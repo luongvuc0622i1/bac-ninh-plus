@@ -1,0 +1,19 @@
+.list-button-route {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+}
+
+.list-button-route .button-stations {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .824em;
+  cursor: pointer;
+  float: left;
+  margin: 2px;
+  border-radius: 5px;
+}

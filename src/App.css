@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+.header {
+  width: 100%;
+  height: 55px;
+  background-color: #3e8e41;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+  /* height: calc(100vh - 55px - 10px); */
+  background-color: #4CAF50; /* green */
+  padding: 5px 0px;
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-on-computer {
+  width: 380px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.menu-on-phone-when-normal {
+  width: 100%;
+}
+
+.menu-on-phone-when-click {
+  display: none;
+}
+
+.group {
+  background-color: #3e8e41;
+  padding: 10px;
+  margin: 5px 10px;
+  border-radius: 5px;
   color: white;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.group .button {
+  background-color: #3e8e41;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-2 {
+  width: calc(100%/2);
+}
+
+.button-3 {
+  width: calc(100%/3);
+}
+
+.group .button:hover {
+  background-color: #245326 !important;
+}
+
+.sub-container {
+  width: 100%;
+}
+
+/* .sub-container label {
+  width: 56px;
+  height: 30px;
+  margin-top: 4px;
+  float: left;
+} */
+
+.input-text {
+  height: 30px;
+  width: -webkit-fill-available;
+  border-radius: 3px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 0px 0px 0px 10px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.map {
+  height: calc(100vh - 55px);
+  float: right;
+  background-color: yellow;
+  position: relative;
+}
+
+.map-on-computer {
+  width: calc(100% - 380px);
+}
+
+.map-on-phone-when-normal {
+  width: 0px;
+  display: none;
+}
+
+.map-on-phone-when-click {
+  width: 100%;
+}
+
+.map .custom-menu {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  padding: 20px 5px;
+  background-color: #4CAF50;
+  border-radius: 0px 5px 5px 0px;
+  color: #245326;
+}
+
+.list-button {
+  width: 100% !important;
+  height: calc(100vh - 55px - 143px);
+  overflow: auto !important;
+  margin-top: 10px;
+}
+
+.button-route-or-station {
+  width: 100%;
+  border: none;
+  margin: 2px 0;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  color: #245326;
+}
+
+.button-route-or-station:hover {
+  background-color: #3e8e41;
+}
+
+.button-route-or-station:focus {
+  background-color: #4CAF50;
+  color: white;
 }
