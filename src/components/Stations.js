@@ -17,7 +17,8 @@ export default function Stations() {
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }}>
             <button className='button-route-or-station' >
-              <b>{feature.properties.name} </b><small>({feature.properties.description})</small><br />
+              <b>{feature.properties.name ? feature.properties.name : feature.properties.address} </b>
+              <small style={{ display: feature.properties.description ? '' : 'none' }}>({feature.properties.description})</small><br />
               <small>Đ/c: </small>
               <small style={{ display: feature.properties.address ? '' : 'none' }}>{feature.properties.address}, </small>
               <small style={{ display: feature.properties.ward ? '' : 'none' }}>{feature.properties.ward}, </small>

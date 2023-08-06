@@ -2,7 +2,7 @@ import '../styles/Routes.css';
 import { routes } from '../data/routes'
 import { useState } from 'react';
 
-export default function Routes() {
+export default function Routes(props) {
   const [textSearch, setTextSearch] = useState('');
   const features = routes.features.filter(feature => feature.geometry.status).filter(feature => feature.geometry.id.toLowerCase().includes(textSearch.toLowerCase()) || feature.geometry.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
 
@@ -10,12 +10,16 @@ export default function Routes() {
     setTextSearch(e.target.value);
   }
 
+  const handleChoose = (e) => {
+    props.parentCallbackChangeRoute(e);
+  }
+
   return (
     <div className='sub-container'>
       <input className='input-text' placeholder='Tìm tuyến xe' onChange={inputText} />
       <div className='list-button'>
         {features.map(feature => (
-          <button key={feature.geometry.id} className='button-route-or-station' >
+          <button key={feature.geometry.id} className='button-route-or-station' onClick={() => handleChoose(feature.geometry.id)} >
             <i className="fa fa-bus"/>
             <div style={{ float: 'right', width: 'calc(100% - 40px)' }}>
               <h3>{feature.geometry.id}</h3>
