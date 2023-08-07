@@ -2,12 +2,16 @@ import '../styles/Stations.css';
 import { stations } from '../data/stations'
 import { useState } from 'react';
 
-export default function Stations() {
+export default function Stations(props) {
   const [textSearch, setTextSearch] = useState('');
   const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
 
   const inputText = (e) => {
     setTextSearch(e.target.value);
+  }
+
+  const handleChoose = (e) => {
+    props.parentCallbackChangeStation(e);
   }
 
   return (
@@ -16,7 +20,7 @@ export default function Stations() {
       <div className='list-button'>
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }}>
-            <button className='button-route-or-station' >
+            <button className='button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
               <b>{feature.properties.name ? feature.properties.name : feature.properties.address} </b>
               <small style={{ display: feature.properties.description ? '' : 'none' }}>({feature.properties.description})</small><br />
               <small>Đ/c: </small>

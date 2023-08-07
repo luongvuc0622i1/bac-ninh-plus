@@ -9,7 +9,7 @@ export default function DefaultMenu(props) {
   }
 
   return (
-    <div>
+    <>
       <div className='group'>
         <button className={props.classButton} style={{ backgroundColor: props.chooseId === 1 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(1)} >Tuyến buýt</button>
         <button className={props.classButton} style={{ backgroundColor: props.chooseId === 2 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(2)} >Trạm dừng</button>
@@ -19,8 +19,8 @@ export default function DefaultMenu(props) {
         <Routes parentCallbackChangeRoute={props.parentCallbackChangeRoute} />
       </div>
       <div className='group' style={{ display: props.chooseId === 2 ? '' : 'none' }} >
-        <Stations/>
+        <Stations parentCallbackChangeStation={props.parentCallbackChangeStation} />
       </div>
-    </div>
+    </>
   );
 }

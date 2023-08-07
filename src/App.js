@@ -4,11 +4,13 @@ import { useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';
 import DetailRoute from './components/DetailRoute';
+import DetailStation from './components/DetailStation';
 
 export default function App() {
   const [width, height] = useWindowDimension();
   const [chooseId, setChooseId] = useState(1);
   const [routeId, setRouteId] = useState();
+  const [stationId, setStationId] = useState();
   let classMenu;
   let classButton;
   let classMap;
@@ -41,16 +43,31 @@ export default function App() {
     setRouteId(e);
   }
 
+  const handleClickChangeStation = (e) => {
+    setStationId(e);
+  }
+  
+  const handleClickBackFromRoute = (e) => {
+    setRouteId();
+  }
+  
+  const handleClickBackFromStation = (e) => {
+    setStationId();
+  }
+
   return (
     <div className='container' >
       <div className='header' >
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
-      <div className={classMenu} style={{ display: routeId ? 'none' : '' }}>
-        <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeChoose={handleClickChangeChoose} chooseId={chooseId} parentCallbackChangeRoute={handleClickChangeRoute} />
+      <div className={classMenu} style={{ display: routeId || stationId ? 'none' : '' }}>
+        <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeChoose={handleClickChangeChoose} chooseId={chooseId} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
       </div>
-      <div className={classMenu}>
-        <DetailRoute style={{ display: routeId ? '' : 'none' }} routeId={routeId} />
+      <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
+        <DetailRoute routeId={routeId} parentCallbackBack={handleClickBackFromRoute} />
+      </div>
+      <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
+        <DetailStation stationId={stationId} parentCallbackBack={handleClickBackFromStation} />
       </div>
       <div className={classMap}>
         <Map />
