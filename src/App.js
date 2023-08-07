@@ -9,6 +9,7 @@ import DetailStation from './components/DetailStation';
 export default function App() {
   const [width, height] = useWindowDimension();
   const [chooseId, setChooseId] = useState(1);
+  const [lastChoose, setLastChoose] = useState(1);
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
   let classMenu;
@@ -31,16 +32,19 @@ export default function App() {
   }
 
   const handleChoose = (e) => {
+    if (e === 3) setLastChoose(chooseId);
     setChooseId(e);
     // setMarkerId("");
   }
 
   const handleClickChangeChoose = (e) => {
+    if (e === 3) setLastChoose(chooseId);
     setChooseId(e);
   }
 
   const handleClickChangeRoute = (e) => {
     setRouteId(e);
+    setChooseId(4);
   }
 
   const handleClickChangeStation = (e) => {
@@ -49,10 +53,12 @@ export default function App() {
   
   const handleClickBackFromRoute = (e) => {
     setRouteId();
+    setChooseId(1);
   }
   
   const handleClickBackFromStation = (e) => {
     setStationId();
+    setChooseId(1);
   }
 
   return (
@@ -64,14 +70,14 @@ export default function App() {
         <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeChoose={handleClickChangeChoose} chooseId={chooseId} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
       </div>
       <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-        <DetailRoute routeId={routeId} parentCallbackBack={handleClickBackFromRoute} />
+        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={handleClickBackFromRoute} chooseId={chooseId} parentCallbackChangeChoose={handleClickChangeChoose} />
       </div>
       <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
         <DetailStation stationId={stationId} parentCallbackBack={handleClickBackFromStation} />
       </div>
       <div className={classMap}>
         <Map />
-        <div className='custom-menu' style={{ display: chooseId === 3 ? '' : 'none' }} onClick={() => handleChoose(1)} >
+        <div className='custom-menu' style={{ display: chooseId === 3 ? '' : 'none' }} onClick={() => handleChoose(lastChoose)} >
           <i className='fa fa-chevron-right' />
         </div>
         <div className='custom-menu' style={{ display: chooseId !== 3 ? '' : 'none' }} onClick={() => handleChoose(3)} >

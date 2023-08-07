@@ -1,0 +1,11 @@
+.group-detail {
+  /* text-decoration: none;
+  display: inline-block; */
+  overflow: auto;
+  height: calc(100vh - 221px);
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
+}

@@ -53,6 +53,10 @@
   width: calc(100%/3);
 }
 
+.button-4 {
+  width: calc(100%/4);
+}
+
 .group .button:hover {
   background-color: #245326 !important;
 }
