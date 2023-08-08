@@ -1,0 +1,22 @@
+.group-detail {
+  overflow: auto;
+  height: calc(100vh - 55px - 166px);
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.go {
+  float: left;
+  padding: 6px !important;
+  width: 50%;
+  border-radius: 5px 0px 0px 5px !important;
+}
+
+.back {
+  padding: 6px !important;
+  width: 50%;
+  border-radius: 0px 5px 5px 0px !important;
+}

@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import Information from './Information';
-import Station from './Station';
-import Timeline from './Timeline';
+import '../styles/DetailRoute.css';
+import Information from './DetailRoute-subcomponents/Information';
+import Station from './DetailRoute-subcomponents/Station';
+import Timeline from './DetailRoute-subcomponents/Timeline';
 
 export default function DetailRoute(props) {
   const [chooseId, setChooseId] = useState(1);
@@ -14,7 +15,7 @@ export default function DetailRoute(props) {
   }
 
   const handleChoose = (e) => {
-    setChooseId(e);
+    setChooseId(parseInt(e.target.value));
   }
 
   const handleShowMap = () => {
@@ -30,18 +31,18 @@ export default function DetailRoute(props) {
         </button>
       </div>
       <div className='group'>
-        <button className={classButton} style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(1)} >Thông tin</button>
-        <button className={classButton} style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(2)} >Trạm dừng</button>
-        <button className={classButton} style={{ backgroundColor: chooseId === 3 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(3)} >Biểu đồ giờ</button>
+        <button className={classButton} style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41" }} onClick={handleChoose} value='1' >Thông tin</button>
+        <button className={classButton} style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41" }} onClick={handleChoose} value='2' >Trạm dừng</button>
+        <button className={classButton} style={{ backgroundColor: chooseId === 3 ? "#4CAF50" : "#3e8e41" }} onClick={handleChoose} value='3' >Biểu đồ giờ</button>
         <button className={classButton} style={{ display: props.widthDimension > 500 ? 'none' : '' }} onClick={handleShowMap} >Bản đồ</button>
       </div>
-      <div className='group group-detail' style={{ display: chooseId === 1 && props.routeId ? "block" : "none" }} >
+      <div className='group group-detail' style={{ display: chooseId === 1 ? "block" : "none" }} >
         <Information routeId={props.routeId} />
       </div>
-      <div className='group group-detail' style={{ display: chooseId === 2 && props.routeId ? "block" : "none" }} >
+      <div className='group' style={{ display: chooseId === 2 ? "block" : "none" }} >
         <Station routeId={props.routeId} />
       </div>
-      <div className='group group-detail' style={{ display: chooseId === 3 && props.routeId ? "block" : "none" }} >
+      <div className='group group-detail' style={{ display: chooseId === 3 ? "block" : "none" }} >
         <Timeline routeId={props.routeId} />
       </div>
     </>

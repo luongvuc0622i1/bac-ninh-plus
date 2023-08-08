@@ -1,6 +1,6 @@
-import '../styles/Routes.css';
-import { routes } from '../data/routes'
+import '../../styles/Routes.css';
 import { useState } from 'react';
+import { routes } from '../../data/routes';
 
 export default function Routes(props) {
   const [textSearch, setTextSearch] = useState('');
@@ -15,7 +15,7 @@ export default function Routes(props) {
   }
 
   return (
-    <div className='sub-container'>
+    <>
       <input className='input-text' placeholder='Tìm tuyến xe' onChange={inputText} />
       <div className='list-button'>
         {features.map(feature => (
@@ -34,6 +34,6 @@ export default function Routes(props) {
           </button>
         ))}
       </div>
-    </div>
+    </>
   );
 }

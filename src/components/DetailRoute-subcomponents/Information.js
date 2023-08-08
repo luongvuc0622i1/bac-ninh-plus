@@ -1,5 +1,4 @@
-import { routes } from "../data/routes";
-import '../styles/Information.css';
+import { routes } from '../../data/routes';
 
 export default function Infomation(props) {
   if (!props.routeId) return;
@@ -7,7 +6,7 @@ export default function Infomation(props) {
 
   return (
     <>
-      <img src={require(`../images/${feature.properties.image}`)} alt={props.routeId} className="image" ></img>
+      <img src={require(`../../../public/images/${feature.properties.image}`)} alt={props.routeId} className="image" ></img>
       <hr />
       <table>
         <tbody>
@@ -51,19 +50,17 @@ export default function Infomation(props) {
       <table>
         <tbody>
           <tr>
-            <td style={{ width: 100 }}></td>
-            <td style={{ width: 79 }}></td>
-            <td style={{ width: 75, textAlign: 'center' }}>Xuất bến</td>
-            <td style={{ width: 75, textAlign: 'center' }}>Đóng bến</td>
+            <td style={{ width: 165 }}>Thời gian hoạt động:</td>
+            <td style={{ width: 82, textAlign: 'center' }}>Xuất bến</td>
+            <td style={{ width: 82, textAlign: 'center' }}>Đóng bến</td>
           </tr>
           <tr>
-            <td rowSpan={2}>Thời gian hoạt động:</td>
-            <td>{feature.properties.timeline[0][0]}</td>
+            <td style={{ textAlign: 'right' }}>{feature.properties.timeline[0][0]}</td>
             <td style={{ textAlign: 'center' }}>{feature.properties.timeline[1][0]}</td>
             <td style={{ textAlign: 'center' }}>{feature.properties.timeline[feature.properties.timeline.length - 1][0]}</td>
           </tr>
           <tr>
-            <td>{feature.properties.timeline[0][1]}</td>
+            <td style={{ textAlign: 'right' }}>{feature.properties.timeline[0][1]}</td>
             <td style={{ textAlign: 'center' }}>{feature.properties.timeline[1][1]}</td>
             <td style={{ textAlign: 'center' }}>{feature.properties.timeline[feature.properties.timeline.length - 1][1]}</td>
           </tr>

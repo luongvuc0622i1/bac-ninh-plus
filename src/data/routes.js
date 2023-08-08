@@ -580,7 +580,7 @@ export let routes = {
           'image': 'img-54.jpg',
           'description': 'Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Hai Bà Trưng (Tiên Du) - Nguyễn Văn Cừ (Bắc Ninh) - Ngô Gia Tự (Bắc Ninh) - Kinh Dương Vương (Bắc Ninh) - Thành phố Bắc Ninh và ngược lại.',
           'timeline': [
-            ['Long Biên', 'Tp. Bắc Ninh'],
+            ['Long Biên', 'Thành phố Bắc Ninh'],
             []
           ],
           'ticket': [

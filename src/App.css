@@ -66,8 +66,8 @@
   float: right;
 }
 
-.sub-container {
-  width: 100%;
+.button-back:hover {
+  color: white !important;
 }
 
 .input-text {
