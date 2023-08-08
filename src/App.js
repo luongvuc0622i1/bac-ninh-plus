@@ -8,8 +8,7 @@ import DetailStation from './components/DetailStation';
 
 export default function App() {
   const [width, height] = useWindowDimension();
-  const [chooseId, setChooseId] = useState(1);
-  const [lastChoose, setLastChoose] = useState(1);
+  const [showMap, setShowMap] = useState(false);
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
   let classMenu;
@@ -26,25 +25,17 @@ export default function App() {
     classMap = 'map map-on-phone-when-normal';
   }
 
-  if (chooseId === 3) {
+  if (showMap) {
     classMenu = 'menu menu-on-phone-when-click';
     classMap = 'map map-on-phone-when-click';
   }
 
-  const handleChoose = (e) => {
-    if (e === 3) setLastChoose(chooseId);
-    setChooseId(e);
-    // setMarkerId("");
-  }
-
-  const handleClickChangeChoose = (e) => {
-    if (e === 3) setLastChoose(chooseId);
-    setChooseId(e);
+  const handleShowMap = (e) => {
+    setShowMap(e);
   }
 
   const handleClickChangeRoute = (e) => {
     setRouteId(e);
-    setChooseId(4);
   }
 
   const handleClickChangeStation = (e) => {
@@ -53,12 +44,10 @@ export default function App() {
   
   const handleClickBackFromRoute = (e) => {
     setRouteId();
-    setChooseId(1);
   }
   
   const handleClickBackFromStation = (e) => {
     setStationId();
-    setChooseId(1);
   }
 
   return (
@@ -67,20 +56,20 @@ export default function App() {
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
       <div className={classMenu} style={{ display: routeId || stationId ? 'none' : '' }}>
-        <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeChoose={handleClickChangeChoose} chooseId={chooseId} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+        <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} parentCallbackShowMap={() => handleShowMap(true)} />
       </div>
       <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={handleClickBackFromRoute} chooseId={chooseId} parentCallbackChangeChoose={handleClickChangeChoose} />
+        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={handleClickBackFromRoute} parentCallbackShowMap={() => handleShowMap(true)} />
       </div>
       <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
         <DetailStation stationId={stationId} parentCallbackBack={handleClickBackFromStation} />
       </div>
       <div className={classMap}>
         <Map />
-        <div className='custom-menu' style={{ display: chooseId === 3 ? '' : 'none' }} onClick={() => handleChoose(lastChoose)} >
+        <div className='custom-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
           <i className='fa fa-chevron-right' />
         </div>
-        <div className='custom-menu' style={{ display: chooseId !== 3 ? '' : 'none' }} onClick={() => handleChoose(3)} >
+        <div className='custom-menu' style={{ display: showMap ? '' : 'none' }} onClick={() => handleShowMap(false)} >
           <i className='fa fa-chevron-left' />
         </div>
       </div>
