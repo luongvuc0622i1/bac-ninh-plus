@@ -15,7 +15,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-bn01.jpg?alt=media&token=e78af5e1-d22a-487d-b43f-68d3e2addd39',
+          'image': 'img-bn01.jpg',
           'description': 'Bến xe Bắc Ninh - Cổng Ô (Thành phố Bắc Ninh) - Đường Ngô Gia Tự - Đường Kinh Dương Vương - Đường Lý Thái Tổ - QL.38 - Cầu Hồ - Ngã tư Đông Côi - QL.17 - Thị trấn Gia Bình - ĐT.280 - Bến xe Lương Tài và ngược lại.',
           'timeline': [
             ['Bắc Ninh', 'Lương Tài'],
@@ -92,7 +92,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-bn02.jpg?alt=media&token=c40ee1d8-942b-44c1-819c-28f08b064ef3',
+          'image': 'img-bn02.jpg',
           'description': 'Bến xe Bắc Ninh - Cổng Ô (Thành phố Bắc Ninh) - Đường Ngô Gia Tự - Đường Trần Hưng Đạo - QL.18 - Gần cầu Phả Lại và ngược lại.',
           'timeline': [
             ['Bắc Ninh', 'Phả Lại'],
@@ -163,7 +163,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-bn03.jpg?alt=media&token=0c97f296-0057-4346-bad8-93fc6ff73186',
+          'image': 'img-bn03.jpg',
           'description': '',
           'timeline': [
             ['Bắc Ninh', 'Yên Phong'],
@@ -222,7 +222,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-bn08.jpg?alt=media&token=8007761a-bca2-422b-9667-b15f898280d8',
+          'image': 'img-bn08.jpg',
           'description': '',
           'timeline': [
             ['Bắc Ninh', 'Kênh Vàng'],
@@ -288,7 +288,7 @@ export let routes = {
             { 'name': 'Khai trương tuyến', 'link': 'https://bacninh.gov.vn/news/-/details/20182/chinh-thuc-khai-truong-tuyen-xe-buyt-noi-tinh-kenh-vang-xuan-lam' },
             { 'name': 'Điều chỉnh lộ trình', 'link': 'https://bacninh.gov.vn/news/-/details/20182/-ieu-chinh-lo-trinh-tuyen-xe-buyt-noi-tinh-kenh-vang-xuan-lam-38857148' }
           ],
-          'image': 'img-bn27.jpg?alt=media&token=80a83ab6-8c0c-4cf4-90e4-3a62a80876a1',
+          'image': 'img-bn27.jpg',
           'description': 'Ngã ba Kênh Vàng - ĐT.281 - Thị trấn Thứa - ĐT.284 - Đại Bái - QL.17 - Ngã tư Đông Côi - QL.38 - Đường Vương Văn Trà - Đường Âu Cơ - QL.17 - KCN Khai Sơn - Chùa Dâu - Cổng KĐT Khai Sơn (Xuân Lâm) và ngược lại.',
           'timeline': [
             ['Kênh Vàng', 'Xuân Lâm'],
@@ -361,7 +361,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-bn68.jpg?alt=media&token=eb34ee48-5b9c-46e4-a78b-5a6a79c990f7',
+          'image': 'img-bn68.jpg',
           'description': 'Thôn Rích Gạo (Phù Chẩn) - ĐT.277 - Cầu Đại Đình - Đền Đô - Cột đồng hồ Từ Sơn - ĐT.295B - Đường Lê Thái Tổ - Cột đồng hồ Bắc Ninh - Đường Nguyễn Trãi - Đường Bình Than - Đường Nguyễn Đăng Đạo - Đường Lý Thái Tổ - Đường Kinh Dương Vương - ĐT.295B - Đường Trần Lựu - Đường Hoàng Quốc Việt - Đê Sông Cầu (ĐT.279) - Chợ Nội Doi (ĐT.279) - Ngã tư Phố Mới - Chợ Chì (ĐT.279) - Thôn Quế Ổ (Chi Lăng) và ngược lại.',
           'timeline': [
             ['KCN VSIP', 'Chi Lăng'],
@@ -425,7 +425,7 @@ export let routes = {
             { 'name': 'Quyết định số 854/QĐ-UBND', 'link': 'https://bacninh.gov.vn/news/-/details/20182/khai-thac-tuyen-xe-buyt-noi-tinh-thanh-pho-bac-ninh-lai-ha' },
             { 'name': 'Công văn số 2726/UBND-XDCB', 'link': 'https://bacninh.gov.vn/news/-/details/20182/keo-dai-lo-trinh-tuyen-xe-buyt-thanh-pho-bac-ninh-lai-ha-huyen-luong-tai-' }
           ],
-          'image': 'img-bn86a.jpg?alt=media&token=108f64c5-2210-4dd7-8d73-d0dbebb3072a',
+          'image': 'img-bn86a.jpg',
           'description': 'Bến xe Bắc Ninh - Cổng Ô (Thành phố Bắc Ninh) - Đường Ngô Gia Tự - Đường Trần Hưng Đạo - QL.18 - Cầu Bình Than - QL.17 - ĐT.285 - Đê Lai Hạ - Đê Minh Tân và ngược lại.',
           'timeline': [
             ['Bắc Ninh', 'Minh Tân'],
@@ -483,7 +483,7 @@ export let routes = {
             { 'name': 'Quyết định số 2128/QĐ-UBND', 'link': 'https://bacninh.gov.vn/documents/20182/23899416/2128-Q%C4%90-UBND.doc/bf7f39f9-7398-42d1-a32c-5efa3e6a76cd?version=1.0' },
             { 'name': 'Quyết định số 1153/QĐ-SGTVT', 'link': 'https://www.facebook.com/photo/?fbid=453040052054657&set=pcb.453040118721317' }
           ],
-          'image': 'img-bn86b.jpg?alt=media&token=b0e5fb82-e510-4fe2-ac55-975af0b2db05',
+          'image': 'img-bn86b.jpg',
           'description': 'Bến xe Bắc Ninh - Cổng Ô (Thành phố Bắc Ninh) - Đường Ngô Gia Tự - Đường Trần Hưng Đạo - QL.18 - Cầu Bình Than - QL.17 - ĐT.285 - Phương Triện - Khu di tích Lệ Chi Viên và ngược lại.',
           'timeline': [
             ['Bắc Ninh', 'Đại Lai'],
@@ -540,7 +540,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-10a.jpg?alt=media&token=cc272b49-5caf-4044-bdff-b024d68affb9',
+          'image': 'img-10a.jpg',
           'description': 'Long Biên (đối diện Đội CSGT số 1 Hà Nội - số 3 Trần Nhật Duật) - Trần Nhật Duật - Yên Phụ - Quay đầu tại đối diện 92 Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Từ Sơn (Cổng bệnh viện đa khoa Từ Sơn) và ngược lại.',
           'timeline': [
             ['Long Biên', 'Từ Sơn'],
@@ -577,7 +577,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-54.jpg?alt=media&token=d993169f-2139-46a2-917f-3facfad162cb',
+          'image': 'img-54.jpg',
           'description': 'Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Hai Bà Trưng (Tiên Du) - Nguyễn Văn Cừ (Bắc Ninh) - Ngô Gia Tự (Bắc Ninh) - Kinh Dương Vương (Bắc Ninh) - Thành phố Bắc Ninh và ngược lại.',
           'timeline': [
             ['Long Biên', 'Tp. Bắc Ninh'],
@@ -614,7 +614,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-203.jpg?alt=media&token=ce020346-f107-4fc6-b42d-1a6e29daa1de',
+          'image': 'img-203.jpg',
           'description': '',
           'timeline': [
             ['Giáp Bát', 'Bắc Giang'],
@@ -650,7 +650,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-204.jpg?alt=media&token=38257086-a2b7-4d27-860a-26acd2958d17',
+          'image': 'img-204.jpg',
           'description': '',
           'timeline': [
             ['Long Biên', 'Thuận Thành'],
@@ -687,7 +687,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-210.jpg?alt=media&token=333be9f2-2ea5-4f52-8076-caac0d478d81',
+          'image': 'img-210.jpg',
           'description': '',
           'timeline': [
             ['Hiệp Hòa', 'Gia Lâm'],
@@ -723,7 +723,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-212.jpg?alt=media&token=afa0775a-d6c8-4f36-8962-e6c02ddf45ab',
+          'image': 'img-212.jpg',
           'description': 'Bến xe Mỹ Đình - Phạm Hùng - Phạm Văn Đông - Cầu Thăng Long - Võ Văn Kiệt - QL.18 - Đường YP.3 - Đường YP.2 - Cầu Đông Yên - QL.18 - QL.1A - Cầu Bồ Sơn - Nguyễn Trãi (Bắc Ninh) - Lý Thái Tổ (Bắc Ninh) - Trần Hưng Đạo (Bắc Ninh) - Cầu Đại Phúc - QL.18 - Bến xe Quế Võ và ngược lại.',
           'timeline': [
             ['Mỹ Đình', 'Quế Võ'],
@@ -765,7 +765,7 @@ export let routes = {
           'decision': [
             { 'name': '', 'link': '' }
           ],
-          'image': 'img-217.jpg?alt=media&token=8491db29-cbd2-4741-9404-4ea7d8e4125b',
+          'image': 'img-217.jpg',
           'description': '',
           'timeline': [
             ['Hải Dương', 'Bắc Ninh'],

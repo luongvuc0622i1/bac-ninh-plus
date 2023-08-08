@@ -17,8 +17,12 @@ export default function DetailRoute(props) {
 
   return (
     <>
-      <button onClick={props.parentCallbackBack}>Back</button>
-      <div>{props.routeId}</div>
+      <div className='group' style={{ height: '38px' }}>
+        <b style={{ fontSize: '28px' }}>{props.routeId}</b>
+        <button className='button button-back' onClick={props.parentCallbackBack}>
+          <i className='fa fa-reply' />
+        </button>
+      </div>
       <div className='group'>
         <button className={classButton} style={{ backgroundColor: props.chooseId === 4 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(4)} >Thông tin</button>
         <button className={classButton} style={{ backgroundColor: props.chooseId === 5 ? "#4CAF50" : "#3e8e41" }} onClick={() => handleChoose(5)} >Trạm dừng</button>

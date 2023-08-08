@@ -7,7 +7,7 @@ export default function Infomation(props) {
 
   return (
     <>
-      <img src={'https://firebasestorage.googleapis.com/v0/b/bac-ninh-bus-map-b35ca.appspot.com/o/' + feature.properties.image} alt={props.routeId} className="image" ></img>
+      <img src={require(`../images/${feature.properties.image}`)} alt={props.routeId} className="image" ></img>
       <hr />
       <table>
         <tbody>

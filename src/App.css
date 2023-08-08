@@ -61,6 +61,12 @@
   background-color: #245326 !important;
 }
 
+.button-back {
+  background-color: white !important;
+  color: #245326 !important;
+  float: right;
+}
+
 .sub-container {
   width: 100%;
 }
