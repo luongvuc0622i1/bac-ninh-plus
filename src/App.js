@@ -12,16 +12,13 @@ export default function App() {
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
   let classMenu;
-  let classButton;
   let classMap;
 
   if (width > 500) {
     classMenu = 'menu menu-on-computer';
-    classButton = 'button button-2';
     classMap = 'map map-on-computer';
   } else {
     classMenu = 'menu menu-on-phone-when-normal';
-    classButton = 'button button-3';
     classMap = 'map map-on-phone-when-normal';
   }
 
@@ -41,14 +38,6 @@ export default function App() {
   const handleClickChangeStation = (e) => {
     setStationId(e);
   }
-  
-  const handleClickBackFromRoute = (e) => {
-    setRouteId();
-  }
-  
-  const handleClickBackFromStation = (e) => {
-    setStationId();
-  }
 
   return (
     <div className='container' >
@@ -56,13 +45,13 @@ export default function App() {
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
       <div className={classMenu} style={{ display: routeId || stationId ? 'none' : '' }}>
-        <DefaultMenu classButton={classButton} widthDimension={width} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} parentCallbackShowMap={() => handleShowMap(true)} />
+        <DefaultMenu widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
       </div>
       <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={handleClickBackFromRoute} parentCallbackShowMap={() => handleShowMap(true)} />
+        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={() => setRouteId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div>
       <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
-        <DetailStation stationId={stationId} parentCallbackBack={handleClickBackFromStation} />
+        <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div>
       <div className={classMap}>
         <Map />

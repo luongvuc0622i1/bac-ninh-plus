@@ -2,7 +2,7 @@
   /* text-decoration: none;
   display: inline-block; */
   overflow: auto;
-  height: calc(100vh - 221px);
+  height: calc(100vh - 55px - 166px);
 }
 
 .image {

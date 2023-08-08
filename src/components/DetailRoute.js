@@ -17,7 +17,7 @@ export default function DetailRoute(props) {
     setChooseId(e);
   }
 
-  const handleShowMap = (e) => {
+  const handleShowMap = () => {
     props.parentCallbackShowMap();
   }
 
