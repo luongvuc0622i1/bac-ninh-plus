@@ -1,4 +1,3 @@
-import '../../styles/Stations.css';
 import { useState } from 'react';
 import { stations } from '../../data/stations';
 
@@ -20,7 +19,7 @@ export default function Stations(props) {
       <div className='list-button'>
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
+            <button className='button button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
               <b>{feature.properties.name ? feature.properties.name : feature.properties.address} </b>
               <small style={{ display: feature.properties.description ? '' : 'none' }}>({feature.properties.description})</small><br />
               <small>Đ/c: </small>

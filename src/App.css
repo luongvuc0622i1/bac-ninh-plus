@@ -6,7 +6,6 @@
 
 .menu {
   background-color: #4CAF50; /* green */
-  padding: 5px 0px;
   float: left;
 }
 
@@ -22,52 +21,118 @@
   display: none;
 }
 
+.custom-menu {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  padding: 20px 5px;
+  background-color: #4CAF50;
+  border-radius: 0px 5px 5px 0px;
+  color: #245326;
+}
+
 .group {
   background-color: #3e8e41;
   padding: 10px;
-  margin: 5px 10px;
+  margin: 10px;
   border-radius: 5px;
   color: white;
   font-size: 16px;
 }
 
-.group .button {
-  background-color: #3e8e41;
+.button {
   border: none;
-  color: white;
   padding: 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius: 3px;
 }
 
-.button-2 {
-  width: calc(100%/2);
+.button-normal {
+  color: white;
 }
 
-.button-3 {
-  width: calc(100%/3);
-}
-
-.button-4 {
-  width: calc(100%/4);
-}
-
-.group .button:hover {
+.button:hover {
   background-color: #245326 !important;
 }
 
-.button-back {
-  background-color: white !important;
-  color: #245326 !important;
+.button-double {
+  width: calc(100%/2);
+}
+
+.button-triple {
+  width: calc(100%/3);
+}
+
+.button-quadruple {
+  width: calc(100%/4);
+}
+
+.button-reply {
+  background-color: white;
+  color: #245326;
   float: right;
 }
 
-.button-back:hover {
-  color: white !important;
+.button-reply:hover {
+  color: white;
+}
+
+.button-route-or-station {
+  width: 100%;
+  margin: 2px 0;
+  text-align: left;
+  vertical-align: top;
+  color: #3e8e41;
+}
+
+.button-route-or-station:hover {
+  background-color: #3e8e41;
+}
+
+.button-go {
+  float: left;
+  padding: 6px !important;
+  width: 50%;
+  border-radius: 5px 0px 0px 5px !important;
+}
+
+.button-back {
+  padding: 6px !important;
+  width: 50%;
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.list-button {
+  height: calc(100vh - 55px - 148px);
+  overflow: auto;
+  margin-top: 10px;
+}
+
+i.fa-bus {
+  font-size: 30px;
+  float: left;
+}
+
+.list-button-route {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+}
+
+.list-button-route .button-stations {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .824em;
+  cursor: pointer;
+  float: left;
+  margin: 2px;
+  border-radius: 5px;
 }
 
 .input-text {
@@ -84,6 +149,16 @@
 ::placeholder {
   color: white;
   font-size: 16px;
+}
+
+.group-detail {
+  overflow: auto;
+  height: calc(100vh - 55px - 176px);
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
 }
 
 .map {
@@ -104,41 +179,4 @@
 
 .map-on-phone-when-click {
   width: 100%;
-}
-
-.map .custom-menu {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  padding: 20px 5px;
-  background-color: #4CAF50;
-  border-radius: 0px 5px 5px 0px;
-  color: #245326;
-}
-
-.list-button {
-  width: 100% !important;
-  height: calc(100vh - 55px - 143px);
-  overflow: auto !important;
-  margin-top: 10px;
-}
-
-.button-route-or-station {
-  width: 100%;
-  border: none;
-  margin: 2px 0;
-  border-radius: 4px;
-  padding: 10px;
-  text-align: left;
-  vertical-align: top;
-  color: #245326;
-}
-
-.button-route-or-station:hover {
-  background-color: #3e8e41;
-}
-
-.button-route-or-station:focus {
-  background-color: #4CAF50;
-  color: white;
 }

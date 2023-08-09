@@ -1,4 +1,3 @@
-import '../../styles/Routes.css';
 import { useState } from 'react';
 import { routes } from '../../data/routes';
 
@@ -19,7 +18,7 @@ export default function Routes(props) {
       <input className='input-text' placeholder='Tìm tuyến xe' onChange={inputText} />
       <div className='list-button'>
         {features.map(feature => (
-          <button key={feature.geometry.id} className='button-route-or-station' onClick={() => handleChoose(feature.geometry.id)} >
+          <button key={feature.geometry.id} className='button button-route-or-station' onClick={() => handleChoose(feature.geometry.id)} >
             <i className="fa fa-bus"/>
             <div style={{ float: 'right', width: 'calc(100% - 40px)' }}>
               <h3>{feature.geometry.id}</h3>

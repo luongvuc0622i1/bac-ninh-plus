@@ -7,9 +7,9 @@ export default function DefaultMenu(props) {
   let classButton;
 
   if (props.widthDimension > 500) {
-    classButton = 'button button-2';
+    classButton = 'button button-normal button-double';
   } else {
-    classButton = 'button button-3';
+    classButton = 'button button-normal button-triple';
   }
 
   const handleChoose = (e) => {

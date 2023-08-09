@@ -28,13 +28,13 @@ export default function Infomation(props) {
 
   return (
     <>
-      <button className='button go' style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="1" >Chiều đi</button>
-      <button className='button back' style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="2" >Chiều về</button>
+      <button className='button button-normal button-go' style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="1" >Chiều đi</button>
+      <button className='button button-normal button-back' style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="2" >Chiều về</button>
       <input className='input-text' placeholder='Tìm trạm dừng' style={{ marginTop: '10px' }} onChange={inputText} />
-      <div className='list-button' style={{ display: props.routeId ? "block" : "none", height: 'calc(100vh - 55px - 143px - 103px)' }} >
+      <div className='list-button' style={{ display: props.routeId ? "block" : "none", height: 'calc(100vh - 55px - 143px - 113px)' }} >
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button-route-or-station' onClick={() => handleStation(feature.properties.routers.filter(route => route.name === props.routeId)[0].id)} >
+            <button className='button button-route-or-station' onClick={() => handleStation(feature.properties.routers.filter(route => route.name === props.routeId)[0].id)} >
               {feature.properties.name ? displayName(feature) : (<b>{feature.properties.address} </b>)}
               {feature.properties.description ? (<small>({feature.properties.description})</small>) : ''}<br />
               <small>Đ/c: </small>

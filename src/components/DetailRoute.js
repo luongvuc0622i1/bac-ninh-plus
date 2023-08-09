@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../styles/DetailRoute.css';
 import Information from './DetailRoute-subcomponents/Information';
 import Station from './DetailRoute-subcomponents/Station';
 import Timeline from './DetailRoute-subcomponents/Timeline';
@@ -9,9 +8,9 @@ export default function DetailRoute(props) {
   let classButton;
 
   if (props.widthDimension > 500) {
-    classButton = 'button button-3';
+    classButton = 'button button-normal button-triple';
   } else {
-    classButton = 'button button-4';
+    classButton = 'button button-normal button-quadruple';
   }
 
   const handleChoose = (e) => {
@@ -26,7 +25,7 @@ export default function DetailRoute(props) {
     <>
       <div className='group' style={{ height: '38px' }}>
         <b style={{ fontSize: '28px' }}>{props.routeId}</b>
-        <button className='button button-back' onClick={props.parentCallbackBack}>
+        <button className='button button-reply' onClick={props.parentCallbackBack}>
           <i className='fa fa-reply' />
         </button>
       </div>
