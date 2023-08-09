@@ -9,7 +9,7 @@ export default function Stations(props) {
     setTextSearch(e.target.value);
   }
 
-  const handleChoose = (e) => {
+  const handleStation = (e) => {
     props.parentCallbackChangeStation(e);
   }
 
@@ -23,7 +23,7 @@ export default function Stations(props) {
       <div className='list-button'>
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
+            <button className='button-route-or-station' onClick={() => handleStation(index)} >
               <b>{feature.properties.name ? feature.properties.name : feature.properties.address} </b>
               <small style={{ display: feature.properties.description ? '' : 'none' }}>({feature.properties.description})</small><br />
               <small>Đ/c: </small>

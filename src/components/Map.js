@@ -1,5 +1,5 @@
-export default function Map() {
+export default function Map(props) {
     return(
-      <h1>Map Com</h1>
+      <h1>Map Com: {props.stationId ? props.stationId : 'chưa chọn stationId' }</h1>
     );
   }

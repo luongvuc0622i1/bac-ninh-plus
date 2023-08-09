@@ -39,7 +39,7 @@ export default function DetailRoute(props) {
         <Information routeId={props.routeId} />
       </div>
       <div className='group' style={{ display: chooseId === 2 ? "block" : "none" }} >
-        <Station routeId={props.routeId} parentCallbackChangeRoute={props.parentCallbackChangeRoute} />
+        <Station routeId={props.routeId} parentCallbackChangeRoute={props.parentCallbackChangeRoute} parentCallbackChangeStation={props.parentCallbackChangeStation} />
       </div>
       <div className='group group-detail' style={{ display: chooseId === 3 ? "block" : "none" }} >
         <Timeline routeId={props.routeId} />

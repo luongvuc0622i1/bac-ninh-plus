@@ -38,6 +38,7 @@
   cursor: pointer;
   border-radius: 3px;
   color: white;
+  background-color: #3e8e41;
 }
 
 .button:hover {
@@ -98,6 +99,10 @@
 
 .button-route-or-station:hover {
   background-color: #3e8e41;
+}
+
+.button-route-or-station:focus {
+  background-color: #4CAF50;
 }
 
 .button-go {
