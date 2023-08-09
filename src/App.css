@@ -17,18 +17,8 @@
   width: 100%;
 }
 
-.menu-on-phone-when-click {
+.menu-on-phone-when-show-map {
   display: none;
-}
-
-.custom-menu {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  padding: 20px 5px;
-  background-color: #4CAF50;
-  border-radius: 0px 5px 5px 0px;
-  color: #245326;
 }
 
 .group {
@@ -47,9 +37,6 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 3px;
-}
-
-.button-normal {
   color: white;
 }
 
@@ -69,7 +56,23 @@
   width: calc(100%/4);
 }
 
+/* -----------------------------------------button other type----------------------------------------- */
+.button-show-menu {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  padding: 20px 5px;
+  background-color: #4CAF50;
+  border-radius: 0px 5px 5px 0px;
+  color: #245326;
+}
+
 .button-reply {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
   background-color: white;
   color: #245326;
   float: right;
@@ -77,14 +80,20 @@
 
 .button-reply:hover {
   color: white;
+  background-color: #245326;
 }
 
 .button-route-or-station {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
   width: 100%;
   margin: 2px 0;
   text-align: left;
   vertical-align: top;
-  color: #3e8e41;
+  color: #245326;
 }
 
 .button-route-or-station:hover {
@@ -92,20 +101,40 @@
 }
 
 .button-go {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
   float: left;
-  padding: 6px !important;
+  padding: 6px;
   width: 50%;
-  border-radius: 5px 0px 0px 5px !important;
+  border-radius: 5px 0px 0px 5px;
+  margin-bottom: 10px;
 }
 
 .button-back {
-  padding: 6px !important;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  padding: 6px;
   width: 50%;
-  border-radius: 0px 5px 5px 0px !important;
+  border-radius: 0px 5px 5px 0px;
+  margin-bottom: 10px;
+}
+
+.button-go:hover, .button-back:hover, .button-stations:hover {
+  background-color: #245326 !important;
 }
 
 .list-button {
   height: calc(100vh - 55px - 148px);
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.list-button-in-detail {
+  height: calc(100vh - 55px - 148px - 108px);
   overflow: auto;
   margin-top: 10px;
 }
@@ -121,18 +150,14 @@ i.fa-bus {
   left: 8px;
 }
 
-.list-button-route .button-stations {
+.button-stations {
   background-color: #4CAF50;
   border: none;
   color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: .824em;
   cursor: pointer;
-  float: left;
   margin: 2px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .input-text {
@@ -177,6 +202,6 @@ i.fa-bus {
   display: none;
 }
 
-.map-on-phone-when-click {
+.map-on-phone-when-show-map {
   width: 100%;
 }

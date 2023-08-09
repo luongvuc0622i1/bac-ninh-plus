@@ -8,9 +8,9 @@ export default function DetailRoute(props) {
   let classButton;
 
   if (props.widthDimension > 500) {
-    classButton = 'button button-normal button-triple';
+    classButton = 'button button-triple';
   } else {
-    classButton = 'button button-normal button-quadruple';
+    classButton = 'button button-quadruple';
   }
 
   const handleChoose = (e) => {
@@ -25,7 +25,7 @@ export default function DetailRoute(props) {
     <>
       <div className='group' style={{ height: '38px' }}>
         <b style={{ fontSize: '28px' }}>{props.routeId}</b>
-        <button className='button button-reply' onClick={props.parentCallbackBack}>
+        <button className='button-reply' onClick={props.parentCallbackBack}>
           <i className='fa fa-reply' />
         </button>
       </div>
@@ -39,7 +39,7 @@ export default function DetailRoute(props) {
         <Information routeId={props.routeId} />
       </div>
       <div className='group' style={{ display: chooseId === 2 ? "block" : "none" }} >
-        <Station routeId={props.routeId} />
+        <Station routeId={props.routeId} parentCallbackChangeRoute={props.parentCallbackChangeRoute} />
       </div>
       <div className='group group-detail' style={{ display: chooseId === 3 ? "block" : "none" }} >
         <Timeline routeId={props.routeId} />

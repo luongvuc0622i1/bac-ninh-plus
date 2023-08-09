@@ -7,9 +7,9 @@ export default function DefaultMenu(props) {
   let classButton;
 
   if (props.widthDimension > 500) {
-    classButton = 'button button-normal button-double';
+    classButton = 'button button-double';
   } else {
-    classButton = 'button button-normal button-triple';
+    classButton = 'button button-triple';
   }
 
   const handleChoose = (e) => {
@@ -31,7 +31,7 @@ export default function DefaultMenu(props) {
         <Routes parentCallbackChangeRoute={props.parentCallbackChangeRoute} />
       </div>
       <div className='group' style={{ display: chooseId === 2 ? '' : 'none' }} >
-        <Stations parentCallbackChangeStation={props.parentCallbackChangeStation} />
+        <Stations parentCallbackChangeStation={props.parentCallbackChangeStation} parentCallbackChangeRoute={props.parentCallbackChangeRoute} />
       </div>
     </>
   );

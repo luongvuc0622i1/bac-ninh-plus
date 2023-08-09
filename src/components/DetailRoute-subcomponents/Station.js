@@ -12,6 +12,10 @@ export default function Infomation(props) {
     setChooseId(parseInt(e.target.value));
   }
 
+  const handleClickChangeRoute = (e) => {
+    props.parentCallbackChangeRoute(e.target.value);
+  }
+
   const handleStation = (e) => {
     // props.function
   }
@@ -28,13 +32,13 @@ export default function Infomation(props) {
 
   return (
     <>
-      <button className='button button-normal button-go' style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="1" >Chiều đi</button>
-      <button className='button button-normal button-back' style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="2" >Chiều về</button>
-      <input className='input-text' placeholder='Tìm trạm dừng' style={{ marginTop: '10px' }} onChange={inputText} />
-      <div className='list-button' style={{ display: props.routeId ? "block" : "none", height: 'calc(100vh - 55px - 143px - 113px)' }} >
+      <button className='button-go' style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="1" >Chiều đi</button>
+      <button className='button-back' style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41", display: props.routeId ? "block" : "none" }} onClick={handleChoose} value="2" >Chiều về</button>
+      <input className='input-text' placeholder='Tìm trạm dừng' onChange={inputText} />
+      <div className='list-button-in-detail' style={{ display: props.routeId ? "block" : "none" }} >
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button button-route-or-station' onClick={() => handleStation(feature.properties.routers.filter(route => route.name === props.routeId)[0].id)} >
+            <button className='button-route-or-station' onClick={() => handleStation(feature.properties.routers.filter(route => route.name === props.routeId)[0].id)} >
               {feature.properties.name ? displayName(feature) : (<b>{feature.properties.address} </b>)}
               {feature.properties.description ? (<small>({feature.properties.description})</small>) : ''}<br />
               <small>Đ/c: </small>
@@ -44,7 +48,7 @@ export default function Infomation(props) {
               <div style={{ height: '25px' }}></div>
             </button>
             <div className='list-button-route' >
-              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations'>{route.name}</button>))}
+              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
             </div>
           </div>
         ))}

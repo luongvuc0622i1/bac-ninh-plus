@@ -23,8 +23,8 @@ export default function App() {
   }
 
   if (showMap) {
-    classMenu = 'menu menu-on-phone-when-click';
-    classMap = 'map map-on-phone-when-click';
+    classMenu = 'menu menu-on-phone-when-show-map';
+    classMap = 'map map-on-phone-when-show-map';
   }
 
   const handleShowMap = (e) => {
@@ -48,17 +48,17 @@ export default function App() {
         <DefaultMenu widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
       </div>
       <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={() => setRouteId()} parentCallbackShowMap={() => handleShowMap(true)} />
+        <DetailRoute routeId={routeId} widthDimension={width} parentCallbackBack={() => setRouteId()} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} />
       </div>
       <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
         <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div>
       <div className={classMap}>
         <Map />
-        <div className='custom-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
+        <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
           <i className='fa fa-chevron-right' />
         </div>
-        <div className='custom-menu' style={{ display: showMap ? '' : 'none' }} onClick={() => handleShowMap(false)} >
+        <div className='button-show-menu' style={{ display: showMap ? '' : 'none' }} onClick={() => handleShowMap(false)} >
           <i className='fa fa-chevron-left' />
         </div>
       </div>

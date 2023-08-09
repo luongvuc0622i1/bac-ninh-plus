@@ -50,9 +50,9 @@ export default function Infomation(props) {
       <table>
         <tbody>
           <tr>
-            <td style={{ width: 165 }}>Thời gian hoạt động:</td>
-            <td style={{ width: 82, textAlign: 'center' }}>Xuất bến</td>
-            <td style={{ width: 82, textAlign: 'center' }}>Đóng bến</td>
+            <td>Thời gian hoạt động:</td>
+            <td style={{ width: 80, textAlign: 'center' }}>Xuất bến</td>
+            <td style={{ width: 80, textAlign: 'center' }}>Đóng bến</td>
           </tr>
           <tr>
             <td style={{ textAlign: 'right' }}>{feature.properties.timeline[0][0]}</td>

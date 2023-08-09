@@ -13,13 +13,17 @@ export default function Stations(props) {
     props.parentCallbackChangeStation(e);
   }
 
+  const handleClickChangeRoute = (e) => {
+    props.parentCallbackChangeRoute(e.target.value);
+  }
+
   return (
     <>
       <input className='input-text' placeholder='Tìm trạm dừng' onChange={inputText} />
       <div className='list-button'>
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
+            <button className='button-route-or-station' onClick={() => handleChoose(feature.properties.name)} >
               <b>{feature.properties.name ? feature.properties.name : feature.properties.address} </b>
               <small style={{ display: feature.properties.description ? '' : 'none' }}>({feature.properties.description})</small><br />
               <small>Đ/c: </small>
@@ -29,8 +33,7 @@ export default function Stations(props) {
               <div style={{ height: '25px' }}></div>
             </button>
             <div className='list-button-route' >
-              {/* {feature.properties.routers.filter(route => route.start).map(route => (<button key={route.name} className='button' onClick={sendDataChangeRoute} value={route.name} >{route.name}</button>))} */}
-              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations'>{route.name}</button>))}
+              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
             </div>
           </div>
         ))}

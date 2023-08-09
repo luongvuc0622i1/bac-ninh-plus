@@ -544,7 +544,7 @@ export let routes = {
           'description': 'Long Biên (đối diện Đội CSGT số 1 Hà Nội - số 3 Trần Nhật Duật) - Trần Nhật Duật - Yên Phụ - Quay đầu tại đối diện 92 Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Từ Sơn (Cổng bệnh viện đa khoa Từ Sơn) và ngược lại.',
           'timeline': [
             ['Long Biên', 'Từ Sơn'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -581,7 +581,7 @@ export let routes = {
           'description': 'Long Biên - Yên Phụ - Điểm trung chuyển Long Biên - Trần Nhật Duật - Cầu Chương Dương - Nguyễn Văn Cừ - Ngô Gia Tự - Cầu Đuống - Hà Huy Tập - Đặng Phúc Thông - Trần Phú (Từ Sơn) - Minh Khai (Từ Sơn) - Hai Bà Trưng (Tiên Du) - Nguyễn Văn Cừ (Bắc Ninh) - Ngô Gia Tự (Bắc Ninh) - Kinh Dương Vương (Bắc Ninh) - Thành phố Bắc Ninh và ngược lại.',
           'timeline': [
             ['Long Biên', 'Thành phố Bắc Ninh'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -618,7 +618,7 @@ export let routes = {
           'description': '',
           'timeline': [
             ['Giáp Bát', 'Bắc Giang'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -654,7 +654,7 @@ export let routes = {
           'description': '',
           'timeline': [
             ['Long Biên', 'Thuận Thành'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -691,7 +691,7 @@ export let routes = {
           'description': '',
           'timeline': [
             ['Hiệp Hòa', 'Gia Lâm'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -727,7 +727,7 @@ export let routes = {
           'description': 'Bến xe Mỹ Đình - Phạm Hùng - Phạm Văn Đông - Cầu Thăng Long - Võ Văn Kiệt - QL.18 - Đường YP.3 - Đường YP.2 - Cầu Đông Yên - QL.18 - QL.1A - Cầu Bồ Sơn - Nguyễn Trãi (Bắc Ninh) - Lý Thái Tổ (Bắc Ninh) - Trần Hưng Đạo (Bắc Ninh) - Cầu Đại Phúc - QL.18 - Bến xe Quế Võ và ngược lại.',
           'timeline': [
             ['Mỹ Đình', 'Quế Võ'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
@@ -769,7 +769,7 @@ export let routes = {
           'description': '',
           'timeline': [
             ['Hải Dương', 'Bắc Ninh'],
-            []
+            [ '', '' ]
           ],
           'ticket': [
             {
