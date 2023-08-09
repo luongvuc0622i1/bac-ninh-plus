@@ -16,8 +16,8 @@ export default function Timeline(props) {
           {timeline.map((item,index) => (
             <tr key={index} style={{ display: index ? '' : 'none'}}>
               <td style={{ textAlign: 'center' }}>{index}</td>
-              <td style={{ textAlign: 'right', paddingRight: '65px' }}>{item[0]}</td>
-              <td style={{ textAlign: 'right', paddingRight: '65px' }}>{item[1]}</td>
+              <td style={{ textAlign: 'center', paddingRight: parseInt(item[0].slice(0, 2)) > 9 ? '0.55em' : '' }} >{item[0]}</td>
+              <td style={{ textAlign: 'center', paddingRight: parseInt(item[1].slice(0, 2)) > 9 ? '0.55em' : '' }} >{item[1]}</td>
             </tr>
           ))}
         </tbody>
