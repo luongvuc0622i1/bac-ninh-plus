@@ -54,7 +54,7 @@ export default function App() {
         <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div> */}
       <div className={classMap}>
-        <Map stationId={stationId} />
+        <Map routeId={routeId} stationId={stationId} />
         <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
           <i className='fa fa-chevron-left' />
         </div>

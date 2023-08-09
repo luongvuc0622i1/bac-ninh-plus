@@ -194,12 +194,11 @@ i.fa-bus {
 .map {
   height: calc(100vh - 55px);
   float: right;
-  background-color: yellow;
   position: relative;
 }
 
 .map-on-computer {
-  width: calc(100% - 380px);
+  width: calc(100vw - 380px);
 }
 
 .map-on-phone-when-normal {
@@ -209,4 +208,22 @@ i.fa-bus {
 
 .map-on-phone-when-show-map {
   width: 100%;
+}
+
+.a1 {
+  width: inherit;
+  height: calc(100vh - 55px);
+}
+
+.button-route-map {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: .824em;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 5px;
 }
