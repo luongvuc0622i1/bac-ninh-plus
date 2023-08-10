@@ -44,17 +44,17 @@ export default function App() {
       <div className='header' >
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
-      <div className={classMenu} style={{ display: routeId ? 'none' : '' }}>
-        <DefaultMenu widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-      </div>
-      <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-        <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-      </div>
       {/* <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
         <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div> */}
-      <div className={classMap}>
-        <Map routeId={routeId} stationId={stationId} />
+      <Map routeId={routeId} stationId={stationId} />
+      <div className={classMenu} style={{ display: routeId ? 'none' : '', position: 'absolute', top: '55px' }}>
+        <DefaultMenu widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+      </div>
+      <div className={classMenu} style={{ display: routeId ? '' : 'none', position: 'absolute', top: '55px' }} >
+        <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+      </div>
+      <div className={classMap} style={{ position: 'absolute', top: '55px', left: showMap ? '' : '380px' }}>
         <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
           <i className='fa fa-chevron-left' />
         </div>
