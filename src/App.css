@@ -210,11 +210,6 @@ i.fa-bus {
   width: 100%;
 }
 
-.a1 {
-  width: inherit;
-  height: calc(100vh - 55px);
-}
-
 .button-route-map {
   background-color: #4CAF50;
   border: none;

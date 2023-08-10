@@ -47,16 +47,26 @@ export default class Map extends React.Component {
   };
 
   componentDidUpdate() {
+    //----------------------------------------------------------------------------- thay đổi ở đây
+    this.map = new mapboxgl.Map({
+      container: this.mapContainer,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [106.0804849, 21.1169071],
+      zoom: 10.5
+    });
+    //init page load soure & layer (route line) all route
+    initLoadLine(this.map);
+
     if (this.props.routeId) {
       //first change routeId => clear all init route
       if (this.first) {
-        clearInitLoadLine(this.map);
+        clearInitLoadLine(this.map);//-------------------------------------------- thay đổi ở đây
         this.first = false;
       }
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
-      setDataSoureById(this.map, this.props.routeId);
+      // setDataSoureById(this.map, this.props.routeId);--------------------------- thay đổi ở đây
       //setup new list marker by route
       loadMarker(this.map, this.props.routeId);
     } else {
@@ -70,7 +80,7 @@ export default class Map extends React.Component {
 
   render() {
     return (
-      <div ref={el => this.mapContainer = el} className='a1' />
+      <div ref={el => this.mapContainer = el} style={{ width: 'inherit', height: 'inherit' }} />
     );
   }
 }
@@ -236,30 +246,34 @@ function change(number) {
 }
 
 function clearInitLoadLine(map) {
+  if (map.getSource('Init Route BN01 Go'))
   map.removeLayer('Init Route BN01 Go').removeSource('Init Route BN01 Go');
+  if (map.getSource('Init Route BN01 Back'))
   map.removeLayer('Init Route BN01 Back').removeSource('Init Route BN01 Back');
+  if (map.getSource('Init Route BN02 Go'))
   map.removeLayer('Init Route BN02 Go').removeSource('Init Route BN02 Go');
+  if (map.getSource('Init Route BN02 Back'))
   map.removeLayer('Init Route BN02 Back').removeSource('Init Route BN02 Back');
-  map.removeLayer('Init Route BN03 Go').removeSource('Init Route BN03 Go');
-  map.removeLayer('Init Route BN03 Back').removeSource('Init Route BN03 Back');
-  map.removeLayer('Init Route BN08 Go').removeSource('Init Route BN08 Go');
-  map.removeLayer('Init Route BN08 Back').removeSource('Init Route BN08 Back');
-  map.removeLayer('Init Route BN27 Go').removeSource('Init Route BN27 Go');
-  map.removeLayer('Init Route BN27 Back').removeSource('Init Route BN27 Back');
-  map.removeLayer('Init Route BN68 Go').removeSource('Init Route BN68 Go');
-  map.removeLayer('Init Route BN68 Back').removeSource('Init Route BN68 Back');
-  map.removeLayer('Init Route BN86A Go').removeSource('Init Route BN86A Go');
-  map.removeLayer('Init Route BN86A Back').removeSource('Init Route BN86A Back');
-  map.removeLayer('Init Route BN86B Go').removeSource('Init Route BN86B Go');
-  map.removeLayer('Init Route BN86B Back').removeSource('Init Route BN86B Back');
-  map.removeLayer('Init Route 10A Go').removeSource('Init Route 10A Go');
-  map.removeLayer('Init Route 10A Back').removeSource('Init Route 10A Back');
-  map.removeLayer('Init Route 54 Go').removeSource('Init Route 54 Go');
-  map.removeLayer('Init Route 54 Back').removeSource('Init Route 54 Back');
-  map.removeLayer('Init Route 204 Go').removeSource('Init Route 204 Go');
-  map.removeLayer('Init Route 204 Back').removeSource('Init Route 204 Back');
-  map.removeLayer('Init Route 217 Go').removeSource('Init Route 217 Go');
-  map.removeLayer('Init Route 217 Back').removeSource('Init Route 217 Back');
+  // map.removeLayer('Init Route BN03 Go').removeSource('Init Route BN03 Go');
+  // map.removeLayer('Init Route BN03 Back').removeSource('Init Route BN03 Back');
+  // map.removeLayer('Init Route BN08 Go').removeSource('Init Route BN08 Go');
+  // map.removeLayer('Init Route BN08 Back').removeSource('Init Route BN08 Back');
+  // map.removeLayer('Init Route BN27 Go').removeSource('Init Route BN27 Go');
+  // map.removeLayer('Init Route BN27 Back').removeSource('Init Route BN27 Back');
+  // map.removeLayer('Init Route BN68 Go').removeSource('Init Route BN68 Go');
+  // map.removeLayer('Init Route BN68 Back').removeSource('Init Route BN68 Back');
+  // map.removeLayer('Init Route BN86A Go').removeSource('Init Route BN86A Go');
+  // map.removeLayer('Init Route BN86A Back').removeSource('Init Route BN86A Back');
+  // map.removeLayer('Init Route BN86B Go').removeSource('Init Route BN86B Go');
+  // map.removeLayer('Init Route BN86B Back').removeSource('Init Route BN86B Back');
+  // map.removeLayer('Init Route 10A Go').removeSource('Init Route 10A Go');
+  // map.removeLayer('Init Route 10A Back').removeSource('Init Route 10A Back');
+  // map.removeLayer('Init Route 54 Go').removeSource('Init Route 54 Go');
+  // map.removeLayer('Init Route 54 Back').removeSource('Init Route 54 Back');
+  // map.removeLayer('Init Route 204 Go').removeSource('Init Route 204 Go');
+  // map.removeLayer('Init Route 204 Back').removeSource('Init Route 204 Back');
+  // map.removeLayer('Init Route 217 Go').removeSource('Init Route 217 Go');
+  // map.removeLayer('Init Route 217 Back').removeSource('Init Route 217 Back');
 }
 
 function clearMarkerByClassName(className) {
