@@ -160,7 +160,7 @@ export let stations = {
         'routers': [
           { 'id': 8, 'name': 'BN01', 'color': 'green' },
           { 'id': 8, 'name': 'BN08', 'color': 'green' },
-          { 'id': 49, 'name': 'BN68', 'color': 'red' }
+          { 'id': 53, 'name': 'BN68', 'color': 'red' }
         ]
       }
     },
@@ -179,7 +179,7 @@ export let stations = {
         'routers': [
           { 'id': 9, 'name': 'BN01', 'color': 'red' },
           { 'id': 9, 'name': 'BN08', 'color': 'red' },
-          { 'id': 48, 'name': 'BN68', 'color': 'green' },
+          { 'id': 52, 'name': 'BN68', 'color': 'green' },
           { 'id': 77, 'name': '54', 'start': true }
         ]
       }
@@ -198,7 +198,7 @@ export let stations = {
         'routers': [
           { 'id': 10, 'name': 'BN01', 'color': 'green' },
           { 'id': 10, 'name': 'BN08', 'color': 'green' },
-          { 'id': 47, 'name': 'BN68', 'color': 'red' }
+          { 'id': 51, 'name': 'BN68', 'color': 'red' }
         ]
       },
     },
@@ -216,7 +216,7 @@ export let stations = {
         'routers': [
           { 'id': 11, 'name': 'BN01', 'color': 'red' },
           { 'id': 11, 'name': 'BN08', 'color': 'red' },
-          { 'id': 46, 'name': 'BN68', 'color': 'green' }
+          { 'id': 50, 'name': 'BN68', 'color': 'green' }
         ]
       }
     },
@@ -234,7 +234,7 @@ export let stations = {
         'routers': [
           { 'id': 12, 'name': 'BN01', 'color': 'green' },
           { 'id': 12, 'name': 'BN08', 'color': 'green' },
-          { 'id': 45, 'name': 'BN68', 'color': 'red' }
+          { 'id': 49, 'name': 'BN68', 'color': 'red' }
         ]
       }
     },
@@ -252,7 +252,7 @@ export let stations = {
         'routers': [
           { 'id': 13, 'name': 'BN01', 'color': 'red' },
           { 'id': 13, 'name': 'BN08', 'color': 'red' },
-          { 'id': 44, 'name': 'BN68', 'color': 'green' }
+          { 'id': 48, 'name': 'BN68', 'color': 'green' }
         ]
       }
     },
@@ -368,25 +368,25 @@ export let stations = {
         ]
       }
     },
-    // {
-    //   'type': 'Feature',
-    //   'geometry': {
-    //     'type': 'Point',
-    //     'coordinates': [106.065021, 21.166126]
-    //   },
-    //   'properties': {
-    //     'name': 'Bệnh viện Đa Khoa Bắc Ninh',
-    //     'description': '',
-    //     'address': '502 Nguyễn Trãi',
-    //     'district': 'Thành phố Bắc Ninh',
-    //     'routers': [
-    //       { 'id': 20, 'name': 'BN01', 'color': 'red' },
-    //       { 'id': 20, 'name': 'BN08', 'color': 'red' },
-    //       { 'name': '212', 'color': 'green' },
-    //       { 'id': 95, 'name': '217', 'color': 'green' }
-    //     ]
-    //   }
-    // },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.064674,21.166925]
+      },
+      'properties': {
+        'name': 'Bệnh viện Đa Khoa Bắc Ninh',
+        'description': 'Phòng khám Đa Khoa Bắc Hà',
+        'address': '502 Nguyễn Trãi',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 20, 'name': 'BN01', 'color': 'green' },
+          { 'id': 20, 'name': 'BN08', 'color': 'green' },
+          { 'name': '212', 'color': 'red' },
+          { 'id': 95, 'name': '217', 'color': 'red' }
+        ]
+      }
+    },
     {
       'type': 'Feature',
       'geometry': {
@@ -396,7 +396,7 @@ export let stations = {
       'properties': {
         'name': 'Bệnh viện Đa Khoa Bắc Ninh',
         'description': '',
-        'address': 'Đường Nguyễn Trãi',
+        'address': 'Đối diện 550 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
           { 'id': 21, 'name': 'BN01', 'color': 'red' },
@@ -418,9 +418,9 @@ export let stations = {
         'address': '678-680 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 20, 'name': 'BN01' },
-          { 'id': 20, 'name': 'BN08' },
-          { 'id': 95, 'name': '217' }
+          { 'id': 22, 'name': 'BN01' },
+          { 'id': 22, 'name': 'BN08' },
+          { 'id': 93, 'name': '217' }
         ]
       }
     },
@@ -436,9 +436,9 @@ export let stations = {
         'address': 'Đối diện 930 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 21, 'name': 'BN01', 'color': 'red' },
-          { 'id': 21, 'name': 'BN08', 'color': 'red' },
-          { 'id': 94, 'name': '217', 'color': 'green' }
+          { 'id': 23, 'name': 'BN01', 'color': 'red' },
+          { 'id': 23, 'name': 'BN08', 'color': 'red' },
+          { 'id': 92, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -454,9 +454,9 @@ export let stations = {
         'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 22, 'name': 'BN01', 'color': 'green' },
-          { 'id': 22, 'name': 'BN08', 'color': 'green' },
-          { 'id': 93, 'name': '217', 'color': 'red' }
+          { 'id': 24, 'name': 'BN01', 'color': 'green' },
+          { 'id': 24, 'name': 'BN08', 'color': 'green' },
+          { 'id': 91, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -472,9 +472,9 @@ export let stations = {
         'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 23, 'name': 'BN01', 'color': 'red' },
-          { 'id': 23, 'name': 'BN08', 'color': 'red' },
-          { 'id': 92, 'name': '217', 'color': 'green' }
+          { 'id': 25, 'name': 'BN01', 'color': 'red' },
+          { 'id': 25, 'name': 'BN08', 'color': 'red' },
+          { 'id': 90, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -490,9 +490,9 @@ export let stations = {
         'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 24, 'name': 'BN01', 'color': 'green' },
-          { 'id': 24, 'name': 'BN08', 'color': 'green' },
-          { 'id': 91, 'name': '217', 'color': 'red' }
+          { 'id': 26, 'name': 'BN01', 'color': 'green' },
+          { 'id': 26, 'name': 'BN08', 'color': 'green' },
+          { 'id': 89, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -508,9 +508,9 @@ export let stations = {
         'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 25, 'name': 'BN01', 'color': 'red' },
-          { 'id': 25, 'name': 'BN08', 'color': 'red' },
-          { 'id': 90, 'name': '217', 'color': 'green' }
+          { 'id': 27, 'name': 'BN01', 'color': 'red' },
+          { 'id': 27, 'name': 'BN08', 'color': 'red' },
+          { 'id': 88, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -526,9 +526,9 @@ export let stations = {
         'address': '1346-1348 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 26, 'name': 'BN01', 'color': 'green' },
-          { 'id': 26, 'name': 'BN08', 'color': 'green' },
-          { 'id': 89, 'name': '217', 'color': 'red' }
+          { 'id': 28, 'name': 'BN01', 'color': 'green' },
+          { 'id': 28, 'name': 'BN08', 'color': 'green' },
+          { 'id': 87, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -544,9 +544,9 @@ export let stations = {
         'address': '1466-1468 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 27, 'name': 'BN01', 'color': 'green' },
-          { 'id': 27, 'name': 'BN08', 'color': 'green' },
-          { 'id': 88, 'name': '217', 'color': 'red' }
+          { 'id': 29, 'name': 'BN01', 'color': 'green' },
+          { 'id': 29, 'name': 'BN08', 'color': 'green' },
+          { 'id': 86, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -562,9 +562,9 @@ export let stations = {
         'address': '1017-1019 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 28, 'name': 'BN01', 'color': 'red' },
-          { 'id': 28, 'name': 'BN08', 'color': 'red' },
-          { 'id': 87, 'name': '217', 'color': 'green' }
+          { 'id': 30, 'name': 'BN01', 'color': 'red' },
+          { 'id': 30, 'name': 'BN08', 'color': 'red' },
+          { 'id': 85, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -580,9 +580,9 @@ export let stations = {
         'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 29, 'name': 'BN01', 'color': 'green' },
-          { 'id': 29, 'name': 'BN08', 'color': 'green' },
-          { 'id': 86, 'name': '217', 'color': 'red' }
+          { 'id': 31, 'name': 'BN01', 'color': 'green' },
+          { 'id': 31, 'name': 'BN08', 'color': 'green' },
+          { 'id': 84, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -598,9 +598,9 @@ export let stations = {
         'address': '1147-1149 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 30, 'name': 'BN01', 'color': 'red' },
-          { 'id': 30, 'name': 'BN08', 'color': 'red' },
-          { 'id': 85, 'name': '217', 'color': 'green' }
+          { 'id': 32, 'name': 'BN01', 'color': 'red' },
+          { 'id': 32, 'name': 'BN08', 'color': 'red' },
+          { 'id': 83, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -617,9 +617,9 @@ export let stations = {
         'ward': 'Lạc Vệ',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 31, 'name': 'BN01' },
-          { 'id': 31, 'name': 'BN08' },
-          { 'id': 84, 'name': '217' }
+          { 'id': 33, 'name': 'BN01' },
+          { 'id': 33, 'name': 'BN08' },
+          { 'id': 82, 'name': '217' }
         ]
       }
     },
@@ -636,9 +636,9 @@ export let stations = {
         'ward': 'Lạc Vệ',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 32, 'name': 'BN01' },
-          { 'id': 32, 'name': 'BN08' },
-          { 'id': 83, 'name': '217' }
+          { 'id': 34, 'name': 'BN01' },
+          { 'id': 34, 'name': 'BN08' },
+          { 'id': 81, 'name': '217' }
         ]
       }
     },
@@ -655,9 +655,9 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 33, 'name': 'BN01' },
-          { 'id': 33, 'name': 'BN08' },
-          { 'id': 82, 'name': '217' }
+          { 'id': 35, 'name': 'BN01' },
+          { 'id': 35, 'name': 'BN08' },
+          { 'id': 80, 'name': '217' }
         ]
       }
     },
@@ -669,14 +669,14 @@ export let stations = {
       },
       'properties': {
         'name': 'Chùa Phổ Âm',
-        'description': 'CCN Tân Chi -Mercury Industrial Park',
+        'description': 'CCN Tân Chi',
         'address': 'Quốc lộ 38',
         'ward': 'Tư Chi, Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 34, 'name': 'BN01' },
-          { 'id': 34, 'name': 'BN08' },
-          { 'id': 81, 'name': '217' }
+          { 'id': 36, 'name': 'BN01' },
+          { 'id': 36, 'name': 'BN08' },
+          { 'id': 79, 'name': '217' }
         ]
       }
     },
@@ -693,7 +693,7 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 35, 'name': 'BN01' }
+          { 'id': 37, 'name': 'BN01' }
         ]
       }
     },
@@ -710,7 +710,7 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 36, 'name': 'BN01' }
+          { 'id': 38, 'name': 'BN01' }
         ]
       }
     },
@@ -727,7 +727,7 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 37, 'name': 'BN01' }
+          { 'id': 39, 'name': 'BN01' }
         ]
       }
     },
@@ -743,8 +743,8 @@ export let stations = {
         'address': 'Đường Kinh Dương Vương',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 38, 'name': 'BN01' },
-          { 'id': 77, 'name': '217' }
+          { 'id': 40, 'name': 'BN01' },
+          { 'id': 75, 'name': '217' }
         ]
       }
     },
@@ -760,7 +760,7 @@ export let stations = {
         'address': 'Đường Vương Văn Trà',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 39, 'name': 'BN01', 'color': 'green' },
+          { 'id': 41, 'name': 'BN01', 'color': 'green' },
           { 'id': 37, 'name': 'BN27', 'color': 'green' }
         ]
       }
@@ -777,7 +777,7 @@ export let stations = {
         'address': 'Đường Vương Văn Trà',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 40, 'name': 'BN01', 'color': 'red' },
+          { 'id': 42, 'name': 'BN01', 'color': 'red' },
           { 'id': 38, 'name': 'BN27', 'color': 'red' }
         ]
       }
@@ -794,7 +794,7 @@ export let stations = {
         'address': '213 Âu Cơ',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 41, 'name': 'BN01' },
+          { 'id': 43, 'name': 'BN01' },
           { 'id': 39, 'name': 'BN27' },
           { 'id': 77, 'name': '204' }
         ]
@@ -812,7 +812,7 @@ export let stations = {
         'address': '474 Âu Cơ',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 42, 'name': 'BN01' },
+          { 'id': 44, 'name': 'BN01' },
           { 'id': 40, 'name': 'BN27' },
           { 'id': 76, 'name': '204' }
         ]
@@ -830,7 +830,7 @@ export let stations = {
         'address': '614 Âu Cơ',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 43, 'name': 'BN01' },
+          { 'id': 45, 'name': 'BN01' },
           { 'id': 41, 'name': 'BN27' },
           { 'id': 75, 'name': '204' }
         ]
@@ -848,7 +848,7 @@ export let stations = {
         'address': '1055-1057 Âu Cơ',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 44, 'name': 'BN01', 'color': 'red' },
+          { 'id': 46, 'name': 'BN01', 'color': 'red' },
           { 'id': 42, 'name': 'BN27', 'color': 'red' },
           { 'id': 74, 'name': '204', 'color': 'red' }
         ]
@@ -866,7 +866,7 @@ export let stations = {
         'address': 'Quốc lộ 17',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 45, 'name': 'BN01' },
+          { 'id': 47, 'name': 'BN01' },
           { 'id': 36, 'name': 'BN27' }
         ]
       }
@@ -884,7 +884,7 @@ export let stations = {
         'ward': 'An Bình',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 46, 'name': 'BN01' },
+          { 'id': 48, 'name': 'BN01' },
           { 'id': 35, 'name': 'BN27' }
         ]
       }
@@ -902,7 +902,7 @@ export let stations = {
         'ward': 'An Bình',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 47, 'name': 'BN01' },
+          { 'id': 49, 'name': 'BN01' },
           { 'id': 34, 'name': 'BN27' }
         ]
       }
@@ -920,7 +920,7 @@ export let stations = {
         'ward': 'Đại Bái',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 48, 'name': 'BN01' },
+          { 'id': 50, 'name': 'BN01' },
           { 'id': 33, 'name': 'BN27' }
         ]
       }
@@ -938,7 +938,7 @@ export let stations = {
         'ward': 'Đại Bái',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 49, 'name': 'BN01' }
+          { 'id': 51, 'name': 'BN01' }
         ]
       }
     },
@@ -955,7 +955,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 50, 'name': 'BN01', 'color': 'green' }
+          { 'id': 52, 'name': 'BN01', 'color': 'green' }
         ]
       }
     },
@@ -972,7 +972,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 51, 'name': 'BN01', 'color': 'red' }
+          { 'id': 53, 'name': 'BN01', 'color': 'red' }
         ]
       }
     },
@@ -989,7 +989,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 52, 'name': 'BN01', 'color': 'green' }
+          { 'id': 54, 'name': 'BN01', 'color': 'green' }
         ]
       }
     },
@@ -1006,7 +1006,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 53, 'name': 'BN01', 'color': 'red' }
+          { 'id': 55, 'name': 'BN01', 'color': 'red' }
         ]
       }
     },
@@ -1023,7 +1023,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 54, 'name': 'BN01', 'color': 'green' }
+          { 'id': 56, 'name': 'BN01', 'color': 'green' }
         ]
       }
     },
@@ -1040,7 +1040,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 55, 'name': 'BN01', 'color': 'red' }
+          { 'id': 57, 'name': 'BN01', 'color': 'red' }
         ]
       }
     },
@@ -1057,7 +1057,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 56, 'name': 'BN01', 'color': 'green' }
+          { 'id': 58, 'name': 'BN01', 'color': 'green' }
         ]
       }
     },
@@ -1074,7 +1074,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 57, 'name': 'BN01', 'color': 'red' }
+          { 'id': 59, 'name': 'BN01', 'color': 'red' }
         ]
       }
     },
@@ -1091,7 +1091,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 58, 'name': 'BN01' }
+          { 'id': 60, 'name': 'BN01' }
         ]
       }
     },
@@ -1108,7 +1108,7 @@ export let stations = {
         'ward': 'Quỳnh Phú',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 59, 'name': 'BN01' }
+          { 'id': 61, 'name': 'BN01' }
         ]
       }
     },
@@ -1125,7 +1125,7 @@ export let stations = {
         'ward': 'Quỳnh Phú',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 60, 'name': 'BN01' }
+          { 'id': 62, 'name': 'BN01' }
         ]
       }
     },
@@ -1142,7 +1142,7 @@ export let stations = {
         'ward': 'Tân Lãng',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 61, 'name': 'BN01', 'color': 'green' }
+          { 'id': 63, 'name': 'BN01', 'color': 'green' }
         ]
       }
     },
@@ -1159,7 +1159,7 @@ export let stations = {
         'ward': 'Tân Lãng',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 62, 'name': 'BN01', 'color': 'red' }
+          { 'id': 64, 'name': 'BN01', 'color': 'red' }
         ]
       }
     },
@@ -1176,7 +1176,7 @@ export let stations = {
         'ward': 'Thị trấn Thứa',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 63, 'name': 'BN01' }
+          { 'id': 65, 'name': 'BN01' }
         ]
       }
     },
@@ -1193,7 +1193,7 @@ export let stations = {
         'ward': 'Thị trấn Thứa',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 64, 'name': 'BN01' }
+          { 'id': 66, 'name': 'BN01' }
         ]
       }
     },
@@ -1211,7 +1211,7 @@ export let stations = {
         'ward': 'Thị trấn Thứa',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 65, 'name': 'BN01', 'start': true }
+          { 'id': 67, 'name': 'BN01', 'start': true }
         ]
       }
     },
@@ -1863,8 +1863,8 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 36, 'name': 'BN08', 'color': 'green' },
-          { 'id': 79, 'name': '217', 'color': 'red' }
+          { 'id': 38, 'name': 'BN08', 'color': 'green' },
+          { 'id': 77, 'name': '217', 'color': 'red' }
         ]
       }
     },
@@ -1881,8 +1881,8 @@ export let stations = {
         'ward': 'Tân Chi',
         'district': 'Tiên Du',
         'routers': [
-          { 'id': 37, 'name': 'BN08', 'color': 'red' },
-          { 'id': 78, 'name': '217', 'color': 'green' }
+          { 'id': 39, 'name': 'BN08', 'color': 'red' },
+          { 'id': 76, 'name': '217', 'color': 'green' }
         ]
       },
       'color': 'red',
@@ -1901,7 +1901,7 @@ export let stations = {
         'ward': 'Hoài Thượng',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 38, 'name': 'BN08' }
+          { 'id': 40, 'name': 'BN08' }
         ]
       }
     },
@@ -1918,7 +1918,7 @@ export let stations = {
         'ward': 'Hoài Thượng',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 39, 'name': 'BN08' }
+          { 'id': 41, 'name': 'BN08' }
         ]
       }
     },
@@ -1935,7 +1935,7 @@ export let stations = {
         'ward': 'Hoài Thượng',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 40, 'name': 'BN08' }
+          { 'id': 42, 'name': 'BN08' }
         ]
       }
     },
@@ -1952,7 +1952,7 @@ export let stations = {
         'ward': 'Mão Điền',
         'district': 'Thị xã Thuận Thành',
         'routers': [
-          { 'id': 41, 'name': 'BN08' }
+          { 'id': 43, 'name': 'BN08' }
         ]
       }
     },
@@ -1969,7 +1969,7 @@ export let stations = {
         'ward': 'Lãng Ngâm',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 42, 'name': 'BN08' }
+          { 'id': 44, 'name': 'BN08' }
         ]
       }
     },
@@ -1986,7 +1986,7 @@ export let stations = {
         'ward': 'Lãng Ngâm',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 43, 'name': 'BN08' }
+          { 'id': 45, 'name': 'BN08' }
         ]
       }
     },
@@ -2003,7 +2003,7 @@ export let stations = {
         'ward': 'Lãng Ngâm',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 44, 'name': 'BN08' }
+          { 'id': 46, 'name': 'BN08' }
         ]
       }
     },
@@ -2020,7 +2020,7 @@ export let stations = {
         'ward': 'Lãng Ngâm',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 45, 'name': 'BN08' }
+          { 'id': 47, 'name': 'BN08' }
         ]
       }
     },
@@ -2037,7 +2037,7 @@ export let stations = {
         'ward': 'Lãng Ngâm',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 46, 'name': 'BN08' }
+          { 'id': 48, 'name': 'BN08' }
         ]
       }
     },
@@ -2054,7 +2054,7 @@ export let stations = {
         'ward': 'Đông Cứu',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 47, 'name': 'BN08' }
+          { 'id': 49, 'name': 'BN08' }
         ]
       }
     },
@@ -2071,7 +2071,7 @@ export let stations = {
         'ward': 'Đông Cứu',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 48, 'name': 'BN08' }
+          { 'id': 50, 'name': 'BN08' }
         ]
       }
     },
@@ -2088,7 +2088,7 @@ export let stations = {
         'ward': 'Đông Cứu',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 49, 'name': 'BN08' }
+          { 'id': 51, 'name': 'BN08' }
         ]
       }
     },
@@ -2105,7 +2105,7 @@ export let stations = {
         'ward': 'Đông Cứu',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 50, 'name': 'BN08' }
+          { 'id': 52, 'name': 'BN08' }
         ]
       }
     },
@@ -2122,7 +2122,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 51, 'name': 'BN08', 'color': 'green' }
+          { 'id': 53, 'name': 'BN08', 'color': 'green' }
         ]
       }
     },
@@ -2139,7 +2139,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 52, 'name': 'BN08', 'color': 'red' }
+          { 'id': 54, 'name': 'BN08', 'color': 'red' }
         ]
       }
     },
@@ -2156,7 +2156,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 53, 'name': 'BN08' }
+          { 'id': 55, 'name': 'BN08' }
         ]
       }
     },
@@ -2173,7 +2173,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 54, 'name': 'BN08' }
+          { 'id': 56, 'name': 'BN08' }
         ]
       }
     },
@@ -2190,7 +2190,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 55, 'name': 'BN08', 'color': 'green' }
+          { 'id': 57, 'name': 'BN08', 'color': 'green' }
         ]
       }
     },
@@ -2207,7 +2207,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 56, 'name': 'BN08', 'color': 'red' }
+          { 'id': 58, 'name': 'BN08', 'color': 'red' }
         ]
       }
     },
@@ -2224,7 +2224,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 57, 'name': 'BN08', 'color': 'green' }
+          { 'id': 59, 'name': 'BN08', 'color': 'green' }
         ]
       }
     },
@@ -2241,7 +2241,7 @@ export let stations = {
         'ward': 'Thị trấn Gia Bình',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 58, 'name': 'BN08', 'color': 'red' }
+          { 'id': 60, 'name': 'BN08', 'color': 'red' }
         ]
       }
     },
@@ -2258,7 +2258,7 @@ export let stations = {
         'ward': 'Xuân Lai',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 59, 'name': 'BN08' }
+          { 'id': 61, 'name': 'BN08' }
         ]
       }
     },
@@ -2275,7 +2275,7 @@ export let stations = {
         'ward': 'Xuân Lai',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 60, 'name': 'BN08' }
+          { 'id': 62, 'name': 'BN08' }
         ]
       }
     },
@@ -2292,7 +2292,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 61, 'name': 'BN08' }
+          { 'id': 63, 'name': 'BN08' }
         ]
       }
     },
@@ -2309,7 +2309,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 62, 'name': 'BN08' }
+          { 'id': 64, 'name': 'BN08' }
         ]
       }
     },
@@ -2326,7 +2326,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 63, 'name': 'BN08' },
+          { 'id': 65, 'name': 'BN08' },
           { 'id': 40, 'name': 'BN86A' }
         ]
       }
@@ -2344,7 +2344,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 64, 'name': 'BN08' },
+          { 'id': 66, 'name': 'BN08' },
           { 'id': 39, 'name': 'BN86A' },
           { 'id': 39, 'name': 'BN86B' }
         ]
@@ -2363,7 +2363,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 65, 'name': 'BN08' },
+          { 'id': 67, 'name': 'BN08' },
           { 'id': 38, 'name': 'BN86A' },
           { 'id': 38, 'name': 'BN86B' }
         ]
@@ -2382,7 +2382,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 66, 'name': 'BN08' },
+          { 'id': 68, 'name': 'BN08' },
           { 'id': 37, 'name': 'BN86A' },
           { 'id': 37, 'name': 'BN86B' }
         ]
@@ -2401,7 +2401,7 @@ export let stations = {
         'ward': 'Thị trấn Nhân Thắng',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 67, 'name': 'BN08' },
+          { 'id': 69, 'name': 'BN08' },
           { 'id': 36, 'name': 'BN86A' },
           { 'id': 36, 'name': 'BN86B' }
         ]
@@ -2420,7 +2420,7 @@ export let stations = {
         'ward': 'Bình Dương',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 68, 'name': 'BN08' },
+          { 'id': 70, 'name': 'BN08' },
           { 'id': 35, 'name': 'BN86A' },
           { 'id': 35, 'name': 'BN86B' }
         ]
@@ -2439,7 +2439,7 @@ export let stations = {
         'ward': 'Bình Dương',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 69, 'name': 'BN08' },
+          { 'id': 71, 'name': 'BN08' },
           { 'id': 34, 'name': 'BN86A' },
           { 'id': 34, 'name': 'BN86B' }
         ]
@@ -2458,7 +2458,7 @@ export let stations = {
         'ward': 'Bình Dương',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 70, 'name': 'BN08' },
+          { 'id': 72, 'name': 'BN08' },
           { 'id': 33, 'name': 'BN86A' },
           { 'id': 33, 'name': 'BN86B' }
         ]
@@ -2477,7 +2477,7 @@ export let stations = {
         'ward': 'Vạn Ninh',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 71, 'name': 'BN08' }
+          { 'id': 73, 'name': 'BN08' }
         ]
       }
     },
@@ -2494,7 +2494,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 72, 'name': 'BN08' }
+          { 'id': 74, 'name': 'BN08' }
         ]
       }
     },
@@ -2511,7 +2511,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 73, 'name': 'BN08' }
+          { 'id': 75, 'name': 'BN08' }
         ]
       }
     },
@@ -2528,7 +2528,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 74, 'name': 'BN08' }
+          { 'id': 76, 'name': 'BN08' }
         ]
       }
     },
@@ -2545,7 +2545,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 75, 'name': 'BN08' }
+          { 'id': 77, 'name': 'BN08' }
         ]
       }
     },
@@ -2562,7 +2562,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 76, 'name': 'BN08' }
+          { 'id': 78, 'name': 'BN08' }
         ]
       }
     },
@@ -2579,7 +2579,7 @@ export let stations = {
         'ward': 'Cao Đức',
         'district': 'Gia Bình',
         'routers': [
-          { 'id': 77, 'name': 'BN08' }
+          { 'id': 79, 'name': 'BN08' }
         ]
       }
     },
@@ -2596,7 +2596,7 @@ export let stations = {
         'ward': 'An Thịnh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 78, 'name': 'BN08' }
+          { 'id': 80, 'name': 'BN08' }
         ]
       }
     },
@@ -2613,7 +2613,7 @@ export let stations = {
         'ward': 'An Thịnh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 79, 'name': 'BN08' }
+          { 'id': 81, 'name': 'BN08' }
         ]
       }
     },
@@ -2630,7 +2630,7 @@ export let stations = {
         'ward': 'Trung Kênh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 80, 'name': 'BN08' }
+          { 'id': 82, 'name': 'BN08' }
         ]
       }
     },
@@ -2647,7 +2647,7 @@ export let stations = {
         'ward': 'Trung Kênh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 81, 'name': 'BN08' }
+          { 'id': 83, 'name': 'BN08' }
         ]
       }
     },
@@ -2664,7 +2664,7 @@ export let stations = {
         'ward': 'Trung Kênh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 82, 'name': 'BN08' }
+          { 'id': 84, 'name': 'BN08' }
         ]
       }
     },
@@ -2682,7 +2682,7 @@ export let stations = {
         'ward': 'Trung Kênh',
         'district': 'Lương Tài',
         'routers': [
-          { 'id': 83, 'name': 'BN08', 'start': true },
+          { 'id': 85, 'name': 'BN08', 'start': true },
           { 'id': 1, 'name': 'BN27', 'start': true }
         ]
       }
@@ -4203,6 +4203,22 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
+        'coordinates': [106.071634,21.176638]
+      },
+      'properties': {
+        'name': 'Gần ngã Sáu',
+        'description': '',
+        'address': 'Đường Nguyễn Đăng Đạo',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 44, 'name': 'BN68' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
         'coordinates': [106.078034,21.191431]
       },
       'properties': {
@@ -4211,7 +4227,7 @@ export let stations = {
         'address': '62 Ngô Gia Tự',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 50, 'name': 'BN68' },
+          { 'id': 54, 'name': 'BN68' },
           { 'name': '203' }
         ]
       }
@@ -4228,7 +4244,7 @@ export let stations = {
         'address': '303-305 Hoàng Quốc Việt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 51, 'name': 'BN68' }
+          { 'id': 55, 'name': 'BN68' }
         ]
       }
     },
@@ -4244,7 +4260,7 @@ export let stations = {
         'address': '568-570 Hoàng Quốc Việt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 52, 'name': 'BN68' }
+          { 'id': 56, 'name': 'BN68' }
         ]
       }
     },
@@ -4260,7 +4276,7 @@ export let stations = {
         'address': '132-134 Như Nguyệt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 53, 'name': 'BN68' }
+          { 'id': 57, 'name': 'BN68' }
         ]
       }
     },
@@ -4276,7 +4292,7 @@ export let stations = {
         'address': '250 Như Nguyệt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 54, 'name': 'BN68' }
+          { 'id': 58, 'name': 'BN68' }
         ]
       }
     },
@@ -4292,7 +4308,7 @@ export let stations = {
         'address': 'Đường Như Nguyệt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 55, 'name': 'BN68' }
+          { 'id': 59, 'name': 'BN68' }
         ]
       }
     },
@@ -4308,7 +4324,7 @@ export let stations = {
         'address': 'Đường Như Nguyệt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 56, 'name': 'BN68' }
+          { 'id': 60, 'name': 'BN68' }
         ]
       }
     },
@@ -4324,7 +4340,7 @@ export let stations = {
         'address': 'Đường Như Nguyệt',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 57, 'name': 'BN68' }
+          { 'id': 61, 'name': 'BN68' }
         ]
       }
     },
@@ -4340,7 +4356,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 58, 'name': 'BN68' }
+          { 'id': 62, 'name': 'BN68' }
         ]
       }
     },
@@ -4356,7 +4372,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 59, 'name': 'BN68' }
+          { 'id': 63, 'name': 'BN68' }
         ]
       }
     },
@@ -4372,7 +4388,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 60, 'name': 'BN68' }
+          { 'id': 64, 'name': 'BN68' }
         ]
       }
     },
@@ -4388,7 +4404,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 61, 'name': 'BN68' }
+          { 'id': 65, 'name': 'BN68' }
         ]
       }
     },
@@ -4404,7 +4420,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 62, 'name': 'BN68' }
+          { 'id': 66, 'name': 'BN68' }
         ]
       }
     },
@@ -4420,7 +4436,7 @@ export let stations = {
         'address': '618 Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 63, 'name': 'BN68' }
+          { 'id': 67, 'name': 'BN68' }
         ]
       }
     },
@@ -4436,7 +4452,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 64, 'name': 'BN68' }
+          { 'id': 68, 'name': 'BN68' }
         ]
       }
     },
@@ -4452,7 +4468,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 65, 'name': 'BN68' }
+          { 'id': 69, 'name': 'BN68' }
         ]
       }
     },
@@ -4468,7 +4484,7 @@ export let stations = {
         'address': 'Đường Quang Trung',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 66, 'name': 'BN68' }
+          { 'id': 70, 'name': 'BN68' }
         ]
       }
     },
@@ -4486,7 +4502,7 @@ export let stations = {
         'ward': 'Chi Lăng',
         'district': 'Thị xã Quế Võ',
         'routers': [
-          { 'id': 67, 'name': 'BN68', 'start': true }
+          { 'id': 71, 'name': 'BN68', 'start': true }
         ]
       }
     },
