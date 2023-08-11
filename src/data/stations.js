@@ -340,14 +340,53 @@ export let stations = {
         'address': '294 Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 18, 'name': 'BN01' },
-          { 'id': 18, 'name': 'BN08' },
-          { 'id': 39, 'name': 'BN68' },
-          { 'name': '212' },
-          { 'id': 97, 'name': '217' }
+          { 'id': 18, 'name': 'BN01', 'color': 'green' },
+          { 'id': 18, 'name': 'BN08', 'color': 'green' },
+          { 'id': 40, 'name': 'BN68', 'color': 'green' },
+          { 'name': '212', 'color': 'red' },
+          { 'id': 97, 'name': '217', 'color': 'red' }
         ]
       }
     },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.062291,21.171793]
+      },
+      'properties': {
+        'name': 'Cột đồng hồ Thành phố Bắc Ninh',
+        'description': '',
+        'address': '295 Nguyễn Trãi',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 19, 'name': 'BN01', 'color': 'red' },
+          { 'id': 19, 'name': 'BN08', 'color': 'red' },
+          { 'id': 41, 'name': 'BN68', 'color': 'red' },
+          { 'name': '212', 'color': 'red' },
+          { 'id': 96, 'name': '217', 'color': 'red' }
+        ]
+      }
+    },
+    // {
+    //   'type': 'Feature',
+    //   'geometry': {
+    //     'type': 'Point',
+    //     'coordinates': [106.065021, 21.166126]
+    //   },
+    //   'properties': {
+    //     'name': 'Bệnh viện Đa Khoa Bắc Ninh',
+    //     'description': '',
+    //     'address': '502 Nguyễn Trãi',
+    //     'district': 'Thành phố Bắc Ninh',
+    //     'routers': [
+    //       { 'id': 20, 'name': 'BN01', 'color': 'red' },
+    //       { 'id': 20, 'name': 'BN08', 'color': 'red' },
+    //       { 'name': '212', 'color': 'green' },
+    //       { 'id': 95, 'name': '217', 'color': 'green' }
+    //     ]
+    //   }
+    // },
     {
       'type': 'Feature',
       'geometry': {
@@ -357,13 +396,13 @@ export let stations = {
       'properties': {
         'name': 'Bệnh viện Đa Khoa Bắc Ninh',
         'description': '',
-        'address': '502 Nguyễn Trãi',
+        'address': 'Đường Nguyễn Trãi',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
-          { 'id': 19, 'name': 'BN01' },
-          { 'id': 19, 'name': 'BN08' },
-          { 'name': '212' },
-          { 'id': 96, 'name': '217' }
+          { 'id': 21, 'name': 'BN01', 'color': 'red' },
+          { 'id': 21, 'name': 'BN08', 'color': 'red' },
+          { 'name': '212', 'color': 'green' },
+          { 'id': 94, 'name': '217', 'color': 'green' }
         ]
       }
     },
@@ -4061,6 +4100,102 @@ export let stations = {
           { 'id': 35, 'name': 'BN68', 'color': 'red' },
           { 'id': 63, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.052934,21.166314]
+      },
+      'properties': {
+        'name': 'Chung cư Cát Tường Thống Nhất',
+        'description': '',
+        'address': '9 Lê Thái Tổ',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 36, 'name': 'BN68', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.052849,21.166460]
+      },
+      'properties': {
+        'name': 'Nhà hàng San San',
+        'description': '',
+        'address': 'Đường Lê Thái Tổ',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 37, 'name': 'BN68', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.059263,21.170431]
+      },
+      'properties': {
+        'name': 'Showroom KIA Bắc Ninh',
+        'description': '',
+        'address': 'Đường Lê Thái Tổ',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 38, 'name': 'BN68', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.058724,21.170286]
+      },
+      'properties': {
+        'name': 'Hợp Phú Complex',
+        'description': '',
+        'address': 'Đường Lê Thái Tổ',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 39, 'name': 'BN68', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.066938,21.168064]
+      },
+      'properties': {
+        'name': 'Bệnh viện Đa Khoa Bắc Ninh',
+        'description': 'Cổng sau',
+        'address': 'Đường Bình Than',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 42, 'name': 'BN68', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.067620,21.168310]
+      },
+      'properties': {
+        'name': 'Đối diện Nhà tang lễ Bắc Ninh',
+        'description': '',
+        'address': 'Đường Bình Than',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 43, 'name': 'BN68', 'color': 'red' }
         ]
       }
     },

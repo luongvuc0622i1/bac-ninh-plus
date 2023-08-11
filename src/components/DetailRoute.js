@@ -33,7 +33,7 @@ export default function DetailRoute(props) {
       <div className='group group-detail' style={{ display: chooseId === 3 ? "block" : "none" }} >
         <Timeline routeId={props.routeId} />
       </div>
-      <div className='group' style={{ display: props.setup ? '' : 'none' , height: '300px' }}>
+      <div className='group' style={{ display: props.setup ? '' : 'none' , height: '300px', color: 'black' }}>
         <Map routeId={props.routeId} stationId={props.stationId} />
       </div>
     </>
