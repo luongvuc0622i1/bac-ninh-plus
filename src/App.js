@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';
 import DetailRoute from './components/DetailRoute';
-// import DetailStation from './components/DetailStation';
 
 export default function App() {
   const [width, height] = useWindowDimension();
@@ -13,14 +12,6 @@ export default function App() {
   const [stationId, setStationId] = useState();
   let classMenu = 'menu menu-on-computer';
   let classMap = 'map map-on-computer';
-
-  // if (width > 500) {
-  //   classMenu = 'menu menu-on-computer';
-  //   classMap = 'map map-on-computer';
-  // } else {
-  //   classMenu = 'menu menu-on-phone-when-normal';
-  //   classMap = 'map map-on-phone-when-normal';
-  // }
 
   if (showMap) {
     classMenu = 'menu menu-on-phone-when-show-map';
@@ -44,9 +35,6 @@ export default function App() {
       <div className='header' >
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
-      {/* <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
-        <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
-      </div> */}
       {width > 500 ? ( //for website
         <>
           <div className={classMenu} style={{ display: routeId ? 'none' : '' }}>
