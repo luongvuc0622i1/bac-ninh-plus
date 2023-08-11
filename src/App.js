@@ -8,19 +8,19 @@ import DetailRoute from './components/DetailRoute';
 
 export default function App() {
   const [width, height] = useWindowDimension();
-  const [showMap, setShowMap] = useState(false);
+  const [showMap, setShowMap] = useState(true);
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
-  let classMenu;
-  let classMap;
+  let classMenu = 'menu menu-on-computer';
+  let classMap = 'map map-on-computer';
 
-  if (width > 500) {
-    classMenu = 'menu menu-on-computer';
-    classMap = 'map map-on-computer';
-  } else {
-    classMenu = 'menu menu-on-phone-when-normal';
-    classMap = 'map map-on-phone-when-normal';
-  }
+  // if (width > 500) {
+  //   classMenu = 'menu menu-on-computer';
+  //   classMap = 'map map-on-computer';
+  // } else {
+  //   classMenu = 'menu menu-on-phone-when-normal';
+  //   classMap = 'map map-on-phone-when-normal';
+  // }
 
   if (showMap) {
     classMenu = 'menu menu-on-phone-when-show-map';
@@ -47,21 +47,34 @@ export default function App() {
       {/* <div className={classMenu} style={{ display: stationId ? '' : 'none' }} >
         <DetailStation stationId={stationId} widthDimension={width} parentCallbackBack={() => setStationId()} parentCallbackShowMap={() => handleShowMap(true)} />
       </div> */}
-      <Map routeId={routeId} stationId={stationId} />
-      <div className={classMenu} style={{ display: routeId ? 'none' : '', position: 'absolute', top: '55px' }}>
-        <DefaultMenu widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-      </div>
-      <div className={classMenu} style={{ display: routeId ? '' : 'none', position: 'absolute', top: '55px' }} >
-        <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} widthDimension={width} parentCallbackShowMap={() => handleShowMap(true)} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-      </div>
-      <div className={classMap} style={{ position: 'absolute', top: '55px', left: showMap ? '' : '380px' }}>
-        <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
-          <i className='fa fa-chevron-left' />
-        </div>
-        <div className='button-show-menu' style={{ display: showMap ? '' : 'none' }} onClick={() => handleShowMap(false)} >
-          <i className='fa fa-chevron-right' />
-        </div>
-      </div>
+      {width > 500 ? ( //for website
+        <>
+          <div className={classMenu} style={{ display: routeId ? 'none' : '' }}>
+            <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+          </div>
+          <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
+            <DetailRoute setup={false} routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+          </div>
+          <div className={classMap}>
+            <Map routeId={routeId} stationId={stationId} />
+            <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
+              <i className='fa fa-chevron-left' />
+            </div>
+            <div className='button-show-menu' style={{ display: showMap ? '' : 'none', left: showMap ? '' : '380px' }} onClick={() => handleShowMap(false)} >
+              <i className='fa fa-chevron-right' />
+            </div>
+          </div>
+        </>
+      ) : ( //for phone
+        <>
+          <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? 'none' : '' }}>
+            <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+          </div>
+          <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? '' : 'none' }} >
+            <DetailRoute setup={true} routeId={routeId} stationId={stationId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+          </div>
+        </>
+      )}
     </div>
   );
 }

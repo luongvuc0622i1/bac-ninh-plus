@@ -70,7 +70,7 @@ export default class Map extends React.Component {
 
   render() {
     return (
-      <div ref={el => this.mapContainer = el} style={{ width: '100vw', height: 'calc(100vh - 55px)' }} />
+      <div ref={el => this.mapContainer = el} style={{ width: 'inherit', height: 'inherit' }} />
     );
   }
 }
