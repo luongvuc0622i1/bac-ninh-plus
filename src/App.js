@@ -31,8 +31,8 @@ export default function App() {
   }
 
   return (
-    <div className='container' >
-      <div className='header' >
+    <div className='container'>
+      <div className='header'>
         <h2>Bắc Ninh Plus: {width} x {height}</h2>
       </div>
       {width > 500 ? ( //for website
@@ -41,7 +41,7 @@ export default function App() {
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMenu} style={{ display: routeId ? '' : 'none' }} >
-            <DetailRoute setup={false} routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMap}>
             <Map routeId={routeId} stationId={stationId} />
@@ -59,7 +59,10 @@ export default function App() {
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? '' : 'none' }} >
-            <DetailRoute setup={true} routeId={routeId} stationId={stationId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <div className='group' style={{ height: '300px', color: 'black' }}>
+              <Map routeId={routeId} stationId={stationId} />
+            </div>
           </div>
         </>
       )}

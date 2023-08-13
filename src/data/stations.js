@@ -2174,7 +2174,7 @@ export let stations = {
       'properties': {
         'name': 'Nghĩa trang Liệt sỹ Thị trấn Chờ',
         'description': '',
-        'address': 'Ngã tư Thị trấn Chờ',
+        'address': 'Ngã tư Chờ',
         'district': 'Yên Phong',
         'routers': [
           { 'id': 23, 'name': 'BN03', 'color': 'green' }
@@ -2321,7 +2321,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.917603,21.199756]
+        'coordinates': [105.917603, 21.199756]
       },
       'properties': {
         'name': 'UBND xã Hòa Tiến',
@@ -2339,7 +2339,7 @@ export let stations = {
       'geometry': {
         'pointId': 4,
         'type': 'Point In Province',
-        'coordinates': [105.911268,21.200376]
+        'coordinates': [105.911268, 21.200376]
       },
       'properties': {
         'name': 'Yên Phong',
@@ -4093,7 +4093,7 @@ export let stations = {
           { 'id': 36, 'name': '10A', 'color': 'green' },
           { 'id': 36, 'name': '54', 'color': 'green' },
           { 'name': '203', 'color': 'green' },
-          { 'name': '210', 'color': 'green' }
+          { 'id': 72, 'name': '210', 'color': 'red' }
         ]
       }
     },
@@ -4113,7 +4113,7 @@ export let stations = {
           { 'id': 37, 'name': '10A', 'color': 'red' },
           { 'id': 37, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' },
-          { 'name': '210', 'color': 'red' }
+          { 'id': 73, 'name': '210', 'color': 'green' }
         ]
       }
     },
@@ -4133,7 +4133,7 @@ export let stations = {
           { 'id': 38, 'name': '10A', 'color': 'green' },
           { 'id': 38, 'name': '54', 'color': 'green' },
           { 'name': '203', 'color': 'green' },
-          { 'name': '210', 'color': 'green' }
+          { 'id': 70, 'name': '210', 'color': 'red' }
         ]
       }
     },
@@ -4153,7 +4153,7 @@ export let stations = {
           { 'id': 39, 'name': '10A', 'color': 'red' },
           { 'id': 39, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' },
-          { 'name': '210', 'color': 'red' }
+          { 'id': 71, 'name': '210', 'color': 'green' }
         ]
       }
     },
@@ -4192,7 +4192,7 @@ export let stations = {
           { 'id': 41, 'name': '10A', 'color': 'red' },
           { 'id': 41, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' },
-          { 'name': '210', 'color': 'red' }
+          { 'id': 69, 'name': '210', 'color': 'green' }
         ]
       }
     },
@@ -5495,7 +5495,7 @@ export let stations = {
           { 'name': '10B' },
           { 'id': 26, 'name': '54' },
           { 'name': '203' },
-          { 'name': '210' }
+          { 'id': 83, 'name': '210' }
         ]
       }
     },
@@ -5515,7 +5515,7 @@ export let stations = {
           { 'name': '10B' },
           { 'id': 27, 'name': '54' },
           { 'name': '203' },
-          { 'name': '210' }
+          { 'id': 82, 'name': '210' }
         ]
       }
     },
@@ -5535,7 +5535,7 @@ export let stations = {
           { 'name': '10B' },
           { 'id': 28, 'name': '54' },
           { 'name': '203' },
-          { 'name': '210' }
+          { 'id': 81, 'name': '210' }
         ]
       }
     },
@@ -5555,7 +5555,7 @@ export let stations = {
           { 'name': '10B' },
           { 'id': 29, 'name': '54' },
           { 'name': '203' },
-          { 'name': '210' }
+          { 'id': 80, 'name': '210' }
         ]
       }
     },
@@ -5574,7 +5574,7 @@ export let stations = {
           { 'id': 30, 'name': '10A' },
           { 'id': 30, 'name': '54' },
           { 'name': '203' },
-          { 'name': '210' }
+          { 'id': 79, 'name': '210' }
         ]
       }
     },
@@ -5593,7 +5593,7 @@ export let stations = {
           { 'id': 31, 'name': '10A', 'color': 'green' },
           { 'id': 31, 'name': '54', 'color': 'green' },
           { 'name': '203', 'color': 'green' },
-          { 'name': '210', 'color': 'green' }
+          { 'id': 77, 'name': '210', 'color': 'red' }
         ]
       }
     },
@@ -5612,7 +5612,7 @@ export let stations = {
           { 'id': 32, 'name': '10A', 'color': 'red' },
           { 'id': 32, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' },
-          { 'name': '210', 'color': 'red' }
+          { 'id': 78, 'name': '210', 'color': 'green' }
         ]
       }
     },
@@ -5631,7 +5631,7 @@ export let stations = {
           { 'id': 33, 'name': '10A', 'color': 'green' },
           { 'id': 33, 'name': '54', 'color': 'green' },
           { 'name': '203', 'color': 'green' },
-          { 'name': '210', 'color': 'green' }
+          { 'id': 76, 'name': '210', 'color': 'red' }
         ]
       }
     },
@@ -5650,7 +5650,7 @@ export let stations = {
           { 'id': 34, 'name': '10A', 'color': 'green' },
           { 'id': 34, 'name': '54', 'color': 'green' },
           { 'name': '203', 'color': 'green' },
-          { 'name': '210', 'color': 'green' }
+          { 'id': 74, 'name': '210', 'color': 'red' }
         ]
       }
     },
@@ -5669,7 +5669,7 @@ export let stations = {
           { 'id': 35, 'name': '10A', 'color': 'red' },
           { 'id': 35, 'name': '54', 'color': 'red' },
           { 'name': '203', 'color': 'red' },
-          { 'name': '210', 'color': 'red' }
+          { 'id': 75, 'name': '210', 'color': 'green' }
         ]
       }
     },
@@ -5860,6 +5860,412 @@ export let stations = {
         'district': 'Bắc Giang',
         'routers': [
           { 'id': 1, 'name': '210', 'start': true }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.963164, 21.209046]
+      },
+      'properties': {
+        'name': 'Khu công nghiệp Yên Phong IIC',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Lâu, Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 44, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.960469, 21.205702]
+      },
+      'properties': {
+        'name': 'Cầu vượt Quốc lộ 18',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Lâu, Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 45, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.956165, 21.199889]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '8-10 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 46, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.956119, 21.199706]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '37-39 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 47, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.955630, 21.197787]
+      },
+      'properties': {
+        'name': 'Trường THPT Yên Phong số 1',
+        'description': '',
+        'address': '66 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 48, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.955483, 21.197139]
+      },
+      'properties': {
+        'name': 'Trường THCS Thị trấn Chờ',
+        'description': '',
+        'address': '135 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 49, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954868, 21.194662]
+      },
+      'properties': {
+        'name': 'Ngã tư Chờ',
+        'description': '',
+        'address': 'Đường Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 50, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954369, 21.192717]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '182-184 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 52, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954474, 21.193086]
+      },
+      'properties': {
+        'name': 'Trường Mầm non Thị trấn Chờ số 2',
+        'description': '',
+        'address': '255 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 53, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954820, 21.189514]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '262-264 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 54, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954738, 21.189770]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '557-559 Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 55, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.955197, 21.186292]
+      },
+      'properties': {
+        'name': 'Trường tiểu học Thị trấn Chờ',
+        'description': '',
+        'address': 'Đường Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 56, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.955565, 21.183485]
+      },
+      'properties': {
+        'name': 'Khu đô thị Nghiêm Xá',
+        'description': '',
+        'address': 'Đường Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 57, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.956060, 21.178543]
+      },
+      'properties': {
+        'name': 'Cầu Tây Nghiêm Xá',
+        'description': '',
+        'address': 'Đường Văn Tiến Dũng',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 58, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.956343, 21.175971]
+      },
+      'properties': {
+        'name': 'Cụm công nghiệp Đông Thọ',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Phú Đức, Đông Thọ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 59, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.956756, 21.171559]
+      },
+      'properties': {
+        'name': 'UBND xã Đông Thọ',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Phú Đức, Đông Thọ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 60, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.957338, 21.165393]
+      },
+      'properties': {
+        'name': 'Cầu Nét',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Thọ Khê, Đông Thọ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 61, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.957761, 21.159710]
+      },
+      'properties': {
+        'name': 'Khu phố Thọ Trai',
+        'description': '',
+        'address': 'Đường Ngô Gia Tự',
+        'ward': 'Phường Tam Sơn',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 62, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.957610, 21.152773]
+      },
+      'properties': {
+        'name': 'Trung tâm Đăng kiểm 9902S',
+        'description': 'Khu phố Dương Sơn',
+        'address': 'Đường Ngô Gia Tự',
+        'ward': 'Phường Tam Sơn',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 63, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.958026, 21.148862]
+      },
+      'properties': {
+        'name': 'Trường Cao Đẳng Công nghệ Bắc Hà',
+        'description': '',
+        'address': 'Đường Ngô Gia Tự',
+        'ward': 'Phường Tam Sơn',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 64, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.959668, 21.144358]
+      },
+      'properties': {
+        'name': 'Khu Phố Tự',
+        'description': '',
+        'address': 'Đường Ngô Gia Tự',
+        'ward': 'Phường Tam Sơn',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 65, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.963408, 21.132010]
+      },
+      'properties': {
+        'name': 'PETROLIMEX - CH 175',
+        'description': 'Cầu Tranh',
+        'address': 'Đường Ngô Gia Tự',
+        'ward': 'Phường Đồng Nguyên',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 66, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.964242, 21.128327]
+      },
+      'properties': {
+        'name': 'Khu Phố Cẩm Giang',
+        'description': '',
+        'address': 'Đường Ngô Gia Tự',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 67, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.965698, 21.123566]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '56-58 Ngô Gia Tự',
+        'district': 'Thành phố Từ Sơn',
+        'routers': [
+          { 'id': 68, 'name': '210' }
         ]
       }
     },

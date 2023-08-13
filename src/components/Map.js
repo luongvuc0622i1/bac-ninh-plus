@@ -24,6 +24,8 @@ import b54Go from '../data/bus-routes/54-go.json';
 import b54Back from '../data/bus-routes/54-back.json';
 import b204Go from '../data/bus-routes/204-go.json';
 import b204Back from '../data/bus-routes/204-back.json';
+import b210Go from '../data/bus-routes/210-go.json';
+import b210Back from '../data/bus-routes/210-back.json';
 import b217Go from '../data/bus-routes/217-go.json';
 import b217Back from '../data/bus-routes/217-back.json';
 import { stations } from '../data/stations';
@@ -98,6 +100,8 @@ function initLoadLine(map) {
   addSourceLayer(map, 'Init Route 54 Go', [b54Go], '#3e8e41');
   addSourceLayer(map, 'Init Route 204 Back', [b204Back], 'red');
   addSourceLayer(map, 'Init Route 204 Go', [b204Go], '#3e8e41');
+  addSourceLayer(map, 'Init Route 210 Back', [b210Back], 'red');
+  addSourceLayer(map, 'Init Route 210 Go', [b210Go], '#3e8e41');
   addSourceLayer(map, 'Init Route 217 Back', [b217Back], 'red');
   addSourceLayer(map, 'Init Route 217 Go', [b217Go], '#3e8e41');
   addSourceLayer(map, 'Bus Route Back', [], 'red');
@@ -325,6 +329,9 @@ function setDataSoureById(map, routeId) {
   } else if (routeId === "204") {
     setDataSoure(map, 'Bus Route Go', [b204Go], routeId);
     setDataSoure(map, 'Bus Route Back', [b204Back], routeId);
+  } else if (routeId === "210") {
+    setDataSoure(map, 'Bus Route Go', [b210Go], routeId);
+    setDataSoure(map, 'Bus Route Back', [b210Back], routeId);
   } else if (routeId === "217") {
     setDataSoure(map, 'Bus Route Go', [b217Go], routeId);
     setDataSoure(map, 'Bus Route Back', [b217Back], routeId);

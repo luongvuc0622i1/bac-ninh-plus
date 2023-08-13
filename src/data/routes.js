@@ -678,7 +678,7 @@ export let routes = {
         'geometry': {
           'id': '210',
           'name': 'Hiệp Hòa - Gia Lâm',
-          'status': false
+          'status': true
         },
         'properties': {
           'distance': '43,8 km',
