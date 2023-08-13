@@ -41,7 +41,7 @@ export let stations = {
         'routers': [
           { 'id': 2, 'name': 'BN01', 'color': 'green' },
           { 'id': 2, 'name': 'BN02', 'color': 'green' },
-          { 'id': 2, 'name': 'BN03', 'color': 'red' },
+          { 'id': 2, 'name': 'BN03', 'color': 'green' },
           { 'id': 2, 'name': 'BN08', 'color': 'green' },
           { 'id': 2, 'name': 'BN86A', 'color': 'green' },
           { 'id': 2, 'name': 'BN86B', 'color': 'green' },
@@ -352,7 +352,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.062291,21.171793]
+        'coordinates': [106.062291, 21.171793]
       },
       'properties': {
         'name': 'Cột đồng hồ Thành phố Bắc Ninh',
@@ -372,7 +372,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.064674,21.166925]
+        'coordinates': [106.064674, 21.166925]
       },
       'properties': {
         'name': 'Bệnh viện Đa Khoa Bắc Ninh',
@@ -1834,18 +1834,521 @@ export let stations = {
     {
       'type': 'Feature',
       'geometry': {
-        'pointId': 4,
-        'type': 'Point In Province',
-        'coordinates': [105.917504,21.199791]
+        'type': 'Point',
+        'coordinates': [106.062598, 21.185017]
       },
       'properties': {
-        'name': 'Yên Phong',
-        'description': 'Gần cầu Đò Lo',
+        'name': '',
+        'description': '',
+        'address': '186-188 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 3, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.062336, 21.185245]
+      },
+      'properties': {
+        'name': 'UBND Phường Vệ An',
+        'description': '',
+        'address': '117-119 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 4, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.058789, 21.186631]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '390-392 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 5, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.058704, 21.186607]
+      },
+      'properties': {
+        'name': 'Cổng Hậu',
+        'description': '',
+        'address': '191-193 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 6, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.054857, 21.190270]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '624-626 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 7, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.055160, 21.190058]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '453-455 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 8, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.048699, 21.194772]
+      },
+      'properties': {
+        'name': 'UBND Phường Vạn An',
+        'description': '',
+        'address': '898 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 9, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.049282, 21.194345]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '745-747 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 10, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.045220, 21.196150]
+      },
+      'properties': {
+        'name': 'Cống Đặng',
+        'description': '',
+        'address': '1022-1024 Thiên Đức',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 11, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.040469, 21.191696]
+      },
+      'properties': {
+        'name': 'Trường THPT Lý Nhân Tông',
+        'description': '',
+        'address': 'Km3+700 ĐT.286',
+        'district': 'Thành phố Bắc Ninh',
+        'routers': [
+          { 'id': 12, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.026460, 21.187700]
+      },
+      'properties': {
+        'name': 'Khu dãn cư Đông Xá',
+        'description': '',
+        'address': 'Km5+400 ĐT.286',
+        'ward': 'Đông Phong',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 13, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.020141, 21.188533]
+      },
+      'properties': {
+        'name': 'Đường vào Cao Đẳng Viglacera',
+        'description': '',
+        'address': 'Km6 ĐT.286',
+        'ward': 'Đông Phong',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 14, 'name': 'BN03' },
+          { 'name': '212', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.015948, 21.189096]
+      },
+      'properties': {
+        'name': 'KTX SEV Viglacera',
+        'description': '',
+        'address': 'Km6+500 ĐT.286',
+        'ward': 'Đông Phong',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 15, 'name': 'BN03' },
+          { 'name': '212', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.011184, 21.189623]
+      },
+      'properties': {
+        'name': 'Chợ Đông Yên',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Đông Phong',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 16, 'name': 'BN03' },
+          { 'name': '212', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [106.007026, 21.189510]
+      },
+      'properties': {
+        'name': 'Ngã ba Đông Yên',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Đông Phong',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 17, 'name': 'BN03' },
+          { 'name': '212', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.997139, 21.189346]
+      },
+      'properties': {
+        'name': 'Chùa Ngọc Lâm',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Long Châu',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 18, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.988759, 21.189777]
+      },
+      'properties': {
+        'name': 'Thôn Mẫn Xá',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Long Châu',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 19, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.976086, 21.190647]
+      },
+      'properties': {
+        'name': 'Thôn Đại Chu',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Long Châu',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 20, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.964306, 21.192630]
+      },
+      'properties': {
+        'name': 'Ngã ba Tiên Trà',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Trung Nghĩa',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 21, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.959610, 21.193464]
+      },
+      'properties': {
+        'name': 'Khu tái định cư Ngô Nội',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Trung Nghĩa',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 22, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.954535, 21.194399]
+      },
+      'properties': {
+        'name': 'Nghĩa trang Liệt sỹ Thị trấn Chờ',
+        'description': '',
+        'address': 'Ngã tư Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 23, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.955781, 21.194127]
+      },
+      'properties': {
+        'name': 'Viettel Yên Phong',
+        'description': 'Đối diện chợ Chờ',
+        'address': 'Phố Thanh Gừng',
+        'ward': 'Trung Nghĩa',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 24, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.951720, 21.195491]
+      },
+      'properties': {
+        'name': '',
+        'description': '',
+        'address': '174-176 An Dương Vương',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 25, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.952280, 21.195311]
+      },
+      'properties': {
+        'name': 'VNPT Yên Phong',
+        'description': '',
+        'address': 'Phố Chờ',
+        'ward': 'Thị trấn Chờ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 26, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.936114, 21.197569]
+      },
+      'properties': {
+        'name': 'Khu đô thị POLOCITY',
+        'description': 'KĐT Phía tây Thị trấn Chờ',
+        'address': 'Km14+900',
+        'ward': 'Yên Phụ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 27, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.929270, 21.198401]
+      },
+      'properties': {
+        'name': 'Thôn An Ninh',
+        'description': '',
+        'address': 'Km15+700 ĐT.286',
+        'ward': 'Yên Phụ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 28, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.928053, 21.198587]
+      },
+      'properties': {
+        'name': 'Thôn An Ninh',
+        'description': '',
+        'address': 'Km15+850 ĐT.286',
+        'ward': 'Yên Phụ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 29, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.921502, 21.199334]
+      },
+      'properties': {
+        'name': 'Ngõ Mương Kênh Bắc',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Thôn An Ninh, Yên Phụ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 30, 'name': 'BN03', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.923849, 21.199195]
+      },
+      'properties': {
+        'name': 'UBND xã Yên Phụ',
+        'description': '',
+        'address': 'Đường tỉnh 286',
+        'ward': 'Yên Phụ',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 31, 'name': 'BN03', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.917603,21.199756]
+      },
+      'properties': {
+        'name': 'UBND xã Hòa Tiến',
+        'description': '',
         'address': 'Đường tỉnh 286',
         'ward': 'Hòa Tiến',
         'district': 'Yên Phong',
         'routers': [
-          { 'id': 66, 'name': 'BN03', 'start': true }
+          { 'id': 32, 'name': 'BN03' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'pointId': 4,
+        'type': 'Point In Province',
+        'coordinates': [105.911268,21.200376]
+      },
+      'properties': {
+        'name': 'Yên Phong',
+        'description': 'Gần cầu Đò Lo',
+        'address': 'Km17+600 Đường tỉnh 286',
+        'ward': 'Hòa Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 33, 'name': 'BN03', 'start': true }
         ]
       }
     },
@@ -1960,7 +2463,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.134261,21.076401]
+        'coordinates': [106.134261, 21.076401]
       },
       'properties': {
         'name': 'Điếm văn hoá Ngăm Lương',
@@ -1977,7 +2480,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.141251,21.077232]
+        'coordinates': [106.141251, 21.077232]
       },
       'properties': {
         'name': 'UBND xã Lãng Ngâm',
@@ -1994,7 +2497,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.149923,21.076529]
+        'coordinates': [106.149923, 21.076529]
       },
       'properties': {
         'name': 'Dốc Lãng Ngâm',
@@ -2011,7 +2514,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.152732,21.075127]
+        'coordinates': [106.152732, 21.075127]
       },
       'properties': {
         'name': 'Đình An Quang',
@@ -2028,7 +2531,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.156426,21.074710]
+        'coordinates': [106.156426, 21.074710]
       },
       'properties': {
         'name': 'Chợ Núi',
@@ -2045,7 +2548,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.159157,21.072406]
+        'coordinates': [106.159157, 21.072406]
       },
       'properties': {
         'name': 'Bưu điện Phố Núi',
@@ -2062,7 +2565,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.159910,21.069926]
+        'coordinates': [106.159910, 21.069926]
       },
       'properties': {
         'name': 'Ngã 3 đường tránh Phố Núi',
@@ -2079,7 +2582,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.162400,21.066495]
+        'coordinates': [106.162400, 21.066495]
       },
       'properties': {
         'name': 'Thôn Yên Việt',
@@ -2096,7 +2599,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.165703,21.066135]
+        'coordinates': [106.165703, 21.066135]
       },
       'properties': {
         'name': 'Đường vào Đền thờ Lê Văn Thịnh',
@@ -2113,7 +2616,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.171884,21.060606]
+        'coordinates': [106.171884, 21.060606]
       },
       'properties': {
         'name': '',
@@ -2147,7 +2650,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.176247,21.056675]
+        'coordinates': [106.176247, 21.056675]
       },
       'properties': {
         'name': 'Cổng làng Hương Vinh',
@@ -2198,7 +2701,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.180450,21.053850]
+        'coordinates': [106.180450, 21.053850]
       },
       'properties': {
         'name': '',
@@ -2215,7 +2718,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.186345,21.054941]
+        'coordinates': [106.186345, 21.054941]
       },
       'properties': {
         'name': 'Nhà văn hóa thôn Đông Bình',
@@ -2232,7 +2735,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.185850,21.054830]
+        'coordinates': [106.185850, 21.054830]
       },
       'properties': {
         'name': '',
@@ -2468,7 +2971,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.264913,21.085796]
+        'coordinates': [106.264913, 21.085796]
       },
       'properties': {
         'name': 'Đường vào thôn Cao Thọ',
@@ -2485,7 +2988,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.275678,21.087120]
+        'coordinates': [106.275678, 21.087120]
       },
       'properties': {
         'name': 'Bưu điện văn hóa xã Cao Đức',
@@ -2502,7 +3005,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.282167,21.086989]
+        'coordinates': [106.282167, 21.086989]
       },
       'properties': {
         'name': 'Dốc Than',
@@ -2519,7 +3022,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.283911,21.083846]
+        'coordinates': [106.283911, 21.083846]
       },
       'properties': {
         'name': 'UBND xã Cao Đức',
@@ -2536,7 +3039,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.284963,21.077403]
+        'coordinates': [106.284963, 21.077403]
       },
       'properties': {
         'name': 'Điếm canh đê Kênh Phố',
@@ -2553,7 +3056,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.293038,21.072198]
+        'coordinates': [106.293038, 21.072198]
       },
       'properties': {
         'name': 'Dốc Mỹ Lộc',
@@ -2570,7 +3073,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.296750,21.070375]
+        'coordinates': [106.296750, 21.070375]
       },
       'properties': {
         'name': 'Điếm canh đê Mỹ Lộc',
@@ -2587,7 +3090,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.302793,21.065090]
+        'coordinates': [106.302793, 21.065090]
       },
       'properties': {
         'name': 'Điếm canh đê Cáp Thủy',
@@ -2604,7 +3107,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.302884,21.058555]
+        'coordinates': [106.302884, 21.058555]
       },
       'properties': {
         'name': 'Điếm canh đê Cáp Thượng',
@@ -2621,7 +3124,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.301676,21.053798]
+        'coordinates': [106.301676, 21.053798]
       },
       'properties': {
         'name': 'Nhà máy nước sạch',
@@ -2638,7 +3141,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.299043,21.049666]
+        'coordinates': [106.299043, 21.049666]
       },
       'properties': {
         'name': 'Điếm canh đê Cáp Hạ',
@@ -2655,7 +3158,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.295168,21.045818]
+        'coordinates': [106.295168, 21.045818]
       },
       'properties': {
         'name': 'Thôn Cáp Trại',
@@ -2673,7 +3176,7 @@ export let stations = {
       'geometry': {
         'pointId': 5,
         'type': 'Point In Province',
-        'coordinates': [106.290945,21.040881]
+        'coordinates': [106.290945, 21.040881]
       },
       'properties': {
         'name': 'Kênh Vàng',
@@ -2692,7 +3195,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.285534,21.042155]
+        'coordinates': [106.285534, 21.042155]
       },
       'properties': {
         'name': 'Cổng làng Tháp Dương',
@@ -2709,7 +3212,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.279360,21.043661]
+        'coordinates': [106.279360, 21.043661]
       },
       'properties': {
         'name': 'Thôn Cường Tráng',
@@ -2726,7 +3229,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.276786,21.044283]
+        'coordinates': [106.276786, 21.044283]
       },
       'properties': {
         'name': 'Cầu Đò',
@@ -2743,7 +3246,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.273702,21.045275]
+        'coordinates': [106.273702, 21.045275]
       },
       'properties': {
         'name': 'Siêu thị điện máy Hoàng Hiệu',
@@ -2760,7 +3263,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.264583,21.047595]
+        'coordinates': [106.264583, 21.047595]
       },
       'properties': {
         'name': 'Thôn Ngọc Thượng',
@@ -2777,7 +3280,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.254862,21.044207]
+        'coordinates': [106.254862, 21.044207]
       },
       'properties': {
         'name': 'Thôn Tỳ Điện',
@@ -2794,7 +3297,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.249689,21.042378]
+        'coordinates': [106.249689, 21.042378]
       },
       'properties': {
         'name': 'Cổng làng Tỳ Điện',
@@ -2811,7 +3314,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.244938,21.041010]
+        'coordinates': [106.244938, 21.041010]
       },
       'properties': {
         'name': 'Thôn Hương Chi',
@@ -2828,7 +3331,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.233526,21.038169]
+        'coordinates': [106.233526, 21.038169]
       },
       'properties': {
         'name': 'UBND xã Phú Hòa',
@@ -2845,7 +3348,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.229974,21.036194]
+        'coordinates': [106.229974, 21.036194]
       },
       'properties': {
         'name': 'Cầu Phương',
@@ -2879,7 +3382,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.222830,21.028604]
+        'coordinates': [106.222830, 21.028604]
       },
       'properties': {
         'name': 'Ngã ba Táo Đôi',
@@ -2896,7 +3399,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.219162,21.027678]
+        'coordinates': [106.219162, 21.027678]
       },
       'properties': {
         'name': 'Trường THCS Hàn Thuyên',
@@ -2913,7 +3416,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.215839,21.026749]
+        'coordinates': [106.215839, 21.026749]
       },
       'properties': {
         'name': '',
@@ -2930,7 +3433,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.215461,21.026624]
+        'coordinates': [106.215461, 21.026624]
       },
       'properties': {
         'name': '',
@@ -2964,7 +3467,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.211538,21.024830]
+        'coordinates': [106.211538, 21.024830]
       },
       'properties': {
         'name': '',
@@ -2998,7 +3501,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.208055,21.022910]
+        'coordinates': [106.208055, 21.022910]
       },
       'properties': {
         'name': '',
@@ -3032,7 +3535,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.203503,21.019379]
+        'coordinates': [106.203503, 21.019379]
       },
       'properties': {
         'name': '',
@@ -3049,7 +3552,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.201338,21.016231]
+        'coordinates': [106.201338, 21.016231]
       },
       'properties': {
         'name': 'Bờ hồ Thứa',
@@ -3066,7 +3569,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.200461,21.014298]
+        'coordinates': [106.200461, 21.014298]
       },
       'properties': {
         'name': '',
@@ -3100,7 +3603,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.196542,21.011850]
+        'coordinates': [106.196542, 21.011850]
       },
       'properties': {
         'name': 'KĐT Tây Nam Thị trấn Thứa',
@@ -3117,7 +3620,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.197181,21.011900]
+        'coordinates': [106.197181, 21.011900]
       },
       'properties': {
         'name': 'Thôn Kim Đào',
@@ -3134,7 +3637,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.193128,21.012996]
+        'coordinates': [106.193128, 21.012996]
       },
       'properties': {
         'name': 'Chi cục thuế huyện Lương Tài',
@@ -3151,7 +3654,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.192960,21.012838]
+        'coordinates': [106.192960, 21.012838]
       },
       'properties': {
         'name': 'Vòng xuyến Kim Đào',
@@ -3168,7 +3671,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.191617,21.020234]
+        'coordinates': [106.191617, 21.020234]
       },
       'properties': {
         'name': 'Lối đi bến xe Lương Tài',
@@ -3185,7 +3688,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.191398,21.020159]
+        'coordinates': [106.191398, 21.020159]
       },
       'properties': {
         'name': 'Lối đi Đại Bái',
@@ -3202,7 +3705,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.152198,21.038080]
+        'coordinates': [106.152198, 21.038080]
       },
       'properties': {
         'name': 'Xóm Trại Đại Bái',
@@ -3236,7 +3739,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.087545,21.037285]
+        'coordinates': [106.087545, 21.037285]
       },
       'properties': {
         'name': 'Trung tâm Y tế Thuận Thành',
@@ -3463,7 +3966,7 @@ export let stations = {
       'geometry': {
         'pointId': 7,
         'type': 'Point In Province',
-        'coordinates': [105.967206,21.087379]
+        'coordinates': [105.967206, 21.087379]
       },
       'properties': {
         'name': 'KCN VSIP',
@@ -3480,7 +3983,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.966597,21.088116]
+        'coordinates': [105.966597, 21.088116]
       },
       'properties': {
         'name': 'TT Văn hoá Thể thao Khu phố Rích Gạo',
@@ -3497,7 +4000,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.967381,21.093506]
+        'coordinates': [105.967381, 21.093506]
       },
       'properties': {
         'name': 'Cổng Khu công nghiệp VSIP',
@@ -3514,7 +4017,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.962700,21.103262]
+        'coordinates': [105.962700, 21.103262]
       },
       'properties': {
         'name': 'Chùa Cổ Pháp',
@@ -3530,7 +4033,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.962587,21.103235]
+        'coordinates': [105.962587, 21.103235]
       },
       'properties': {
         'name': 'Siêu thị DABACO Từ Sơn',
@@ -3546,7 +4049,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.959972,21.108902]
+        'coordinates': [105.959972, 21.108902]
       },
       'properties': {
         'name': 'Nhà tưởng niệm Đồng chí Lê Quang Đạo',
@@ -3562,7 +4065,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.959970,21.108617]
+        'coordinates': [105.959970, 21.108617]
       },
       'properties': {
         'name': 'Đền Đô',
@@ -3578,7 +4081,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.956447,21.116179]
+        'coordinates': [105.956447, 21.116179]
       },
       'properties': {
         'name': 'Bưu điện Thành phố Từ Sơn',
@@ -3598,7 +4101,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.956591,21.116390]
+        'coordinates': [105.956591, 21.116390]
       },
       'properties': {
         'name': 'Cột đồng hồ Thành phố Từ Sơn',
@@ -3618,7 +4121,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.962529,21.119506]
+        'coordinates': [105.962529, 21.119506]
       },
       'properties': {
         'name': '',
@@ -3638,7 +4141,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.961861,21.119148]
+        'coordinates': [105.961861, 21.119148]
       },
       'properties': {
         'name': '',
@@ -3658,7 +4161,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.967557,21.122355]
+        'coordinates': [105.967557, 21.122355]
       },
       'properties': {
         'name': '',
@@ -3677,7 +4180,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.964649,21.120715]
+        'coordinates': [105.964649, 21.120715]
       },
       'properties': {
         'name': 'UBND Phường Đông Ngàn',
@@ -3698,7 +4201,7 @@ export let stations = {
       'geometry': {
         'pointId': 12,
         'type': 'Point In Province',
-        'coordinates': [105.971592,21.124479]
+        'coordinates': [105.971592, 21.124479]
       },
       'properties': {
         'name': 'Từ Sơn',
@@ -3717,7 +4220,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.971573,21.124657]
+        'coordinates': [105.971573, 21.124657]
       },
       'properties': {
         'name': 'Đối diện Trung tâm Y tế Từ Sơn',
@@ -3735,7 +4238,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.978690,21.128524]
+        'coordinates': [105.978690, 21.128524]
       },
       'properties': {
         'name': 'Chợ Vĩnh Kiều',
@@ -3753,7 +4256,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.979071,21.128924]
+        'coordinates': [105.979071, 21.128924]
       },
       'properties': {
         'name': 'Phố Viềng',
@@ -3771,7 +4274,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.988481,21.131489]
+        'coordinates': [105.988481, 21.131489]
       },
       'properties': {
         'name': 'Trung tâm Logicstic - ICD Tiên Sơn',
@@ -3789,7 +4292,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.989044,21.131668]
+        'coordinates': [105.989044, 21.131668]
       },
       'properties': {
         'name': 'Đường vào Chùa Tiêu',
@@ -3807,7 +4310,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.995622,21.132431]
+        'coordinates': [105.995622, 21.132431]
       },
       'properties': {
         'name': 'Khu công nghiệp Tiên Sơn',
@@ -3825,7 +4328,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.996923,21.132814]
+        'coordinates': [105.996923, 21.132814]
       },
       'properties': {
         'name': 'Đối diện Khu công nghiệp Tiên Sơn',
@@ -3843,7 +4346,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.001908,21.133713]
+        'coordinates': [106.001908, 21.133713]
       },
       'properties': {
         'name': 'Đối diện Lăng thôn Đình Cả',
@@ -3862,7 +4365,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.000991,21.133633]
+        'coordinates': [106.000991, 21.133633]
       },
       'properties': {
         'name': 'Lăng thôn Đình Cả',
@@ -3881,7 +4384,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.008232,21.135826]
+        'coordinates': [106.008232, 21.135826]
       },
       'properties': {
         'name': 'Trạm Y tế xã Nội Duệ',
@@ -3900,7 +4403,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.008314,21.136049]
+        'coordinates': [106.008314, 21.136049]
       },
       'properties': {
         'name': 'Trường THCS Nội Duệ',
@@ -3919,7 +4422,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.012267,21.137880]
+        'coordinates': [106.012267, 21.137880]
       },
       'properties': {
         'name': 'Đối diện Cổng làng Lộ Bao',
@@ -3938,7 +4441,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.012558,21.138145]
+        'coordinates': [106.012558, 21.138145]
       },
       'properties': {
         'name': 'Cổng làng Lộ Bao',
@@ -3957,7 +4460,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.016265,21.140892]
+        'coordinates': [106.016265, 21.140892]
       },
       'properties': {
         'name': 'Chi cục thuế Tiên Du',
@@ -3976,7 +4479,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.015751,21.140599]
+        'coordinates': [106.015751, 21.140599]
       },
       'properties': {
         'name': 'Chợ đầu mối Lim',
@@ -3995,7 +4498,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.024953,21.146983]
+        'coordinates': [106.024953, 21.146983]
       },
       'properties': {
         'name': 'UBND Thị trấn Lim',
@@ -4014,7 +4517,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.023279,21.146157]
+        'coordinates': [106.023279, 21.146157]
       },
       'properties': {
         'name': 'Đối diện UBND Thị trấn Lim',
@@ -4033,7 +4536,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.032393,21.153040]
+        'coordinates': [106.032393, 21.153040]
       },
       'properties': {
         'name': 'Phố Ó',
@@ -4052,7 +4555,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.031933,21.152728]
+        'coordinates': [106.031933, 21.152728]
       },
       'properties': {
         'name': 'Phố Ó',
@@ -4071,7 +4574,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.042349,21.163477]
+        'coordinates': [106.042349, 21.163477]
       },
       'properties': {
         'name': 'Gầm cầu vượt Quốc lộ 18',
@@ -4089,7 +4592,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.041201,21.162622]
+        'coordinates': [106.041201, 21.162622]
       },
       'properties': {
         'name': 'Khu công nghiệp Đồng Cao',
@@ -4107,7 +4610,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.052934,21.166314]
+        'coordinates': [106.052934, 21.166314]
       },
       'properties': {
         'name': 'Chung cư Cát Tường Thống Nhất',
@@ -4123,7 +4626,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.052849,21.166460]
+        'coordinates': [106.052849, 21.166460]
       },
       'properties': {
         'name': 'Nhà hàng San San',
@@ -4139,7 +4642,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.059263,21.170431]
+        'coordinates': [106.059263, 21.170431]
       },
       'properties': {
         'name': 'Showroom KIA Bắc Ninh',
@@ -4155,7 +4658,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.058724,21.170286]
+        'coordinates': [106.058724, 21.170286]
       },
       'properties': {
         'name': 'Hợp Phú Complex',
@@ -4171,7 +4674,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.066938,21.168064]
+        'coordinates': [106.066938, 21.168064]
       },
       'properties': {
         'name': 'Bệnh viện Đa Khoa Bắc Ninh',
@@ -4187,7 +4690,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.067620,21.168310]
+        'coordinates': [106.067620, 21.168310]
       },
       'properties': {
         'name': 'Đối diện Nhà tang lễ Bắc Ninh',
@@ -4203,7 +4706,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.071634,21.176638]
+        'coordinates': [106.071634, 21.176638]
       },
       'properties': {
         'name': 'Gần ngã Sáu',
@@ -4219,7 +4722,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.078034,21.191431]
+        'coordinates': [106.078034, 21.191431]
       },
       'properties': {
         'name': 'VNPT Bắc Ninh',
@@ -4236,7 +4739,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.091796,21.193877]
+        'coordinates': [106.091796, 21.193877]
       },
       'properties': {
         'name': '',
@@ -4252,7 +4755,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.094836,21.199540]
+        'coordinates': [106.094836, 21.199540]
       },
       'properties': {
         'name': '',
@@ -4268,7 +4771,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.097075,21.202444]
+        'coordinates': [106.097075, 21.202444]
       },
       'properties': {
         'name': 'Vườn hoa Cảng Đáp Cầu',
@@ -4284,7 +4787,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.099415,21.201884]
+        'coordinates': [106.099415, 21.201884]
       },
       'properties': {
         'name': 'Gầm cầu Như Nguyệt',
@@ -4300,7 +4803,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.106241,21.200770]
+        'coordinates': [106.106241, 21.200770]
       },
       'properties': {
         'name': 'Thôn Kim Đôi',
@@ -4316,7 +4819,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.113367,21.199077]
+        'coordinates': [106.113367, 21.199077]
       },
       'properties': {
         'name': 'Chợ Kim Đôi',
@@ -4332,7 +4835,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.122263,21.194835]
+        'coordinates': [106.122263, 21.194835]
       },
       'properties': {
         'name': 'Trạm bơm tiêu Kim Đôi 2',
@@ -4348,7 +4851,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.129828,21.190579]
+        'coordinates': [106.129828, 21.190579]
       },
       'properties': {
         'name': 'Trường THCS Đại Xuân',
@@ -4364,7 +4867,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.134651,21.184404]
+        'coordinates': [106.134651, 21.184404]
       },
       'properties': {
         'name': 'Khu phố Bất Phí',
@@ -4380,7 +4883,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.141657,21.180748]
+        'coordinates': [106.141657, 21.180748]
       },
       'properties': {
         'name': 'UBND Phường Đại Xuân',
@@ -4396,7 +4899,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.145339,21.175855]
+        'coordinates': [106.145339, 21.175855]
       },
       'properties': {
         'name': 'Khu phố Trại Đường',
@@ -4412,7 +4915,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.148000,21.168530]
+        'coordinates': [106.148000, 21.168530]
       },
       'properties': {
         'name': 'Cửa hàng xăng dầu Âu Lạc',
@@ -4428,7 +4931,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.149800,21.163306]
+        'coordinates': [106.149800, 21.163306]
       },
       'properties': {
         'name': 'Trường THPT Quế Võ số 1',
@@ -4444,7 +4947,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.150963,21.159318]
+        'coordinates': [106.150963, 21.159318]
       },
       'properties': {
         'name': 'Đầu phố Phan Châu Trinh',
@@ -4460,7 +4963,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.151795,21.154132]
+        'coordinates': [106.151795, 21.154132]
       },
       'properties': {
         'name': 'UBND Phường Phố Mới',
@@ -4476,7 +4979,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.151875,21.147460]
+        'coordinates': [106.151875, 21.147460]
       },
       'properties': {
         'name': 'Khu phố Mao Lại',
@@ -4493,7 +4996,7 @@ export let stations = {
       'geometry': {
         'pointId': 8,
         'type': 'Point In Province',
-        'coordinates': [106.143433,21.098960]
+        'coordinates': [106.143433, 21.098960]
       },
       'properties': {
         'name': 'Chi Lăng',
@@ -4529,7 +5032,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.250915,21.098596]
+        'coordinates': [106.250915, 21.098596]
       },
       'properties': {
         'name': 'KCN Hanaka Gia Bình II',
@@ -4547,7 +5050,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.256700,21.089606]
+        'coordinates': [106.256700, 21.089606]
       },
       'properties': {
         'name': 'Thôn Cao Thọ',
@@ -4599,7 +5102,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.228511,21.046117]
+        'coordinates': [106.228511, 21.046117]
       },
       'properties': {
         'name': 'Trường THCS Phú Hòa',
@@ -4650,7 +5153,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.232000,21.026228]
+        'coordinates': [106.232000, 21.026228]
       },
       'properties': {
         'name': 'Cổng làng Đào Xuyên',
@@ -4667,7 +5170,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.238709,21.026438]
+        'coordinates': [106.238709, 21.026438]
       },
       'properties': {
         'name': 'Thôn Trừng Xá',
@@ -4684,7 +5187,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.244687,21.026593]
+        'coordinates': [106.244687, 21.026593]
       },
       'properties': {
         'name': 'Đường vào UBND xã Trừng Xá',
@@ -4701,7 +5204,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.255464,21.024571]
+        'coordinates': [106.255464, 21.024571]
       },
       'properties': {
         'name': 'Thôn An Mỹ',
@@ -4718,7 +5221,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.261121,21.021043]
+        'coordinates': [106.261121, 21.021043]
       },
       'properties': {
         'name': 'Trại DABACO',
@@ -4735,7 +5238,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.275015,21.011911]
+        'coordinates': [106.275015, 21.011911]
       },
       'properties': {
         'name': 'Dốc Lai Hạ',
@@ -4752,7 +5255,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.272898,21.007251]
+        'coordinates': [106.272898, 21.007251]
       },
       'properties': {
         'name': 'Điếm canh đê Nhất Trai',
@@ -4769,7 +5272,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.269008,20.999404]
+        'coordinates': [106.269008, 20.999404]
       },
       'properties': {
         'name': 'Điếm canh đê Đạm Trai',
@@ -4805,7 +5308,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.230599,21.065100]
+        'coordinates': [106.230599, 21.065100]
       },
       'properties': {
         'name': 'Trường THPT Gia Bình Số 1',
@@ -4822,7 +5325,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.230826,21.070205]
+        'coordinates': [106.230826, 21.070205]
       },
       'properties': {
         'name': 'Nhà văn hóa thôn Nhân Hữu',
@@ -4873,7 +5376,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.222924,21.082267]
+        'coordinates': [106.222924, 21.082267]
       },
       'properties': {
         'name': 'Nhà văn hóa thôn Phương Triện',
@@ -4890,7 +5393,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.212485,21.087637]
+        'coordinates': [106.212485, 21.087637]
       },
       'properties': {
         'name': 'Trường Tiểu học Đại Lai',
@@ -4907,7 +5410,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.209620,21.089018]
+        'coordinates': [106.209620, 21.089018]
       },
       'properties': {
         'name': 'UBND xã Đại Lai',
@@ -4924,7 +5427,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.208036,21.088631]
+        'coordinates': [106.208036, 21.088631]
       },
       'properties': {
         'name': 'Chùa Ngọc Hoàng',
@@ -4961,7 +5464,7 @@ export let stations = {
       'geometry': {
         'pointId': 11,
         'type': 'Point Out Province',
-        'coordinates': [105.849453,21.041309]
+        'coordinates': [105.849453, 21.041309]
       },
       'properties': {
         'name': 'Long Biên',
@@ -4980,7 +5483,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.915917,21.083978]
+        'coordinates': [105.915917, 21.083978]
       },
       'properties': {
         'name': 'Ga Yên Viên',
@@ -5000,7 +5503,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.919987,21.088150]
+        'coordinates': [105.919987, 21.088150]
       },
       'properties': {
         'name': 'Công ty giày Yên Viên',
@@ -5020,7 +5523,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.924475,21.092673]
+        'coordinates': [105.924475, 21.092673]
       },
       'properties': {
         'name': '',
@@ -5040,7 +5543,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.927780,21.096150]
+        'coordinates': [105.927780, 21.096150]
       },
       'properties': {
         'name': 'Dốc Lã',
@@ -5060,7 +5563,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.930906,21.098920]
+        'coordinates': [105.930906, 21.098920]
       },
       'properties': {
         'name': 'Chợ Trùng Quán',
@@ -5079,7 +5582,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.938205,21.104920]
+        'coordinates': [105.938205, 21.104920]
       },
       'properties': {
         'name': 'Đường vào Trường Cao Đẳng Thủy Sản',
@@ -5098,7 +5601,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.938408,21.105286]
+        'coordinates': [105.938408, 21.105286]
       },
       'properties': {
         'name': 'Khu đô thị mới Tân Lập Đình Bảng',
@@ -5117,7 +5620,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.946077,21.110398]
+        'coordinates': [105.946077, 21.110398]
       },
       'properties': {
         'name': 'Đối diện Phòng khám Đa khoa Tâm Đức',
@@ -5136,7 +5639,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.951501,21.113413]
+        'coordinates': [105.951501, 21.113413]
       },
       'properties': {
         'name': '',
@@ -5155,7 +5658,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [105.951438,21.113567]
+        'coordinates': [105.951438, 21.113567]
       },
       'properties': {
         'name': 'Điện Máy Xanh Trần Phú',
@@ -5174,7 +5677,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.048113,21.169348]
+        'coordinates': [106.048113, 21.169348]
       },
       'properties': {
         'name': '',
@@ -5191,7 +5694,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.048333,21.169521]
+        'coordinates': [106.048333, 21.169521]
       },
       'properties': {
         'name': '',
@@ -5208,7 +5711,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.052770,21.172777]
+        'coordinates': [106.052770, 21.172777]
       },
       'properties': {
         'name': '',
@@ -5225,7 +5728,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.053921,21.173771]
+        'coordinates': [106.053921, 21.173771]
       },
       'properties': {
         'name': '',
@@ -5242,7 +5745,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.056851,21.176299]
+        'coordinates': [106.056851, 21.176299]
       },
       'properties': {
         'name': 'Bệnh xá Công An tỉnh Bắc Ninh',
@@ -5259,7 +5762,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.057052,21.176486]
+        'coordinates': [106.057052, 21.176486]
       },
       'properties': {
         'name': '',
@@ -5278,7 +5781,7 @@ export let stations = {
       'geometry': {
         'pointId': 14,
         'type': 'Point Out Province',
-        'coordinates': [105.841484,20.979797]
+        'coordinates': [105.841484, 20.979797]
       },
       'properties': {
         'name': 'Giáp Bát',
@@ -5295,7 +5798,7 @@ export let stations = {
       'geometry': {
         'pointId': 15,
         'type': 'Point Out Province',
-        'coordinates': [106.204874,21.286627]
+        'coordinates': [106.204874, 21.286627]
       },
       'properties': {
         'name': 'Bắc Giang',
@@ -5312,7 +5815,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.007706,21.029166]
+        'coordinates': [106.007706, 21.029166]
       },
       'properties': {
         'name': 'Bến xe buýt 52A',
@@ -5330,7 +5833,7 @@ export let stations = {
       'geometry': {
         'pointId': 16,
         'type': 'Point In Province',
-        'coordinates': [106.088707,21.059260]
+        'coordinates': [106.088707, 21.059260]
       },
       'properties': {
         'name': 'Thuận Thành',
@@ -5348,7 +5851,7 @@ export let stations = {
       'geometry': {
         'pointId': 17,
         'type': 'Point Out Province',
-        'coordinates': [105.990757,21.346510]
+        'coordinates': [105.990757, 21.346510]
       },
       'properties': {
         'name': 'Hiệp Hòa',
@@ -5365,7 +5868,7 @@ export let stations = {
       'geometry': {
         'pointId': 18,
         'type': 'Point Out Province',
-        'coordinates': [105.878533,21.047953]
+        'coordinates': [105.878533, 21.047953]
       },
       'properties': {
         'name': 'Gia Lâm',
@@ -5383,7 +5886,7 @@ export let stations = {
       'geometry': {
         'pointId': 19,
         'type': 'Point Out Province',
-        'coordinates': [105.778478,21.028214]
+        'coordinates': [105.778478, 21.028214]
       },
       'properties': {
         'name': 'Mỹ Đình',
@@ -5400,7 +5903,7 @@ export let stations = {
       'geometry': {
         'pointId': 20,
         'type': 'Point In Province',
-        'coordinates': [106.156268,21.152737]
+        'coordinates': [106.156268, 21.152737]
       },
       'properties': {
         'name': 'Quế Võ',
@@ -5693,7 +6196,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.163663,20.968443]
+        'coordinates': [106.163663, 20.968443]
       },
       'properties': {
         'name': '',
@@ -5702,7 +6205,7 @@ export let stations = {
         'ward': 'Ngọc Liên',
         'district': 'Cẩm Giàng',
         'routers': [
-          { 'id': 17, 'name': '217'}
+          { 'id': 17, 'name': '217' }
         ]
       }
     },
@@ -5710,7 +6213,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.156044,20.971531]
+        'coordinates': [106.156044, 20.971531]
       },
       'properties': {
         'name': 'Thôn Nghĩa Trạch',
@@ -5719,7 +6222,7 @@ export let stations = {
         'ward': 'Ngọc Liên',
         'district': 'Cẩm Giàng',
         'routers': [
-          { 'id': 18, 'name': '217'}
+          { 'id': 18, 'name': '217' }
         ]
       }
     },
@@ -5727,7 +6230,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.153138,20.972977]
+        'coordinates': [106.153138, 20.972977]
       },
       'properties': {
         'name': 'Trường THCS Ngọc Liên',
@@ -5744,7 +6247,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.151780,20.973740]
+        'coordinates': [106.151780, 20.973740]
       },
       'properties': {
         'name': 'UBND xã Ngọc Liên',
@@ -5761,7 +6264,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.149403,20.975168]
+        'coordinates': [106.149403, 20.975168]
       },
       'properties': {
         'name': '',
@@ -5778,7 +6281,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.145273,20.977449]
+        'coordinates': [106.145273, 20.977449]
       },
       'properties': {
         'name': 'Đình làng Mỹ Vọng',
@@ -5795,7 +6298,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.141049,20.979969]
+        'coordinates': [106.141049, 20.979969]
       },
       'properties': {
         'name': 'Làng Mỹ Vọng',
@@ -5812,7 +6315,7 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [106.137513,20.985221]
+        'coordinates': [106.137513, 20.985221]
       },
       'properties': {
         'name': 'UBND xã Cẩm Hưng',
@@ -5847,7 +6350,7 @@ export let stations = {
       'geometry': {
         'lineId': '0108217',
         'type': 'Line',
-        'coordinates': [106.075359,21.140047]
+        'coordinates': [106.075359, 21.140047]
       },
       'properties': {
         'name': 'Quốc lộ 38',
@@ -5864,7 +6367,7 @@ export let stations = {
       'geometry': {
         'lineId': '0127',
         'type': 'Line',
-        'coordinates': [106.120867,21.043118]
+        'coordinates': [106.120867, 21.043118]
       },
       'properties': {
         'name': 'Quốc lộ 17',
@@ -5880,7 +6383,7 @@ export let stations = {
       'geometry': {
         'lineId': '0286212',
         'type': 'Line',
-        'coordinates': [106.110034,21.163219]
+        'coordinates': [106.110034, 21.163219]
       },
       'properties': {
         'name': 'Quốc lộ 18',
@@ -5898,7 +6401,7 @@ export let stations = {
       'geometry': {
         'lineId': '0286',
         'type': 'Line',
-        'coordinates': [106.223544,21.123041]
+        'coordinates': [106.223544, 21.123041]
       },
       'properties': {
         'name': 'Quốc lộ 18',
@@ -5915,7 +6418,7 @@ export let stations = {
       'geometry': {
         'lineId': '0886',
         'type': 'Line',
-        'coordinates': [106.243727,21.072526]
+        'coordinates': [106.243727, 21.072526]
       },
       'properties': {
         'name': 'Quốc lộ 17',
@@ -5932,7 +6435,7 @@ export let stations = {
       'geometry': {
         'lineId': '27204',
         'type': 'Line',
-        'coordinates': [106.055893,21.035998]
+        'coordinates': [106.055893, 21.035998]
       },
       'properties': {
         'name': 'Quốc lộ 17',
@@ -5948,7 +6451,7 @@ export let stations = {
       'geometry': {
         'lineId': '6854203',
         'type': 'Line',
-        'coordinates': [106.019100,21.143711]
+        'coordinates': [106.019100, 21.143711]
       },
       'properties': {
         'name': 'Đường tỉnh 295',
@@ -5965,7 +6468,7 @@ export let stations = {
       'geometry': {
         'lineId': '1054210',
         'type': 'Line',
-        'coordinates': [105.915917,21.083978]
+        'coordinates': [105.915917, 21.083978]
       },
       'properties': {
         'name': 'Đường tỉnh 295',
