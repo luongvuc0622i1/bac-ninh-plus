@@ -284,6 +284,10 @@ function clearInitLoadLine(map) {
   map.removeLayer('Init Route 204 Go').removeSource('Init Route 204 Go');
   if (map.getSource('Init Route 204 Back'))
   map.removeLayer('Init Route 204 Back').removeSource('Init Route 204 Back');
+  if (map.getSource('Init Route 210 Go'))
+  map.removeLayer('Init Route 210 Go').removeSource('Init Route 210 Go');
+  if (map.getSource('Init Route 210 Back'))
+  map.removeLayer('Init Route 210 Back').removeSource('Init Route 210 Back');
   if (map.getSource('Init Route 217 Go'))
   map.removeLayer('Init Route 217 Go').removeSource('Init Route 217 Go');
   if (map.getSource('Init Route 217 Back'))
@@ -361,7 +365,7 @@ function fly(map, geojson, routeId) {
                       routeId === '54' ? 11.2 :
                         routeId === '203' ? 10.2 :
                           routeId === '204' ? 11.4 :
-                            routeId === '210' ? 10.2 :
+                            routeId === '210' ? 10.8 :
                               routeId === '212' ? 10.8 : 10.4
   });
 }

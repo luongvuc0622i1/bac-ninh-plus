@@ -5867,6 +5867,125 @@ export let stations = {
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
+        'coordinates': [105.983158, 21.221802]
+      },
+      'properties': {
+        'name': 'Ngã tư Lương Tân',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Yên Trung',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 37, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.976909, 21.211583]
+      },
+      'properties': {
+        'name': 'Thôn Đường Thôn',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 38, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.974173, 21.210563]
+      },
+      'properties': {
+        'name': 'Đường vào thôn Ô Cách',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 39, 'name': '210' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.970248, 21.211696]
+      },
+      'properties': {
+        'name': 'Qua TTHC xã Đông Tiến',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 40, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.971052, 21.211411]
+      },
+      'properties': {
+        'name': 'Đối diện TTHC xã Đông Tiến',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 41, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.965978, 21.212530]
+      },
+      'properties': {
+        'name': 'Ngã ba Thượng Thôn',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 42, 'name': '210', 'color': 'green' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [105.966686, 21.212908]
+      },
+      'properties': {
+        'name': 'Ngã ba Thượng Thôn',
+        'description': '',
+        'address': 'Đường tỉnh 295',
+        'ward': 'Đông Tiến',
+        'district': 'Yên Phong',
+        'routers': [
+          { 'id': 43, 'name': '210', 'color': 'red' }
+        ]
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
         'coordinates': [105.963164, 21.209046]
       },
       'properties': {
