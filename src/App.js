@@ -24,6 +24,7 @@ export default function App() {
 
   const handleClickChangeRoute = (e) => {
     setRouteId(e);
+    setStationId();
   }
 
   const handleClickChangeStation = (e) => {
@@ -50,6 +51,7 @@ export default function App() {
             </div>
             <div className='button-show-menu' style={{ display: showMap ? '' : 'none', left: showMap ? '' : '380px' }} onClick={() => handleShowMap(false)} >
               <i className='fa fa-chevron-right' />
+              <button  id='clickOpenNavWhenInitPage'/>
             </div>
           </div>
         </>

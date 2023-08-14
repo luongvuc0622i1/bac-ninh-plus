@@ -2,32 +2,6 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
-// import bn01Go from '../data/bus-routes/bn01-go.json';
-// import bn01Back from '../data/bus-routes/bn01-back.json';
-// import bn02Go from '../data/bus-routes/bn02-go.json';
-// import bn02Back from '../data/bus-routes/bn02-back.json';
-// import bn03Go from '../data/bus-routes/bn03-go.json';
-// import bn03Back from '../data/bus-routes/bn03-back.json';
-// import bn08Go from '../data/bus-routes/bn08-go.json';
-// import bn08Back from '../data/bus-routes/bn08-back.json';
-// import bn27Go from '../data/bus-routes/bn27-go.json';
-// import bn27Back from '../data/bus-routes/bn27-back.json';
-// import bn68Go from '../data/bus-routes/bn68-go.json';
-// import bn68Back from '../data/bus-routes/bn68-back.json';
-// import bn86aGo from '../data/bus-routes/bn86a-go.json';
-// import bn86aBack from '../data/bus-routes/bn86a-back.json';
-// import bn86bGo from '../data/bus-routes/bn86b-go.json';
-// import bn86bBack from '../data/bus-routes/bn86b-back.json';
-// import b10aGo from '../data/bus-routes/10a-go.json';
-// import b10aBack from '../data/bus-routes/10a-back.json';
-// import b54Go from '../data/bus-routes/54-go.json';
-// import b54Back from '../data/bus-routes/54-back.json';
-// import b204Go from '../data/bus-routes/204-go.json';
-// import b204Back from '../data/bus-routes/204-back.json';
-// import b210Go from '../data/bus-routes/210-go.json';
-// import b210Back from '../data/bus-routes/210-back.json';
-// import b217Go from '../data/bus-routes/217-go.json';
-// import b217Back from '../data/bus-routes/217-back.json';
 import { routes } from '../data/routes';
 import { stations } from '../data/stations';
 import { routeIdList } from './suport/getListRouteId';
@@ -48,6 +22,8 @@ export default class Map extends React.Component {
     initLoadLine(this.map);
     //init page load marker start-end bus stop, all bus stop, node marker
     initLoadMarker(this.map);
+    //open menu navbar on left
+    document.getElementById('clickOpenNavWhenInitPage').click();
   };
 
   componentDidUpdate() {
