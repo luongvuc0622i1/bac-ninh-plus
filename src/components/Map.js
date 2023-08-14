@@ -1,34 +1,36 @@
 import React from 'react';
-import mapboxgl from "mapbox-gl";
+import mapboxgl from 'mapbox-gl';
 import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import bn01Go from '../data/bus-routes/bn01-go.json';
-import bn01Back from '../data/bus-routes/bn01-back.json';
-import bn02Go from '../data/bus-routes/bn02-go.json';
-import bn02Back from '../data/bus-routes/bn02-back.json';
-import bn03Go from '../data/bus-routes/bn03-go.json';
-import bn03Back from '../data/bus-routes/bn03-back.json';
-import bn08Go from '../data/bus-routes/bn08-go.json';
-import bn08Back from '../data/bus-routes/bn08-back.json';
-import bn27Go from '../data/bus-routes/bn27-go.json';
-import bn27Back from '../data/bus-routes/bn27-back.json';
-import bn68Go from '../data/bus-routes/bn68-go.json';
-import bn68Back from '../data/bus-routes/bn68-back.json';
-import bn86aGo from '../data/bus-routes/bn86a-go.json';
-import bn86aBack from '../data/bus-routes/bn86a-back.json';
-import bn86bGo from '../data/bus-routes/bn86b-go.json';
-import bn86bBack from '../data/bus-routes/bn86b-back.json';
-import b10aGo from '../data/bus-routes/10a-go.json';
-import b10aBack from '../data/bus-routes/10a-back.json';
-import b54Go from '../data/bus-routes/54-go.json';
-import b54Back from '../data/bus-routes/54-back.json';
-import b204Go from '../data/bus-routes/204-go.json';
-import b204Back from '../data/bus-routes/204-back.json';
-import b210Go from '../data/bus-routes/210-go.json';
-import b210Back from '../data/bus-routes/210-back.json';
-import b217Go from '../data/bus-routes/217-go.json';
-import b217Back from '../data/bus-routes/217-back.json';
+// import bn01Go from '../data/bus-routes/bn01-go.json';
+// import bn01Back from '../data/bus-routes/bn01-back.json';
+// import bn02Go from '../data/bus-routes/bn02-go.json';
+// import bn02Back from '../data/bus-routes/bn02-back.json';
+// import bn03Go from '../data/bus-routes/bn03-go.json';
+// import bn03Back from '../data/bus-routes/bn03-back.json';
+// import bn08Go from '../data/bus-routes/bn08-go.json';
+// import bn08Back from '../data/bus-routes/bn08-back.json';
+// import bn27Go from '../data/bus-routes/bn27-go.json';
+// import bn27Back from '../data/bus-routes/bn27-back.json';
+// import bn68Go from '../data/bus-routes/bn68-go.json';
+// import bn68Back from '../data/bus-routes/bn68-back.json';
+// import bn86aGo from '../data/bus-routes/bn86a-go.json';
+// import bn86aBack from '../data/bus-routes/bn86a-back.json';
+// import bn86bGo from '../data/bus-routes/bn86b-go.json';
+// import bn86bBack from '../data/bus-routes/bn86b-back.json';
+// import b10aGo from '../data/bus-routes/10a-go.json';
+// import b10aBack from '../data/bus-routes/10a-back.json';
+// import b54Go from '../data/bus-routes/54-go.json';
+// import b54Back from '../data/bus-routes/54-back.json';
+// import b204Go from '../data/bus-routes/204-go.json';
+// import b204Back from '../data/bus-routes/204-back.json';
+// import b210Go from '../data/bus-routes/210-go.json';
+// import b210Back from '../data/bus-routes/210-back.json';
+// import b217Go from '../data/bus-routes/217-go.json';
+// import b217Back from '../data/bus-routes/217-back.json';
+import { routes } from '../data/routes';
 import { stations } from '../data/stations';
+import { routeIdList } from './suport/getListRouteId';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FhZGlxbSIsImEiOiJjamJpMXcxa3AyMG9zMzNyNmdxNDlneGRvIn0.wjlI8r1S_-xxtq2d-W5qPA';
 
@@ -78,32 +80,10 @@ export default class Map extends React.Component {
 }
 
 function initLoadLine(map) {
-  addSourceLayer(map, 'Init Route BN01 Back', [bn01Back], 'red');
-  addSourceLayer(map, 'Init Route BN01 Go', [bn01Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN02 Back', [bn02Back], 'red');
-  addSourceLayer(map, 'Init Route BN02 Go', [bn02Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN03 Back', [bn03Back], 'red');
-  addSourceLayer(map, 'Init Route BN03 Go', [bn03Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN08 Back', [bn08Back], 'red');
-  addSourceLayer(map, 'Init Route BN08 Go', [bn08Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN27 Back', [bn27Back], 'red');
-  addSourceLayer(map, 'Init Route BN27 Go', [bn27Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN68 Back', [bn68Back], 'red');
-  addSourceLayer(map, 'Init Route BN68 Go', [bn68Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN86A Back', [bn86aBack], 'red');
-  addSourceLayer(map, 'Init Route BN86A Go', [bn86aGo], '#3e8e41');
-  addSourceLayer(map, 'Init Route BN86B Back', [bn86bBack], 'red');
-  addSourceLayer(map, 'Init Route BN86B Go', [bn86bGo], '#3e8e41');
-  addSourceLayer(map, 'Init Route 10A Back', [b10aBack], 'red');
-  addSourceLayer(map, 'Init Route 10A Go', [b10aGo], '#3e8e41');
-  addSourceLayer(map, 'Init Route 54 Back', [b54Back], 'red');
-  addSourceLayer(map, 'Init Route 54 Go', [b54Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route 204 Back', [b204Back], 'red');
-  addSourceLayer(map, 'Init Route 204 Go', [b204Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route 210 Back', [b210Back], 'red');
-  addSourceLayer(map, 'Init Route 210 Go', [b210Go], '#3e8e41');
-  addSourceLayer(map, 'Init Route 217 Back', [b217Back], 'red');
-  addSourceLayer(map, 'Init Route 217 Go', [b217Go], '#3e8e41');
+  routeIdList.forEach(e => {
+    addSourceLayer(map, 'Init Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'red');
+    addSourceLayer(map, 'Init Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, '#3e8e41');
+  });
   addSourceLayer(map, 'Bus Route Back', [], 'red');
   addSourceLayer(map, 'Bus Route Go', [], '#3e8e41');
 }
@@ -240,58 +220,12 @@ function change(number) {
 }
 
 function clearInitLoadLine(map) {
-  if (map.getSource('Init Route BN01 Go'))
-  map.removeLayer('Init Route BN01 Go').removeSource('Init Route BN01 Go');
-  if (map.getSource('Init Route BN01 Back'))
-  map.removeLayer('Init Route BN01 Back').removeSource('Init Route BN01 Back');
-  if (map.getSource('Init Route BN02 Go'))
-  map.removeLayer('Init Route BN02 Go').removeSource('Init Route BN02 Go');
-  if (map.getSource('Init Route BN02 Back'))
-  map.removeLayer('Init Route BN02 Back').removeSource('Init Route BN02 Back');
-  if (map.getSource('Init Route BN03 Go'))
-  map.removeLayer('Init Route BN03 Go').removeSource('Init Route BN03 Go');
-  if (map.getSource('Init Route BN03 Back'))
-  map.removeLayer('Init Route BN03 Back').removeSource('Init Route BN03 Back');
-  if (map.getSource('Init Route BN08 Go'))
-  map.removeLayer('Init Route BN08 Go').removeSource('Init Route BN08 Go');
-  if (map.getSource('Init Route BN08 Back'))
-  map.removeLayer('Init Route BN08 Back').removeSource('Init Route BN08 Back');
-  if (map.getSource('Init Route BN27 Go'))
-  map.removeLayer('Init Route BN27 Go').removeSource('Init Route BN27 Go');
-  if (map.getSource('Init Route BN27 Back'))
-  map.removeLayer('Init Route BN27 Back').removeSource('Init Route BN27 Back');
-  if (map.getSource('Init Route BN68 Go'))
-  map.removeLayer('Init Route BN68 Go').removeSource('Init Route BN68 Go');
-  if (map.getSource('Init Route BN68 Back'))
-  map.removeLayer('Init Route BN68 Back').removeSource('Init Route BN68 Back');
-  if (map.getSource('Init Route BN86A Go'))
-  map.removeLayer('Init Route BN86A Go').removeSource('Init Route BN86A Go');
-  if (map.getSource('Init Route BN86A Back'))
-  map.removeLayer('Init Route BN86A Back').removeSource('Init Route BN86A Back');
-  if (map.getSource('Init Route BN86B Go'))
-  map.removeLayer('Init Route BN86B Go').removeSource('Init Route BN86B Go');
-  if (map.getSource('Init Route BN86B Back'))
-  map.removeLayer('Init Route BN86B Back').removeSource('Init Route BN86B Back');
-  if (map.getSource('Init Route 10A Go'))
-  map.removeLayer('Init Route 10A Go').removeSource('Init Route 10A Go');
-  if (map.getSource('Init Route 10A Back'))
-  map.removeLayer('Init Route 10A Back').removeSource('Init Route 10A Back');
-  if (map.getSource('Init Route 54 Go'))
-  map.removeLayer('Init Route 54 Go').removeSource('Init Route 54 Go');
-  if (map.getSource('Init Route 54 Back'))
-  map.removeLayer('Init Route 54 Back').removeSource('Init Route 54 Back');
-  if (map.getSource('Init Route 204 Go'))
-  map.removeLayer('Init Route 204 Go').removeSource('Init Route 204 Go');
-  if (map.getSource('Init Route 204 Back'))
-  map.removeLayer('Init Route 204 Back').removeSource('Init Route 204 Back');
-  if (map.getSource('Init Route 210 Go'))
-  map.removeLayer('Init Route 210 Go').removeSource('Init Route 210 Go');
-  if (map.getSource('Init Route 210 Back'))
-  map.removeLayer('Init Route 210 Back').removeSource('Init Route 210 Back');
-  if (map.getSource('Init Route 217 Go'))
-  map.removeLayer('Init Route 217 Go').removeSource('Init Route 217 Go');
-  if (map.getSource('Init Route 217 Back'))
-  map.removeLayer('Init Route 217 Back').removeSource('Init Route 217 Back');
+  routeIdList.forEach(e => {
+    if (map.getSource('Init Route ' + e + ' Go'))
+      map.removeLayer('Init Route ' + e + ' Go').removeSource('Init Route ' + e + ' Go');
+    if (map.getSource('Init Route ' + e + ' Back'))
+      map.removeLayer('Init Route ' + e + ' Back').removeSource('Init Route ' + e + ' Back');
+  });
 }
 
 function clearMarkerByClassName(className) {
@@ -300,46 +234,12 @@ function clearMarkerByClassName(className) {
 }
 
 function setDataSoureById(map, routeId) {
-  if (routeId === "BN01") {
-    setDataSoure(map, 'Bus Route Go', [bn01Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn01Back], routeId);
-  } else if (routeId === "BN02") {
-    setDataSoure(map, 'Bus Route Go', [bn02Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn02Back], routeId);
-  } else if (routeId === "BN03") {
-    setDataSoure(map, 'Bus Route Go', [bn03Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn03Back], routeId);
-  } else if (routeId === "BN08") {
-    setDataSoure(map, 'Bus Route Go', [bn08Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn08Back], routeId);
-  } else if (routeId === "BN27") {
-    setDataSoure(map, 'Bus Route Go', [bn27Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn27Back], routeId);
-  } else if (routeId === "BN68") {
-    setDataSoure(map, 'Bus Route Go', [bn68Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn68Back], routeId);
-  } else if (routeId === "BN86A") {
-    setDataSoure(map, 'Bus Route Go', [bn86aGo], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn86aBack], routeId);
-  } else if (routeId === "BN86B") {
-    setDataSoure(map, 'Bus Route Go', [bn86bGo], routeId);
-    setDataSoure(map, 'Bus Route Back', [bn86bBack], routeId);
-  } else if (routeId === "10A") {
-    setDataSoure(map, 'Bus Route Go', [b10aGo], routeId);
-    setDataSoure(map, 'Bus Route Back', [b10aBack], routeId);
-  } else if (routeId === "54") {
-    setDataSoure(map, 'Bus Route Go', [b54Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [b54Back], routeId);
-  } else if (routeId === "204") {
-    setDataSoure(map, 'Bus Route Go', [b204Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [b204Back], routeId);
-  } else if (routeId === "210") {
-    setDataSoure(map, 'Bus Route Go', [b210Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [b210Back], routeId);
-  } else if (routeId === "217") {
-    setDataSoure(map, 'Bus Route Go', [b217Go], routeId);
-    setDataSoure(map, 'Bus Route Back', [b217Back], routeId);
-  };
+  routeIdList.forEach(e => {
+    if (routeId === e) {
+      setDataSoure(map, 'Bus Route Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
+      setDataSoure(map, 'Bus Route Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
+    }
+  });
 }
 
 function setDataSoure(map, idSoureLayer, coordinates, routeId) {

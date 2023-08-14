@@ -174,7 +174,7 @@ export let stations = {
       'properties': {
         'name': 'Thành phố Bắc Ninh',
         'description': 'Bến xe buýt 54',
-        'address': 'Đường Kinh Dương Vương',
+        'address': '120 Kinh Dương Vương',
         'district': 'Thành phố Bắc Ninh',
         'routers': [
           { 'id': 9, 'name': 'BN01', 'color': 'red' },

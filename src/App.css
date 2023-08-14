@@ -53,10 +53,6 @@
   width: calc(100%/3);
 }
 
-.button-quadruple {
-  width: calc(100%/4);
-}
-
 /* -----------------------------------------button other type----------------------------------------- */
 .button-show-menu {
   display: inline-block;

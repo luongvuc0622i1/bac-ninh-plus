@@ -1,5 +1,5 @@
 import './App.css';
-import { useWindowDimension } from './components/useWindowDimension';
+import { useWindowDimension } from './components/suport/useWindowDimension';
 import { useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';

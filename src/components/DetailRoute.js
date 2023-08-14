@@ -10,11 +10,16 @@ export default function DetailRoute(props) {
     setChooseId(parseInt(e.target.value));
   }
 
+  const handleBack = () => {
+    props.parentCallbackBack();
+    setChooseId(1);
+  }
+
   return (
     <>
       <div className='group' style={{ height: '38px' }}>
         <b style={{ fontSize: '28px' }}>{props.routeId}</b>
-        <button className='button-reply' onClick={props.parentCallbackBack}>
+        <button className='button-reply' onClick={handleBack}>
           <i className='fa fa-reply' />
         </button>
       </div>

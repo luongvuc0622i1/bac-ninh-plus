@@ -14,10 +14,12 @@ export default function Infomation(props) {
 
   const handleClickChangeRoute = (e) => {
     props.parentCallbackChangeRoute(e.target.value);
+    setChooseId(1);
   }
 
   const handleStation = (e) => {
-    props.parentCallbackChangeStation(e)
+    props.parentCallbackChangeStation(e);
+    setChooseId(1);
   }
   
   const inputText = (e) => {
