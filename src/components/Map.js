@@ -23,7 +23,7 @@ export default class Map extends React.Component {
     //init page load marker start-end bus stop, all bus stop, node marker
     initLoadMarker(this.map);
     //open menu navbar on left
-    document.getElementById('clickOpenNavWhenInitPage').click();
+    if (document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
   };
 
   componentDidUpdate() {
