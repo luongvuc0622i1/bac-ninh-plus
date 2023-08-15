@@ -5,6 +5,69 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { routes } from '../data/routes';
 import { stations } from '../data/stations';
 import { routeIdList } from './suport/getListRouteId';
+import bn01Go from '../data/bus-routes/bn01-go.json';
+import bn01Back from '../data/bus-routes/bn01-back.json';
+import bn02Go from '../data/bus-routes/bn02-go.json';
+import bn02Back from '../data/bus-routes/bn02-back.json';
+import bn03Go from '../data/bus-routes/bn03-go.json';
+import bn03Back from '../data/bus-routes/bn03-back.json';
+import bn08Go from '../data/bus-routes/bn08-go.json';
+import bn08Back from '../data/bus-routes/bn08-back.json';
+import bn27Go from '../data/bus-routes/bn27-go.json';
+import bn27Back from '../data/bus-routes/bn27-back.json';
+import bn68Go from '../data/bus-routes/bn68-go.json';
+import bn68Back from '../data/bus-routes/bn68-back.json';
+import bn86aGo from '../data/bus-routes/bn86a-go.json';
+import bn86aBack from '../data/bus-routes/bn86a-back.json';
+import bn86bGo from '../data/bus-routes/bn86b-go.json';
+import bn86bBack from '../data/bus-routes/bn86b-back.json';
+import b10aGo from '../data/bus-routes/10a-go.json';
+import b10aBack from '../data/bus-routes/10a-back.json';
+import b54Go from '../data/bus-routes/54-go.json';
+import b54Back from '../data/bus-routes/54-back.json';
+import b203Go from '../data/bus-routes/203-go.json';
+import b203Back from '../data/bus-routes/203-back.json';
+import b204Go from '../data/bus-routes/204-go.json';
+import b204Back from '../data/bus-routes/204-back.json';
+import b210Go from '../data/bus-routes/210-go.json';
+import b210Back from '../data/bus-routes/210-back.json';
+import b212Go from '../data/bus-routes/212-go.json';
+import b212Back from '../data/bus-routes/212-back.json';
+import b217Go from '../data/bus-routes/217-go.json';
+import b217Back from '../data/bus-routes/217-back.json';
+
+const dynamicValues = {
+  "[bn01Go]": [bn01Go],
+  "[bn01Back]": [bn01Back],
+  "[bn02Go]": [bn02Go],
+  "[bn02Back]": [bn02Back],
+  "[bn03Go]": [bn03Go],
+  "[bn03Back]": [bn03Back],
+  "[bn08Go]": [bn08Go],
+  "[bn08Back]": [bn08Back],
+  "[bn27Go]": [bn27Go],
+  "[bn27Back]": [bn27Back],
+  "[bn68Go]": [bn68Go],
+  "[bn68Back]": [bn68Back],
+  "[bn86aGo]": [bn86aGo],
+  "[bn86aBack]": [bn86aBack],
+  "[bn86bGo]": [bn86bGo],
+  "[bn86bBack]": [bn86bBack],
+  "[b10aGo]": [b10aGo],
+  "[b10aBack]": [b10aBack],
+  "[b54Go]": [b54Go],
+  "[b54Back]": [b54Back],
+  "[b203Go]": [b203Go],
+  "[b203Back]": [b203Back],
+  "[b204Go]": [b204Go],
+  "[b204Back]": [b204Back],
+  "[b210Go]": [b210Go],
+  "[b210Back]": [b210Back],
+  "[b212Go]": [b212Go],
+  "[b212Back]": [b212Back],
+  "[b217Go]": [b217Go],
+  "[b217Back]": [b217Back]
+};
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FhZGlxbSIsImEiOiJjamJpMXcxa3AyMG9zMzNyNmdxNDlneGRvIn0.wjlI8r1S_-xxtq2d-W5qPA';
 
@@ -57,8 +120,8 @@ export default class Map extends React.Component {
 
 function initLoadLine(map) {
   routeIdList.forEach(e => {
-    addSourceLayer(map, 'Init Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'red');
-    addSourceLayer(map, 'Init Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, '#3e8e41');
+    addSourceLayer(map, 'Init Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'red');
+    addSourceLayer(map, 'Init Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], '#3e8e41');
   });
   addSourceLayer(map, 'Bus Route Back', [], 'red');
   addSourceLayer(map, 'Bus Route Go', [], '#3e8e41');
@@ -212,8 +275,8 @@ function clearMarkerByClassName(className) {
 function setDataSoureById(map, routeId) {
   routeIdList.forEach(e => {
     if (routeId === e) {
-      setDataSoure(map, 'Bus Route Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
-      setDataSoure(map, 'Bus Route Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
+      setDataSoure(map, 'Bus Route Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], routeId);
+      setDataSoure(map, 'Bus Route Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], routeId);
     }
   });
 }
