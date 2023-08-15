@@ -6,7 +6,7 @@ export default function Infomation(props) {
 
   return (
     <>
-      <img src={require(`../../../public/images/${feature.properties.image}`)} alt={props.routeId} className="image" ></img>
+      <img src={'https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/'+feature.properties.image} alt={props.routeId} className="image" ></img>
       <hr />
       <table>
         <tbody>
