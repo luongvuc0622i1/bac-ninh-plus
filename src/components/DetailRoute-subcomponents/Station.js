@@ -19,7 +19,6 @@ export default function Infomation(props) {
 
   const handleStation = (e) => {
     props.parentCallbackChangeStation(e);
-    setChooseId(1);
   }
   
   const inputText = (e) => {
