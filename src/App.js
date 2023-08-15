@@ -50,8 +50,7 @@ export default function App() {
               <i className='fa fa-chevron-left' />
             </div>
             <div className='button-show-menu' style={{ display: showMap ? '' : 'none', left: showMap ? '' : '380px' }} onClick={() => handleShowMap(false)} >
-              <i className='fa fa-chevron-right' />
-              <button  id='clickOpenNavWhenInitPage'/>
+              <i className='fa fa-chevron-right' id='clickOpenNavWhenInitPage' />
             </div>
           </div>
         </>
