@@ -7,13 +7,7 @@ export async function fetchDataFromApi(YOUR_API_URL) {
         [...atob(base64EncodedString)].map(char => char.charCodeAt(0))
     );
     const textDecoder = new TextDecoder();
-    const valueConverted = textDecoder.decode(byteArray)
-    .replaceAll("'go': [", "'go': '[")
-    .replaceAll("'back': [", "'back': '[")
-    .replaceAll("Go],", "Go]',")
-    .replaceAll("Back]", "Back]'")
-    .replace(/'/g, '"')
-    .split('\n').filter(line => !line.trim().startsWith('//')).join('\n').split(' = ')[1];
+    const valueConverted = textDecoder.decode(byteArray).split('\n').filter(line => !line.trim().startsWith('//')).join('\n').split(' = ')[1];
     const decodedString = JSON.parse(valueConverted);
     return decodedString;
 }
