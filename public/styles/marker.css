@@ -1,5 +1,5 @@
 .marker {
-  background-image: url('../images/bus-stop-combo.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-combo.png');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -9,7 +9,7 @@
 }
 
 .marker-green {
-  background-image: url('../images/bus-stop-green.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-green.png');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -19,7 +19,7 @@
 }
 
 .marker-red {
-  background-image: url('../images/bus-stop-red.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-red.png');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -29,17 +29,13 @@
 }
 
 .marker-all {
-  background-image: url('../images/node-combo.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/node-combo.png');
   background-size: cover;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   cursor: pointer;
 }
-
-/* .mapboxgl-popup {
-  max-width: 200px;
-} */
 
 .mapboxgl-popup-content {
   text-align: center;
@@ -55,33 +51,33 @@
 }
 
 .marker-01-08-217 {
-  background-image: url('../images/01,08,217.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/01,08,217.png');
 }
 
 .marker-01-27 {
-  background-image: url('../images/01,27.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/01,27.png');
 }
 
 .marker-02-86-212 {
-  background-image: url('../images/02,86,212.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/02,86,212.png');
 }
 
 .marker-02-86 {
-  background-image: url('../images/02,86.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/02,86.png');
 }
 
 .marker-08-86 {
-  background-image: url('../images/08,86.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/08,86.png');
 }
 
 .marker-27-204 {
-  background-image: url('../images/27,204.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/27,204.png');
 }
 
 .marker-68-54-203 {
-  background-image: url('../images/68,54,203.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/68,54,203.png');
 }
 
 .marker-10-54-210 {
-  background-image: url('../images/10,54,210.png');
+  background-image: url('https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/10,54,210.png');
 }

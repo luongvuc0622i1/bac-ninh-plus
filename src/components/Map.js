@@ -119,12 +119,12 @@ export default class Map extends React.Component {
 }
 
 function initLoadLine(map) {
+  addSourceLayer(map, 'Bus Route Back', [], 'red');
+  addSourceLayer(map, 'Bus Route Go', [], '#3e8e41');
   routeIdList.forEach(e => {
     addSourceLayer(map, 'Init Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'red');
     addSourceLayer(map, 'Init Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], '#3e8e41');
   });
-  addSourceLayer(map, 'Bus Route Back', [], 'red');
-  addSourceLayer(map, 'Bus Route Go', [], '#3e8e41');
 }
 
 function addSourceLayer(map, idSoureLayer, coordinates, color) {
@@ -344,7 +344,7 @@ function clickButtonToHere(stationId) {
     for (const element of elementsNode) {
       element.style.opacity = "1";
     }
-    document.getElementById(stationId).style.backgroundImage = "url(../images/bus-stop-here.png)";
+    document.getElementById(stationId).style.backgroundImage = "url(https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-here.png)";
     document.getElementById(stationId).style.marginTop = "-40px"
     document.getElementById(stationId).style.width = "80px";
     document.getElementById(stationId).style.height = "80px";
