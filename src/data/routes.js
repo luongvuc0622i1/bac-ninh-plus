@@ -1,6 +1,6 @@
 import { fetchDataFromApi } from "../components/suport/fetchDataFromApi";
 
-export let routes = await fetchDataFromApi("https://api.github.com/repos/luongvuc0622i1/project-data/contents/routes.js");
+export let routes = await fetchDataFromApi("https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/routes.js");
 
 // export let routes = {
 //   "type": "FeatureCollection",

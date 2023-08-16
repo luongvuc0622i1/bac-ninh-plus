@@ -1,6 +1,6 @@
 import { fetchDataFromApi } from "../components/suport/fetchDataFromApi";
 
-export let stations = await fetchDataFromApi("https://api.github.com/repos/luongvuc0622i1/project-data/contents/stations.js");
+export let stations = await fetchDataFromApi("https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/stations.js");
 
 // export let stations = {
 //   // ---------------------------------------------------------------- Route BN01: Bac Ninh - Luong Tai ------------------------------------------------------
