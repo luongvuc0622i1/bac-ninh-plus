@@ -2,43 +2,43 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { routes, stations, bn01Go, bn01Back, bn02Go, bn02Back, bn03Go, bn03Back, bn08Go, bn08Back, 
-         bn27Go, bn27Back, bn68Go, bn68Back, bn86aGo, bn86aBack, bn86bGo, bn86bBack, b10aGo, b10aBack, b54Go, b54Back, 
-         b203Go, b203Back, b204Go, b204Back, b210Go, b210Back, b212Go, b212Back, b217Go, b217Back } from './suport/api';
+// import { routes, stations, bn01Go, bn01Back, bn02Go, bn02Back, bn03Go, bn03Back, bn08Go, bn08Back, 
+//          bn27Go, bn27Back, bn68Go, bn68Back, bn86aGo, bn86aBack, bn86bGo, bn86bBack, b10aGo, b10aBack, b54Go, b54Back, 
+//          b203Go, b203Back, b204Go, b204Back, b210Go, b210Back, b212Go, b212Back, b217Go, b217Back } from './suport/api';
 import { routeIdList } from './suport/getListRouteId';
 
-// import { routes } from '../data/routes';
-// import { stations } from '../data/stations';
-// import { bn01Go } from '../data/bus-routes/bn01Go';
-// import { bn01Back } from '../data/bus-routes/bn01Back';
-// import { bn02Go } from '../data/bus-routes/bn02Go';
-// import { bn02Back } from '../data/bus-routes/bn02Back';
-// import { bn03Go } from '../data/bus-routes/bn03Go';
-// import { bn03Back } from '../data/bus-routes/bn03Back';
-// import { bn08Go } from '../data/bus-routes/bn08Go';
-// import { bn08Back } from '../data/bus-routes/bn08Back';
-// import { bn27Go } from '../data/bus-routes/bn27Go';
-// import { bn27Back } from '../data/bus-routes/bn27Back';
-// import { bn68Go } from '../data/bus-routes/bn68Go';
-// import { bn68Back } from '../data/bus-routes/bn68Back';
-// import { bn86aGo } from '../data/bus-routes/bn86aGo';
-// import { bn86aBack } from '../data/bus-routes/bn86aBack';
-// import { bn86bGo } from '../data/bus-routes/bn86bGo';
-// import { bn86bBack } from '../data/bus-routes/bn86bBack';
-// import { b10aGo } from '../data/bus-routes/b10aGo';
-// import { b10aBack } from '../data/bus-routes/b10aBack';
-// import { b54Go } from '../data/bus-routes/b54Go';
-// import { b54Back } from '../data/bus-routes/b54Back';
-// import { b203Go} from '../data/bus-routes/b203Go';
-// import { b203Back } from '../data/bus-routes/b203Back';
-// import { b204Go } from '../data/bus-routes/b204Go';
-// import { b204Back } from '../data/bus-routes/b204Back';
-// import { b210Go } from '../data/bus-routes/b210Go';
-// import { b210Back } from '../data/bus-routes/b210Back';
-// import { b212Go } from '../data/bus-routes/b212Go';
-// import { b212Back } from '../data/bus-routes/b212Back';
-// import { b217Go } from '../data/bus-routes/b217Go';
-// import { b217Back } from '../data/bus-routes/b217Back';
+import { routes } from '../data/routes';
+import { stations } from '../data/stations';
+import { bn01Go } from '../data/bus-routes/bn01Go';
+import { bn01Back } from '../data/bus-routes/bn01Back';
+import { bn02Go } from '../data/bus-routes/bn02Go';
+import { bn02Back } from '../data/bus-routes/bn02Back';
+import { bn03Go } from '../data/bus-routes/bn03Go';
+import { bn03Back } from '../data/bus-routes/bn03Back';
+import { bn08Go } from '../data/bus-routes/bn08Go';
+import { bn08Back } from '../data/bus-routes/bn08Back';
+import { bn27Go } from '../data/bus-routes/bn27Go';
+import { bn27Back } from '../data/bus-routes/bn27Back';
+import { bn68Go } from '../data/bus-routes/bn68Go';
+import { bn68Back } from '../data/bus-routes/bn68Back';
+import { bn86aGo } from '../data/bus-routes/bn86aGo';
+import { bn86aBack } from '../data/bus-routes/bn86aBack';
+import { bn86bGo } from '../data/bus-routes/bn86bGo';
+import { bn86bBack } from '../data/bus-routes/bn86bBack';
+import { b10aGo } from '../data/bus-routes/b10aGo';
+import { b10aBack } from '../data/bus-routes/b10aBack';
+import { b54Go } from '../data/bus-routes/b54Go';
+import { b54Back } from '../data/bus-routes/b54Back';
+import { b203Go } from '../data/bus-routes/b203Go';
+import { b203Back } from '../data/bus-routes/b203Back';
+import { b204Go } from '../data/bus-routes/b204Go';
+import { b204Back } from '../data/bus-routes/b204Back';
+import { b210Go } from '../data/bus-routes/b210Go';
+import { b210Back } from '../data/bus-routes/b210Back';
+import { b212Go } from '../data/bus-routes/b212Go';
+import { b212Back } from '../data/bus-routes/b212Back';
+import { b217Go } from '../data/bus-routes/b217Go';
+import { b217Back } from '../data/bus-routes/b217Back';
 
 const dynamicValues = {
   "[bn01Go]": [bn01Go],
@@ -95,11 +95,6 @@ export default class Map extends React.Component {
 
   componentDidUpdate() {
     if (this.props.routeId) {
-      //first change routeId => clear all init route
-      if (this.first) {
-        clearInitLoadLine(this.map);
-        this.first = false;
-      }
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
@@ -109,6 +104,11 @@ export default class Map extends React.Component {
     } else {
       //must load again funtion initLoadMarker because the last funtion in componentDidMount() not run in componentDidUpdate()
       clearMarkerByClassName('mapboxgl-marker');
+      //first time setDataSource in componentDidMount() so not run
+      if (!this.first) {
+        setDataSoureById(this.map, 'All');
+      }
+      this.first = false;
       initLoadMarker(this.map);
     }
     //event click list bus stop in menu => map
@@ -123,11 +123,9 @@ export default class Map extends React.Component {
 }
 
 function initLoadLine(map) {
-  addSourceLayer(map, 'Bus Route Back', [], 'red');
-  addSourceLayer(map, 'Bus Route Go', [], '#3e8e41');
   routeIdList.forEach(e => {
-    addSourceLayer(map, 'Init Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'red');
-    addSourceLayer(map, 'Init Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], '#3e8e41');
+    addSourceLayer(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'red');
+    addSourceLayer(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], '#3e8e41');
   });
 }
 
@@ -262,15 +260,6 @@ function change(number) {
   return hours + "°" + minutes + "'" + seconds + "''";
 }
 
-function clearInitLoadLine(map) {
-  routeIdList.forEach(e => {
-    if (map.getSource('Init Route ' + e + ' Go'))
-      map.removeLayer('Init Route ' + e + ' Go').removeSource('Init Route ' + e + ' Go');
-    if (map.getSource('Init Route ' + e + ' Back'))
-      map.removeLayer('Init Route ' + e + ' Back').removeSource('Init Route ' + e + ' Back');
-  });
-}
-
 function clearMarkerByClassName(className) {
   const elements = document.getElementsByClassName(className); //clear all old markers
   while (elements.length > 0) elements[0].remove();
@@ -278,9 +267,15 @@ function clearMarkerByClassName(className) {
 
 function setDataSoureById(map, routeId) {
   routeIdList.forEach(e => {
-    if (routeId === e) {
-      setDataSoure(map, 'Bus Route Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], routeId);
-      setDataSoure(map, 'Bus Route Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], routeId);
+    if (routeId === 'All') {
+      setDataSoure(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], 'All');
+      setDataSoure(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'All');
+    } else if (routeId === e) {
+      setDataSoure(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], routeId);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], routeId);
+    } else {
+      setDataSoure(map, 'Bus Route ' + e + ' Go', []);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', []);
     }
   });
 }
@@ -288,12 +283,16 @@ function setDataSoureById(map, routeId) {
 function setDataSoure(map, idSoureLayer, coordinates, routeId) {
   let geojson = getGeojson(coordinates);
   map.getSource(idSoureLayer).setData(geojson);
-  fly(map, geojson, routeId);
+  if (routeId === 'All') fly(map, null, routeId);
+  else if (routeId) fly(map, geojson, routeId);
 }
 
 function fly(map, geojson, routeId) {
-  let turf_center = center(geojson); //find center of bus route using Turf
-  let center_coord = turf_center.geometry.coordinates;
+  let center_coord = [];
+  if (geojson) {
+    let turf_center = center(geojson); //find center of bus route using Turf
+    center_coord = turf_center.geometry.coordinates;
+  } else center_coord = [106.0804849, 21.1169071];
   map.flyTo({
     center: center_coord,
     zoom: routeId === 'BN01' ? 11 :
@@ -309,7 +308,8 @@ function fly(map, geojson, routeId) {
                         routeId === '203' ? 10.2 :
                           routeId === '204' ? 11.4 :
                             routeId === '210' ? 10.8 :
-                              routeId === '212' ? 10.8 : 10.4
+                              routeId === '212' ? 10.8 :
+                                routeId === '217' ? 10.4 : 10.5
   });
 }
 
