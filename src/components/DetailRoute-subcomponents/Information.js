@@ -1,4 +1,4 @@
-import { routes } from '../../data/routes';
+import { routes } from '../suport/api';
 
 export default function Infomation(props) {
   if (!props.routeId) return;

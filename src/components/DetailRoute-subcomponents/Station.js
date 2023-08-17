@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { stations } from '../../data/stations';
+import { stations } from '../suport/api';
 
 export default function Infomation(props) {
   const [chooseId, setChooseId] = useState(1);
