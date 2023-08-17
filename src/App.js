@@ -34,8 +34,9 @@ export default function App() {
   return (
     <div className='container'>
       <div className='header'>
-      <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
-        <h2>Bắc Ninh Plus: {width} x {height}</h2>
+        <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
+        <h1 className='title'>Bắc Ninh Bus</h1>
+        {/* <h2>Bắc Ninh Plus: {width} x {height}</h2> */}
       </div>
       {width > 500 ? ( //for website
         <>

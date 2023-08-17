@@ -1,8 +1,7 @@
 .logo {
-  width: 45px;
-  height: 45px;
-  margin: 5px;
-  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
 }
 
 .header {
@@ -10,6 +9,13 @@
   height: 55px;
   background-color: #3e8e41;
   color: #245326;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .menu {

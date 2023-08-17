@@ -4,7 +4,12 @@ import { stations } from '../suport/api';
 
 export default function Stations(props) {
   const [textSearch, setTextSearch] = useState('');
-  const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
+  let features = stations.features.filter(feature => feature.geometry.type !== 'Line');
+  features = [
+    ...features.filter(feature => feature.geometry.pointId).sort((a, b) => a.geometry.pointId - b.geometry.pointId),
+    ...features.filter(feature => !feature.geometry.pointId).sort((a, b) => a.properties.district.localeCompare(b.properties.district))
+  ]
+    .filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
 
   const inputText = (e) => {
     setTextSearch(e.target.value);
