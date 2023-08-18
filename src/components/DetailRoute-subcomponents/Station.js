@@ -39,7 +39,7 @@ export default function Infomation(props) {
       <div className='list-button-in-detail' style={{ display: props.routeId ? "block" : "none" }} >
         {features.map((feature, index) => (
           <div key={index} style={{ position: 'relative' }} >
-            <button className='button-route-or-station' onClick={() => handleStation(feature.properties.routers.filter(route => route.name === props.routeId)[0].id)} >
+            <button className='button-route-or-station' onClick={() => handleStation(feature.geometry.coordinates)} >
               {feature.properties.name ? displayName(feature) : (<b>{feature.properties.address} </b>)}
               {feature.properties.description ? (<small>({feature.properties.description})</small>) : ''}<br />
               <small>Đ/c: </small>

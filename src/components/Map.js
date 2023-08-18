@@ -134,8 +134,8 @@ function initLoadMarker(map) {
       el.className = 'marker-all';
     } else {
       el.className = 'marker-green';
-      el.id = feature.geometry.pointId;
     }
+    el.id = feature.geometry.coordinates;
 
     let routes = feature.properties.routers;
     if (feature.geometry.type === 'Point In Province' || feature.geometry.type === 'Point Out Province') {
@@ -251,20 +251,17 @@ function loadMarker(map, routeId) {
   // add markers to map
   const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routers.some(route => route.name === routeId));
   for (const feature of features) {
-    const matchId = feature.properties.routers.filter(route => route.name === routeId)[0].id;
     const matchColor = feature.properties.routers.filter(route => route.name === routeId)[0].color;
     // create a HTML element for each feature
     const el = document.createElement('div');
     if (matchColor === 'green') {
       el.className = 'marker-green';
-      el.id = matchId;
     } else if (matchColor === 'red') {
       el.className = 'marker-red';
-      el.id = matchId;
     } else {
       el.className = 'marker';
-      el.id = matchId;
     }
+    el.id = feature.geometry.coordinates;
 
     // make a marker for each feature and add it to the map
     createMarker(map, el, feature, feature.properties.routers, 25);

@@ -47,7 +47,7 @@ export default function App() {
             <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMap}>
-            <Map routeId={routeId} stationId={stationId} />
+            <Map routeId={routeId} stationId={stationId} parentCallbackChangeStation={handleClickChangeStation} />
             <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
               <i className='fa fa-chevron-left' />
             </div>
@@ -64,7 +64,7 @@ export default function App() {
           <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? '' : 'none' }} >
             <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
             <div className='group' style={{ height: '300px', color: 'black' }}>
-              <Map routeId={routeId} stationId={stationId} />
+              <Map routeId={routeId} stationId={stationId} parentCallbackChangeStation={handleClickChangeStation} />
             </div>
           </div>
         </>
