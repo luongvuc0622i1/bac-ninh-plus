@@ -45,6 +45,9 @@ export default class Map extends React.Component {
       this.first = false;
       initLoadMarker(this.map);
     }
+    if (this.props.relativeRoute) {
+      setDataSoureById(this.map, this.props.relativeRoute);
+    }
     //event click list bus stop in menu => map
     clickButtonToHere(this.props.stationId);
   }
@@ -204,12 +207,18 @@ function setDataSoureById(map, routeId) {
     if (routeId === 'All') {
       setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All');
       setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'All');
-    } else if (routeId === e) {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
-      setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
     } else {
       setDataSoure(map, 'Bus Route ' + e + ' Go', []);
       setDataSoure(map, 'Bus Route ' + e + ' Back', []);
+      if (Array.isArray(routeId)) {
+        routeId.forEach(e => {
+          setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
+          setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
+        });
+      } else if (routeId === e) {
+        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
+        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
+      }
     }
   });
 }

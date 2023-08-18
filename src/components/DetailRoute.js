@@ -18,7 +18,9 @@ export default function DetailRoute(props) {
   return (
     <>
       <div className='group' style={{ height: '38px' }}>
-        <b style={{ fontSize: '28px' }}>{props.routeId}</b>
+        <div style={{ width: 'calc(100% - 43px)', overflow: 'auto hidden', whiteSpace: 'nowrap', float: 'left' }} >
+          <b style={{ fontSize: '28px' }}>{props.routeId}</b>
+        </div>
         <button className='button-reply' onClick={handleBack}>
           <i className='fa fa-reply' />
         </button>
