@@ -12,8 +12,8 @@ export default function DefaultMenu(props) {
   return (
     <>
       <div className='group'>
-        <button className='button button-double' style={{ backgroundColor: chooseId === 1 ? "#4CAF50" : "#3e8e41" }} onClick={handleChoose} value='1' >Tuyến buýt</button>
-        <button className='button button-double' style={{ backgroundColor: chooseId === 2 ? "#4CAF50" : "#3e8e41" }} onClick={handleChoose} value='2' >Trạm dừng</button>
+        <button className='button button-double' style={{ backgroundColor: chooseId === 1 ? '#4CAF50' : '#3e8e41' }} onClick={handleChoose} value='1' >Tuyến buýt</button>
+        <button className='button button-double' style={{ backgroundColor: chooseId === 2 ? '#4CAF50' : '#3e8e41' }} onClick={handleChoose} value='2' >Trạm dừng</button>
       </div>
       <div className='group' style={{ display: chooseId === 1 ? '' : 'none' }} >
         <Routes parentCallbackChangeRoute={props.parentCallbackChangeRoute} />

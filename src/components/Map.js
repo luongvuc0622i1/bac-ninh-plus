@@ -282,16 +282,16 @@ function clickButtonToHere(stationId) {
     //for all marker have opacity = 0.3
     const elements = document.getElementsByClassName('mapboxgl-marker');
     for (const element of elements) {
-      element.style.opacity = "0.3";
+      element.style.opacity = '0.3';
     }
     const elementsNode = document.getElementsByClassName('marker-node');
     for (const element of elementsNode) {
-      element.style.opacity = "1";
+      element.style.opacity = '1';
     }
-    document.getElementById(stationId).style.backgroundImage = "url(https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-here.png)";
-    document.getElementById(stationId).style.marginTop = "-40px"
-    document.getElementById(stationId).style.width = "80px";
-    document.getElementById(stationId).style.height = "80px";
-    document.getElementById(stationId).style.opacity = "1";
+    document.getElementById(stationId).style.backgroundImage = 'url(https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/bus-stop-here.png)';
+    document.getElementById(stationId).style.marginTop = '-40px'
+    document.getElementById(stationId).style.width = '80px';
+    document.getElementById(stationId).style.height = '80px';
+    document.getElementById(stationId).style.opacity = '1';
   }
 }

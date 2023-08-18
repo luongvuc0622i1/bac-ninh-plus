@@ -1,12 +1,9 @@
-import { routes } from '../suport/routerData';
-
 export default function Infomation(props) {
-  if (!props.routeId) return;
-  const feature = routes.features.find(el => el.geometry.id === props.routeId);
+  const feature = props.feature;
 
   return (
     <>
-      <img src={'https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/'+feature.properties.image} alt={props.routeId} className="image" ></img>
+      <img src={'https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/'+feature.properties.image} alt={props.routeId} className='image' ></img>
       <hr />
       <table>
         <tbody>
@@ -37,7 +34,7 @@ export default function Infomation(props) {
           {feature.properties.decision.map(el => (
             <tr key={el.name} style={{ display: feature.properties.decision[0].name ? '' : 'none' }} >
               <td rowSpan={feature.properties.decision.length} style={{ width: 100, display: el === feature.properties.decision[0] ? '' : 'none' }} >Văn bản:</td>
-              <td><a href={el.link} target="_blank" rel="noopener noreferrer">{el.name}</a></td>
+              <td><a href={el.link} target='_blank' rel='noopener noreferrer'>{el.name}</a></td>
             </tr>
           ))}
           <tr style={{ display: feature.properties.operatedBy ? '' : 'none' }}>

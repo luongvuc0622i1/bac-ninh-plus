@@ -1,8 +1,5 @@
-import { routes } from '../suport/routerData';
-
 export default function Timeline(props) {
-  if (!props.routeId) return;
-  const timeline = routes.features.find(el => el.geometry.id === props.routeId).properties.timeline;
+  const timeline = props.feature.properties.timeline;
 
   return (
     <>

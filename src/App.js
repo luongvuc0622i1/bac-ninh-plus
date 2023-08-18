@@ -57,9 +57,8 @@ export default function App() {
       <div className='header'>
         <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
         <h1 className='title'>Bắc Ninh Bus</h1>
-        {/* <h2>Bắc Ninh Plus: {width} x {height}</h2> */}
       </div>
-      {width > 500 ? ( //for website
+      {width > 500 && height ? ( //for website
         <>
           <div className={classMenu} style={{ display: display === 'DefaultMenu' ? '' : 'none' }} >
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
@@ -75,23 +74,26 @@ export default function App() {
             <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
               <i className='fa fa-chevron-left' />
             </div>
-            <div className='button-show-menu' style={{ display: showMap ? '' : 'none', left: showMap ? '' : '380px' }} onClick={() => handleShowMap(false)} >
+            <div className='button-show-menu' style={{ display: showMap ? '' : 'none' }} onClick={() => handleShowMap(false)} >
               <i className='fa fa-chevron-right' id='clickOpenNavWhenInitPage' />
             </div>
           </div>
         </>
       ) : ( //for phone
-        <>
-          <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? 'none' : '' }}>
+        <div className='menu menu-on-phone-when-normal'>
+          <div style={{ display: display === 'DefaultMenu' ? '' : 'none' }}>
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
-          <div className='menu menu-on-phone-when-normal' style={{ display: routeId ? '' : 'none' }} >
-            <DetailRoute routeId={routeId} parentCallbackBack={() => setRouteId()} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-            <div className='group' style={{ height: '300px', color: 'black' }}>
-              <Map routeId={routeId} stationId={stationId} relativeRoute={relativeRoute} parentCallbackChangeStation={handleClickChangeStation} />
-            </div>
+          <div style={{ display: display === 'DetailRoute' ? '' : 'none' }} >
+            <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
-        </>
+          <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
+            <DetailStation stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} />
+          </div>
+          <div className='group' style={{ display: display === 'DetailRoute' || display === 'DetailStation' ? '' : 'none', height: '300px', color: 'black' }} >
+            <Map routeId={routeId} stationId={stationId} relativeRoute={relativeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+          </div>
+        </div>
       )}
     </div>
   );
