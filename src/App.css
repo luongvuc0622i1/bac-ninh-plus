@@ -219,16 +219,3 @@ i.fa-bus {
 .map-on-phone-when-show-map {
   width: 100%;
 }
-
-.button-route-map {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: .824em;
-  cursor: pointer;
-  margin: 2px;
-  border-radius: 5px;
-}

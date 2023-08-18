@@ -2,47 +2,12 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import {
-  routes, stations, bn01Go, bn01Back, bn02Go, bn02Back, bn03Go, bn03Back, bn08Go, bn08Back,
-  bn27Go, bn27Back, bn68Go, bn68Back, bn86aGo, bn86aBack, bn86bGo, bn86bBack, b10aGo, b10aBack, b54Go, b54Back,
-  b203Go, b203Back, b204Go, b204Back, b210Go, b210Back, b212Go, b212Back, b217Go, b217Back
-} from './suport/routerData';
+import { routes, stations } from './suport/routerData';
 import { routeIdList } from './suport/getListRouteId';
 
-const dynamicValues = {
-  "[bn01Go]": [bn01Go],
-  "[bn01Back]": [bn01Back],
-  "[bn02Go]": [bn02Go],
-  "[bn02Back]": [bn02Back],
-  "[bn03Go]": [bn03Go],
-  "[bn03Back]": [bn03Back],
-  "[bn08Go]": [bn08Go],
-  "[bn08Back]": [bn08Back],
-  "[bn27Go]": [bn27Go],
-  "[bn27Back]": [bn27Back],
-  "[bn68Go]": [bn68Go],
-  "[bn68Back]": [bn68Back],
-  "[bn86aGo]": [bn86aGo],
-  "[bn86aBack]": [bn86aBack],
-  "[bn86bGo]": [bn86bGo],
-  "[bn86bBack]": [bn86bBack],
-  "[b10aGo]": [b10aGo],
-  "[b10aBack]": [b10aBack],
-  "[b54Go]": [b54Go],
-  "[b54Back]": [b54Back],
-  "[b203Go]": [b203Go],
-  "[b203Back]": [b203Back],
-  "[b204Go]": [b204Go],
-  "[b204Back]": [b204Back],
-  "[b210Go]": [b210Go],
-  "[b210Back]": [b210Back],
-  "[b212Go]": [b212Go],
-  "[b212Back]": [b212Back],
-  "[b217Go]": [b217Go],
-  "[b217Back]": [b217Back]
-};
-
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FhZGlxbSIsImEiOiJjamJpMXcxa3AyMG9zMzNyNmdxNDlneGRvIn0.wjlI8r1S_-xxtq2d-W5qPA';
+const mapInitCenter = [106.0804849, 21.1169071];
+const mapInitZoom = 10.5;
 
 export default class Map extends React.Component {
   first = true;
@@ -51,8 +16,8 @@ export default class Map extends React.Component {
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [106.0804849, 21.1169071],
-      zoom: 10.5
+      center: mapInitCenter,
+      zoom: mapInitZoom
     });
     //init page load soure & layer (route line) all route
     initLoadLine(this.map);
@@ -93,8 +58,8 @@ export default class Map extends React.Component {
 
 function initLoadLine(map) {
   routeIdList.forEach(e => {
-    addSourceLayer(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'red');
-    addSourceLayer(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], '#3e8e41');
+    addSourceLayer(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'red');
+    addSourceLayer(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, '#3e8e41');
   });
 }
 
@@ -210,7 +175,7 @@ function renderRouteList(routes) {
   const routeNameList = [];
   for (let i = 0; i < routes.length; i++) {
     if (i % 4 === 0 && i !== 0) routeNameList.push('<br/>');
-    routeNameList.push('<button class="button-route-map"> ' + routes[i].name + '</button>');
+    routeNameList.push('<button class="button-stations"> ' + routes[i].name + '</button>');
   }
   return routeNameList.join('');
 }
@@ -237,11 +202,11 @@ function clearMarkerByClassName(className) {
 function setDataSoureById(map, routeId) {
   routeIdList.forEach(e => {
     if (routeId === 'All') {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], 'All');
-      setDataSoure(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], 'All');
+      setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All');
+      setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'All');
     } else if (routeId === e) {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.go], routeId);
-      setDataSoure(map, 'Bus Route ' + e + ' Back', dynamicValues[routes.features.find(element => element.geometry.id === e).coordinates.back], routeId);
+      setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, routeId);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, routeId);
     } else {
       setDataSoure(map, 'Bus Route ' + e + ' Go', []);
       setDataSoure(map, 'Bus Route ' + e + ' Back', []);
@@ -261,7 +226,7 @@ function fly(map, geojson, routeId) {
   if (geojson) {
     let turf_center = center(geojson); //find center of bus route using Turf
     center_coord = turf_center.geometry.coordinates;
-  } else center_coord = [106.0804849, 21.1169071];
+  } else center_coord = mapInitCenter;
   map.flyTo({
     center: center_coord,
     zoom: routeId === 'BN01' ? 11 :
@@ -278,7 +243,7 @@ function fly(map, geojson, routeId) {
                           routeId === '204' ? 11.4 :
                             routeId === '210' ? 10.8 :
                               routeId === '212' ? 10.8 :
-                                routeId === '217' ? 10.4 : 10.5
+                                routeId === '217' ? 10.4 : mapInitZoom
   });
 }
 

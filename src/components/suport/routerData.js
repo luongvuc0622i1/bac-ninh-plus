@@ -37,66 +37,34 @@ import { b212BackData } from '../../data/bus-routes/b212Back';
 import { b217GoData } from '../../data/bus-routes/b217Go';
 import { b217BackData } from '../../data/bus-routes/b217Back';
 
-export let routes = routesData;
+const arrayData = [
+  { 'go': [bn01GoData], 'back': [bn01BackData] },
+  { 'go': [bn02GoData], 'back': [bn02BackData] },
+  { 'go': [bn03GoData], 'back': [bn03BackData] },
+  { 'go': [bn08GoData], 'back': [bn08BackData] },
+  { 'go': [bn27GoData], 'back': [bn27BackData] },
+  { 'go': [bn68GoData], 'back': [bn68BackData] },
+  { 'go': [bn86aGoData], 'back': [bn86aBackData] },
+  { 'go': [bn86bGoData], 'back': [bn86bBackData] },
+  { 'go': [b10aGoData], 'back': [b10aBackData] },
+  { 'go': [b54GoData], 'back': [b54BackData] },
+  { 'go': [b203GoData], 'back': [b203BackData] },
+  { 'go': [b204GoData], 'back': [b204BackData] },
+  { 'go': [b210GoData], 'back': [b210BackData] },
+  { 'go': [b212GoData], 'back': [b212BackData] },
+  { 'go': [b217GoData], 'back': [b217BackData] }
+]
+
+export let routes = {
+  ...routesData,
+  features: routesData.features.map((feature, i) => ({
+    ...feature,
+    coordinates: {
+      ...feature.coordinates,
+      go: arrayData[i].go,
+      back: arrayData[i].back
+    }
+  }))
+};
 
 export let stations = stationsData;
-
-export let bn01Go = bn01GoData;
-
-export let bn01Back = bn01BackData;
-
-export let bn02Go = bn02GoData;
-
-export let bn02Back = bn02BackData;
-
-export let bn03Go = bn03GoData;
-
-export let bn03Back = bn03BackData;
-
-export let bn08Go = bn08GoData;
-
-export let bn08Back = bn08BackData;
-
-export let bn27Go = bn27GoData;
-
-export let bn27Back = bn27BackData;
-
-export let bn68Go = bn68GoData;
-
-export let bn68Back = bn68BackData;
-
-export let bn86aGo = bn86aGoData;
-
-export let bn86aBack = bn86aBackData;
-
-export let bn86bGo = bn86bGoData;
-
-export let bn86bBack = bn86bBackData;
-
-export let b10aGo = b10aGoData;
-
-export let b10aBack = b10aBackData;
-
-export let b54Go = b54GoData;
-
-export let b54Back = b54BackData;
-
-export let b203Go = b203GoData;
-
-export let b203Back = b203BackData;
-
-export let b204Go = b204GoData;
-
-export let b204Back = b204BackData;
-
-export let b210Go = b210GoData;
-
-export let b210Back = b210BackData;
-
-export let b212Go = b212GoData;
-
-export let b212Back = b212BackData;
-
-export let b217Go = b217GoData;
-
-export let b217Back = b217BackData;
