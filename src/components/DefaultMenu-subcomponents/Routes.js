@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { routes } from '../suport/api';
-// import { routes } from '../../data/routes';
+import { routes } from '../suport/routerData';
 
 export default function Routes(props) {
   const [textSearch, setTextSearch] = useState('');

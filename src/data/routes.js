@@ -1,4 +1,4 @@
-export let routes = {
+export let routesData = {
   "type": "FeatureCollection",
   "features": [
     {
