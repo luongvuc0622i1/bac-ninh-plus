@@ -5910,7 +5910,7 @@ export let stationsData = {
       "geometry": {
         "pointId": 11,
         "type": "Point Out Province",
-        "coordinates": [105.849453, 21.041309]
+        "coordinates": [105.849463, 21.041309]
       },
       "properties": {
         "name": "Long Biên",
@@ -5937,7 +5937,8 @@ export let stationsData = {
         "district": "Hoàn Kiếm, Hà Nội",
         "routers": [
           { "id": 3, "name": "54", "color": "green" },
-          { "id": 119, "name": "203", "color": "red" }
+          { "id": 119, "name": "203", "color": "red" },
+          { "id": 3, "name": "204", "color": "green" }
         ]
       }
     },
@@ -5954,7 +5955,8 @@ export let stationsData = {
         "district": "Hoàn Kiếm, Hà Nội",
         "routers": [
           { "id": 4, "name": "54", "color": "red" },
-          { "id": 118, "name": "203", "color": "green" }
+          { "id": 118, "name": "203", "color": "green" },
+          { "id": 4, "name": "204", "color": "red" }
         ]
       }
     },
@@ -5972,7 +5974,8 @@ export let stationsData = {
         "routers": [
           { "id": 5, "name": "10A", "color": "green" },
           { "id": 5, "name": "54", "color": "green" },
-          { "id": 117, "name": "203", "color": "red" }
+          { "id": 117, "name": "203", "color": "red" },
+          { "id": 5, "name": "204", "color": "green" }
         ]
       }
     },
@@ -5990,7 +5993,8 @@ export let stationsData = {
         "routers": [
           { "id": 6, "name": "10A", "color": "red" },
           { "id": 6, "name": "54", "color": "red" },
-          { "id": 116, "name": "203", "color": "green" }
+          { "id": 116, "name": "203", "color": "green" },
+          { "id": 6, "name": "204", "color": "red" }
         ]
       }
     },
@@ -6008,7 +6012,8 @@ export let stationsData = {
         "routers": [
           { "id": 7, "name": "10A", "color": "green" },
           { "id": 7, "name": "54", "color": "green" },
-          { "id": 115, "name": "203", "color": "red" }
+          { "id": 115, "name": "203", "color": "red" },
+          { "id": 7, "name": "204", "color": "green" }
         ]
       }
     },
@@ -6026,7 +6031,8 @@ export let stationsData = {
         "routers": [
           { "id": 8, "name": "10A", "color": "red" },
           { "id": 8, "name": "54", "color": "red" },
-          { "id": 114, "name": "203", "color": "green" }
+          { "id": 114, "name": "203", "color": "green" },
+          { "id": 8, "name": "204", "color": "red" }
         ]
       }
     },
@@ -6044,7 +6050,8 @@ export let stationsData = {
         "routers": [
           { "id": 9, "name": "10A", "color": "green" },
           { "id": 9, "name": "54", "color": "green" },
-          { "id": 113, "name": "203", "color": "red" }
+          { "id": 113, "name": "203", "color": "red" },
+          { "id": 9, "name": "204", "color": "green" }
         ]
       }
     },
@@ -6062,7 +6069,8 @@ export let stationsData = {
         "routers": [
           { "id": 10, "name": "10A", "color": "green" },
           { "id": 10, "name": "54", "color": "green" },
-          { "id": 112, "name": "203", "color": "red" }
+          { "id": 112, "name": "203", "color": "red" },
+          { "id": 10, "name": "204", "color": "green" }
         ]
       }
     },
@@ -6081,6 +6089,7 @@ export let stationsData = {
           { "id": 11, "name": "10A", "color": "red" },
           { "id": 11, "name": "54", "color": "red" },
           { "id": 111, "name": "203", "color": "green" },
+          { "id": 11, "name": "204", "color": "red" },
           { "id": 98, "name": "210", "color": "green" }
         ]
       }
@@ -6100,6 +6109,7 @@ export let stationsData = {
           { "id": 12, "name": "10A", "color": "green" },
           { "id": 12, "name": "54", "color": "green" },
           { "id": 110, "name": "203", "color": "red" },
+          { "id": 12, "name": "204", "color": "green" },
           { "id": 97, "name": "210", "color": "red" }
         ]
       }
@@ -6119,6 +6129,7 @@ export let stationsData = {
           { "id": 13, "name": "10A", "color": "red" },
           { "id": 13, "name": "54", "color": "red" },
           { "id": 109, "name": "203", "color": "green" },
+          { "id": 13, "name": "204", "color": "red" },
           { "id": 96, "name": "210", "color": "green" }
         ]
       }
