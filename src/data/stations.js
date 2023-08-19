@@ -5929,16 +5929,321 @@ export let stationsData = {
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [105.881811, 21.048515]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "548 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 10, "name": "10A", "color": "green" },
+          { "id": 10, "name": "54", "color": "green" },
+          { "id": 112, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.883741, 21.049844]
+      },
+      "properties": {
+        "name": "Siêu thị Điện máy HC",
+        "description": "",
+        "address": "549 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 11, "name": "10A", "color": "red" },
+          { "id": 11, "name": "54", "color": "red" },
+          { "id": 111, "name": "203", "color": "green" },
+          { "id": 98, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.886003, 21.052405]
+      },
+      "properties": {
+        "name": "Phòng Công Chứng số 2 TPHN",
+        "description": "",
+        "address": "658 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 12, "name": "10A", "color": "green" },
+          { "id": 12, "name": "54", "color": "green" },
+          { "id": 110, "name": "203", "color": "red" },
+          { "id": 97, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.885893, 21.052419]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "589 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 13, "name": "10A", "color": "red" },
+          { "id": 13, "name": "54", "color": "red" },
+          { "id": 109, "name": "203", "color": "green" },
+          { "id": 96, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.889604, 21.056649]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "18-20 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 14, "name": "10A", "color": "green" },
+          { "id": 14, "name": "54", "color": "green" },
+          { "id": 108, "name": "203", "color": "red" },
+          { "id": 95, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.890491, 21.057942]
+      },
+      "properties": {
+        "name": "Bưu cục Long Biên",
+        "description": "",
+        "address": "79 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 15, "name": "10A", "color": "red" },
+          { "id": 15, "name": "54", "color": "red" },
+          { "id": 107, "name": "203", "color": "green" },
+          { "id": 94, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.894105, 21.061337]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "170-172 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 16, "name": "10A", "color": "green" },
+          { "id": 16, "name": "54", "color": "green" },
+          { "id": 106, "name": "203", "color": "red" },
+          { "id": 93, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.893781, 21.061205]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "285 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 17, "name": "10A", "color": "red" },
+          { "id": 17, "name": "54", "color": "red" },
+          { "id": 105, "name": "203", "color": "green" },
+          { "id": 92, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.897164, 21.064485]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "316-318 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 18, "name": "10A", "color": "green" },
+          { "id": 18, "name": "54", "color": "green" },
+          { "id": 104, "name": "203", "color": "red" },
+          { "id": 91, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.897459, 21.065048]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "505-507 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 19, "name": "10A", "color": "red" },
+          { "id": 19, "name": "54", "color": "red" },
+          { "id": 103, "name": "203", "color": "green" },
+          { "id": 90, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.900905, 21.068396]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "368 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 20, "name": "10A", "color": "green" },
+          { "id": 20, "name": "54", "color": "green" },
+          { "id": 102, "name": "203", "color": "red" },
+          { "id": 89, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.900565, 21.068267]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "713-715 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 21, "name": "10A", "color": "red" },
+          { "id": 21, "name": "54", "color": "red" },
+          { "id": 101, "name": "203", "color": "green" },
+          { "id": 88, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.906885, 21.074422]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "608-610 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 22, "name": "10A", "color": "green" },
+          { "id": 22, "name": "54", "color": "green" },
+          { "id": 100, "name": "203", "color": "red" },
+          { "id": 87, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.906679, 21.074505]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "1095 Ngô Gia Tự",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 23, "name": "10A", "color": "red" },
+          { "id": 23, "name": "54", "color": "red" },
+          { "id": 99, "name": "203", "color": "green" },
+          { "id": 86, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.911487, 21.079572]
+      },
+      "properties": {
+        "name": "Cầu Đuống",
+        "description": "",
+        "address": "44 Hà Huy Tập",
+        "ward": "Yên Viên",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 24, "name": "10A", "color": "green" },
+          { "id": 24, "name": "54", "color": "green" },
+          { "id": 98, "name": "203", "color": "red" },
+          { "id": 85, "name": "210", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.912348, 21.080435]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "115 Hà Huy Tập",
+        "ward": "Yên Viên",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 25, "name": "10A", "color": "red" },
+          { "id": 25, "name": "54", "color": "red" },
+          { "id": 97, "name": "203", "color": "green" },
+          { "id": 84, "name": "210", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [105.915917, 21.083978]
       },
       "properties": {
         "name": "Ga Yên Viên",
         "description": "",
         "address": "270-272 Hà Huy Tập",
-        "district": "Hà Nội",
+        "ward": "Yên Viên",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 26, "name": "10A" },
-          { "name": "10B" },
           { "id": 26, "name": "54" },
           { "id": 96, "name": "203" },
           { "id": 83, "name": "210" }
@@ -5955,10 +6260,10 @@ export let stationsData = {
         "name": "Công ty giày Yên Viên",
         "description": "",
         "address": "488 Hà Huy Tập",
-        "district": "Hà Nội",
+        "ward": "Yên Viên",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 27, "name": "10A" },
-          { "name": "10B" },
           { "id": 27, "name": "54" },
           { "id": 95, "name": "203" },
           { "id": 82, "name": "210" }
@@ -5975,10 +6280,10 @@ export let stationsData = {
         "name": "Đường vào Trường THPT Yên Viên",
         "description": "",
         "address": "664 Hà Huy Tập",
-        "district": "Hà Nội",
+        "ward": "Yên Viên",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 28, "name": "10A" },
-          { "name": "10B" },
           { "id": 28, "name": "54" },
           { "id": 94, "name": "203" },
           { "id": 81, "name": "210" }
@@ -5995,10 +6300,10 @@ export let stationsData = {
         "name": "Dốc Lã",
         "description": "",
         "address": "Đường Đặng Phúc Thông",
-        "district": "Hà Nội",
+        "ward": "Yên Thường",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 29, "name": "10A" },
-          { "name": "10B" },
           { "id": 29, "name": "54" },
           { "id": 93, "name": "203" },
           { "id": 80, "name": "210" }
@@ -6015,7 +6320,8 @@ export let stationsData = {
         "name": "Chợ Trùng Quán",
         "description": "",
         "address": "Đường Đặng Phúc Thông",
-        "district": "Hà Nội",
+        "ward": "Yên Thường",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 30, "name": "10A" },
           { "id": 30, "name": "54" },
@@ -6840,7 +7146,7 @@ export let stationsData = {
       "geometry": {
         "pointId": 18,
         "type": "Point Out Province",
-        "coordinates": [105.878533, 21.047953]
+        "coordinates": [105.878221, 21.048686]
       },
       "properties": {
         "name": "Gia Lâm",
