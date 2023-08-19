@@ -5915,13 +5915,136 @@ export let stationsData = {
       "properties": {
         "name": "Long Biên",
         "description": "Điểm trung chuyển Long Biên",
-        "address": "",
-        "ward": "",
-        "district": "Hà Nội",
+        "address": "Đường Yên Phụ",
+        "district": "Ba Đình, Hà Nội",
         "routers": [
           { "id": 1, "name": "10A", "start": true },
           { "id": 1, "name": "54", "start": true },
           { "id": 1, "name": "204", "start": true }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.852789, 21.037579]
+      },
+      "properties": {
+        "name": "Ô Quan Trưởng",
+        "description": "",
+        "address": "80 Trần Nhật Duật",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routers": [
+          { "id": 3, "name": "54", "color": "green" },
+          { "id": 119, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.852968, 21.037704]
+      },
+      "properties": {
+        "name": "Hàm Tử Quan",
+        "description": "",
+        "address": "373 Hồng Hà (Trần Nhật Duật)",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routers": [
+          { "id": 4, "name": "54", "color": "red" },
+          { "id": 118, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.870970, 21.042585]
+      },
+      "properties": {
+        "name": "Tổng cục Hải quan",
+        "description": "",
+        "address": "162 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 5, "name": "10A", "color": "green" },
+          { "id": 5, "name": "54", "color": "green" },
+          { "id": 117, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.870479, 21.042258]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "135 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 6, "name": "10A", "color": "red" },
+          { "id": 6, "name": "54", "color": "red" },
+          { "id": 116, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.875977, 21.045675]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "358-360 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 7, "name": "10A", "color": "green" },
+          { "id": 7, "name": "54", "color": "green" },
+          { "id": 115, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.875242, 21.045451]
+      },
+      "properties": {
+        "name": "Cty Cầu 5 Thăng Long",
+        "description": "",
+        "address": "307 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 8, "name": "10A", "color": "red" },
+          { "id": 8, "name": "54", "color": "red" },
+          { "id": 114, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.878831, 21.047067]
+      },
+      "properties": {
+        "name": "Đối diện Bến xe Gia Lâm",
+        "description": "",
+        "address": "436-438 Nguyễn Văn Cừ",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 9, "name": "10A", "color": "green" },
+          { "id": 9, "name": "54", "color": "green" },
+          { "id": 113, "name": "203", "color": "red" }
         ]
       }
     },
@@ -6539,7 +6662,7 @@ export let stationsData = {
         "name": "Giáp Bát",
         "description": "Bến xe Giáp Bát",
         "address": "897 Giải Phóng",
-        "district": "Hà Nội",
+        "district": "Hoàng Mai, Hà Nội",
         "routers": [
           { "id": 150, "name": "203", "start": true }
         ]
@@ -7152,7 +7275,7 @@ export let stationsData = {
         "name": "Gia Lâm",
         "description": "Bến xe Gia Lâm",
         "address": "9 Ngô Gia Khảm",
-        "district": "Hà Nội",
+        "district": "Long Biên, Hà Nội",
         "routers": [
           { "id": 99, "name": "210", "start": true }
         ]
@@ -7170,7 +7293,7 @@ export let stationsData = {
         "name": "Mỹ Đình",
         "description": "Bến xe Mỹ Đình",
         "address": "20 Phạm Hùng",
-        "district": "Hà Nội",
+        "district": "Nam Từ Liêm, Hà Nội",
         "routers": [
           { "id": 1, "name": "212", "start": true }
         ]
