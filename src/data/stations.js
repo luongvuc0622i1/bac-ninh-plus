@@ -7117,14 +7117,237 @@ export let stationsData = {
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [105.958525, 21.006446]
+      },
+      "properties": {
+        "name": "ĐD đường vào Nhà máy sữa Hà Nội",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 38, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.958577, 21.006554]
+      },
+      "properties": {
+        "name": "Đường vào Nhà máy sữa Hà Nội",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 39, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.962509, 21.004179]
+      },
+      "properties": {
+        "name": "Ga Phú Thụy",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 40, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.962535, 21.004282]
+      },
+      "properties": {
+        "name": "ĐD Ga Phú Thụy",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 41, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.965465, 21.001356]
+      },
+      "properties": {
+        "name": "Cầu vượt Phú Thụy",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 42, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.965588, 21.001391]
+      },
+      "properties": {
+        "name": "Cầu vượt Phú Thụy",
+        "description": "",
+        "address": "Đường Nguyễn Bình",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 43, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.966757, 21.008431]
+      },
+      "properties": {
+        "name": "Trường THPT Dương Xá",
+        "description": "",
+        "address": "Đường Ỷ Lan",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 44, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.966080, 21.012109]
+      },
+      "properties": {
+        "name": "Đình làng Yên Bình",
+        "description": "",
+        "address": "Đường Ỷ Lan",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 45, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.965060, 21.017434]
+      },
+      "properties": {
+        "name": "Chợ Sủi",
+        "description": "",
+        "address": "Đường Ỷ Lan",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 46, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.970442, 21.022075]
+      },
+      "properties": {
+        "name": "Trung tâm văn hóa thể thao Phú Thị",
+        "description": "",
+        "address": "Đường Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 47, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.976213, 21.023990]
+      },
+      "properties": {
+        "name": "Cây xăng Petrolimex 65",
+        "description": "",
+        "address": "Đường Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 48, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.984179, 21.025824]
+      },
+      "properties": {
+        "name": "Đường vào DTLS Kim Sơn",
+        "description": "",
+        "address": "189 Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 49, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.988575, 21.025955]
+      },
+      "properties": {
+        "name": "UBND xã Kim Sơn",
+        "description": "",
+        "address": "Đường Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 50, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.998100, 21.027029]
+      },
+      "properties": {
+        "name": "Học viện Tòa Án",
+        "description": "",
+        "address": "Đường Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 51, "name": "204" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [106.007706, 21.029166]
       },
       "properties": {
         "name": "Bến xe buýt 52A",
         "description": "",
-        "address": "Quốc lộ 17",
-        "ward": "Lệ Chi",
-        "district": "Gia Lâm",
+        "address": "Đường Dương Đức Hiền",
+        "district": "Gia Lâm, Hà Nội",
         "routers": [
           { "id": 60, "name": "204" }
         ]
