@@ -6701,6 +6701,422 @@ export let stationsData = {
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [105.889395, 21.053359]
+      },
+      "properties": {
+        "name": "Cây xăng Cầu Chui",
+        "description": "",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 14, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.889904, 21.053296]
+      },
+      "properties": {
+        "name": "MediaMart Long Biên",
+        "description": "",
+        "address": "3 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 15, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.891850, 21.049924]
+      },
+      "properties": {
+        "name": "Đối diện Savico Megamall Long Biên",
+        "description": "",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 16, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.891980, 21.050398]
+      },
+      "properties": {
+        "name": "Savico Megamall Long Biên",
+        "description": "BigC Long Biên",
+        "address": "7-9 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 17, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.894290, 21.046183]
+      },
+      "properties": {
+        "name": "Đối Diện Công Ty Nước Sạch",
+        "description": "",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 18, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.895284, 21.044994]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "105-107 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 19, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.898232, 21.038693]
+      },
+      "properties": {
+        "name": "Đối Diện UBND Phường Phúc Đồng",
+        "description": "",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 20, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.898383, 21.038725]
+      },
+      "properties": {
+        "name": "UBND Phường Phúc Đồng",
+        "description": "",
+        "address": "247 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 21, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.909832, 21.031800]
+      },
+      "properties": {
+        "name": "KCN Sài Đồng B",
+        "description": "",
+        "address": "Đối diện 523 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 22, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.907427, 21.033117]
+      },
+      "properties": {
+        "name": "Công ty thí nghiệm miền Bắc",
+        "description": "",
+        "address": "465 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 23, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.914506, 21.029770]
+      },
+      "properties": {
+        "name": "Ngã tư Thạch Bàn",
+        "description": "",
+        "address": "Đối Diện 693 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 24, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.914771, 21.029871]
+      },
+      "properties": {
+        "name": "Ngã tư Thạch Bàn",
+        "description": "",
+        "address": "705 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 25, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.920094, 21.028190]
+      },
+      "properties": {
+        "name": "Ga Cầu Bây",
+        "description": "Đối diện Công ty May 10",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 26, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.918368, 21.028800]
+      },
+      "properties": {
+        "name": "Tổng Công ty May 10",
+        "description": "",
+        "address": "765A Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 27, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.923178, 21.027140]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "68 Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 28, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.923308, 21.027270]
+      },
+      "properties": {
+        "name": "Ngã ba Phố Cầu Bây",
+        "description": "",
+        "address": "Đường Nguyễn Văn Linh",
+        "district": "Long Biên, Hà Nội",
+        "routers": [
+          { "id": 29, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.931774, 21.023576]
+      },
+      "properties": {
+        "name": "Cầu Thanh Trì",
+        "description": "",
+        "address": "Đường Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 30, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.931782, 21.023770]
+      },
+      "properties": {
+        "name": "Cầu Thanh Trì",
+        "description": "",
+        "address": "146 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 31, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.936510, 21.021660]
+      },
+      "properties": {
+        "name": "Ngã tư Trâu Quỳ",
+        "description": "",
+        "address": "Đối diện 187 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 32, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.937484, 21.021343]
+      },
+      "properties": {
+        "name": "Ngã tư Trâu Quỳ",
+        "description": "",
+        "address": "197 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 33, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.942202, 21.018363]
+      },
+      "properties": {
+        "name": "Đối diện Nhà thi đấu Gia Lâm",
+        "description": "",
+        "address": "Đường Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 34, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.942352, 21.018347]
+      },
+      "properties": {
+        "name": "Nhà thi đấu Gia Lâm",
+        "description": "",
+        "address": "399 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 35, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.948903, 21.013473]
+      },
+      "properties": {
+        "name": "Đối diện Cổng KĐT Đặng Xá",
+        "description": "",
+        "address": "Đối diện 815 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 36, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.949123, 21.013444]
+      },
+      "properties": {
+        "name": "Cổng KĐT Đặng Xá",
+        "description": "",
+        "address": "827 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 37, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.951853, 21.011316]
+      },
+      "properties": {
+        "name": "Ngã ba Kiên Thành",
+        "description": "",
+        "address": "Đối diện 981 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 36, "name": "204", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.952213, 21.011190]
+      },
+      "properties": {
+        "name": "Cụm công nghiệp Phú Thị",
+        "description": "",
+        "address": "997 Nguyễn Đức Thuận",
+        "district": "Gia Lâm, Hà Nội",
+        "routers": [
+          { "id": 37, "name": "204", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [106.007706, 21.029166]
       },
       "properties": {
