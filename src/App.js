@@ -13,8 +13,9 @@ export default function App() {
   const [showMap, setShowMap] = useState(true);
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
-  const [relativeRoute, setRelativeRoute] = useState();
+  const [checkRelativeRoutes, setCheckRelativeRoutes] = useState('1');
 
+  let relativeRoutes = [];
   let classMenu = 'menu menu-on-computer';
   let classMap = 'map map-on-computer';
 
@@ -22,6 +23,7 @@ export default function App() {
     classMenu = 'menu menu-on-phone-when-show-map';
     classMap = 'map map-on-phone-when-show-map';
   }
+  if (stationId) relativeRoutes = stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routers.map(route => route.name);
 
   const handleShowMap = (e) => {
     setShowMap(e);
@@ -35,8 +37,6 @@ export default function App() {
   const handleClickChangeStation = (e) => {
     setStationId(e);
     setDisplay('DetailStation');
-    const routeIdList = stations.features.find(feature => feature.geometry.coordinates === e).properties.routers.map(route => route.name);
-    setRelativeRoute(routeIdList);
   }
 
   const handleBackFromRoute = () => {
@@ -47,9 +47,12 @@ export default function App() {
 
   const handleBackFromStation = () => {
     setStationId();
-    setRelativeRoute();
     if (routeId) setDisplay('DetailRoute');
     else setDisplay('DefaultMenu');
+  }
+
+  const handleClickRelativeRoutes = (e) => {
+    setCheckRelativeRoutes(e);
   }
 
   return (
@@ -58,7 +61,7 @@ export default function App() {
         <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
         <h1 className='title'>Bắc Ninh Bus</h1>
       </div>
-      {width > 500 && height ? ( //for website
+      {width > 500 ? ( //for website
         <>
           <div className={classMenu} style={{ display: display === 'DefaultMenu' ? '' : 'none' }} >
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
@@ -67,10 +70,10 @@ export default function App() {
             <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMenu} style={{ display: display === 'DetailStation' ? '' : 'none' }} >
-            <DetailStation stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} />
+            <DetailStation routeId={routeId} stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeRelativeRoutes={handleClickRelativeRoutes} />
           </div>
           <div className={classMap}>
-            <Map routeId={routeId} stationId={stationId} relativeRoute={relativeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <Map scale={height/650} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} relativeRoutes={checkRelativeRoutes === '1' ? (routeId ? [routeId] : (!stationId ? null : relativeRoutes)) : relativeRoutes} />
             <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
               <i className='fa fa-chevron-left' />
             </div>
@@ -88,10 +91,10 @@ export default function App() {
             <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
-            <DetailStation stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} />
+            <DetailStation stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeRelativeRoutes={handleClickRelativeRoutes} />
           </div>
           <div className='group' style={{ display: display === 'DetailRoute' || display === 'DetailStation' ? '' : 'none', height: '300px', color: 'black' }} >
-            <Map routeId={routeId} stationId={stationId} relativeRoute={relativeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <Map scale={0.85} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} relativeRoutes={checkRelativeRoutes === '1' ? (routeId ? [routeId] : (!stationId ? null : relativeRoutes)) : relativeRoutes} />
           </div>
         </div>
       )}
