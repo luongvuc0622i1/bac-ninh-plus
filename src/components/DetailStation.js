@@ -11,7 +11,7 @@ export default function DetailStation(props) {
 
   const handleChoose = (e) => {
     setChooseId(parseInt(e.target.value));
-    props.parentCallbackChangeRelativeRoutes(e.target.value);
+    props.parentCallbackCheckRelativeRoutes(parseInt(e.target.value));
   }
 
   const handleBack = () => {

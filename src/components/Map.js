@@ -17,7 +17,7 @@ export default class Map extends React.Component {
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
       center: mapInitCenter,
-      zoom: mapInitZoom*this.props.scale
+      zoom: mapInitZoom * this.props.scale
     });
     //init page load soure & layer (route line) all route
     initLoadLine(this.map);
@@ -28,13 +28,23 @@ export default class Map extends React.Component {
   };
 
   componentDidUpdate() {
-    if (this.props.relativeRoutes) {
+    let relativeRoutes;
+    if (this.props.routeId) relativeRoutes = [this.props.routeId];
+    if (this.props.stationId) {
+      if (this.props.checkRelativeRoutes === 1) {
+        relativeRoutes = [this.props.routeId];
+      } else if (this.props.checkRelativeRoutes === 2) {
+        relativeRoutes = stations.features.find(feature => feature.geometry.coordinates === this.props.stationId).properties.routers.map(route => route.name);
+      }
+    }
+
+    if (this.props.routeId || this.props.stationId) {
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
-      setDataSoureById(this.map, this.props.relativeRoutes, this.props.scale);
+      setDataSoureById(this.map, relativeRoutes, this.props.scale);
       //setup new list marker by route
-      this.props.relativeRoutes.forEach(e => {
+      relativeRoutes.forEach(e => {
         loadMarker(this.map, e, this.props.checkRelativeRoutes);
       });
     } else {
@@ -42,7 +52,7 @@ export default class Map extends React.Component {
       clearMarkerByClassName('mapboxgl-marker');
       //first time setDataSource in componentDidMount() so not run
       if (!this.first) {
-        setDataSoureById(this.map, 'All');
+        setDataSoureById(this.map, 'All', this.props.scale);
       }
       this.first = false;
       initLoadMarker(this.map);
@@ -232,7 +242,7 @@ function fly(map, geojson, relativeRoutes, scale) {
   } else center_coord = mapInitCenter;
   map.flyTo({
     center: center_coord,
-    zoom: scale*(relativeRoutes === 'BN01' ? 11 :
+    zoom: scale * (relativeRoutes === 'BN01' ? 11 :
       relativeRoutes === 'BN02' ? 11.5 :
         relativeRoutes === 'BN03' ? 12.1 :
           relativeRoutes === 'BN08' ? 11.2 :
@@ -246,7 +256,7 @@ function fly(map, geojson, relativeRoutes, scale) {
                           relativeRoutes === '204' ? 11.4 :
                             relativeRoutes === '210' ? 10.8 :
                               relativeRoutes === '212' ? 10.8 :
-                                relativeRoutes === '217' ? 10.4 : mapInitZoom*this.props.scale)
+                                relativeRoutes === '217' ? 10.4 : mapInitZoom)
   });
 }
 
@@ -256,7 +266,7 @@ function loadMarker(map, routeId, checkRelativeRoutes) {
   for (const feature of features) {
     // create a HTML element for each feature
     const el = document.createElement('div');
-    if (checkRelativeRoutes === '2') {
+    if (checkRelativeRoutes === 2) {
       el.className = 'marker-all';
     } else {
       const matchColor = feature.properties.routers.filter(route => route.name === routeId)[0].color;
