@@ -38,7 +38,7 @@ export default function Stations(props) {
               <div style={{ height: '25px' }}></div>
             </button>
             <div className='list-button-route' >
-              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
+              {feature.properties.routes.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
             </div>
           </div>
         ))}

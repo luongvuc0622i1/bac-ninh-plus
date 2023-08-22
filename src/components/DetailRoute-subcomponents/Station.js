@@ -4,9 +4,9 @@ import { stations } from '../suport/routerData';
 export default function Infomation(props) {
   const [chooseId, setChooseId] = useState(1);
   const [textSearch, setTextSearch] = useState('');
-  let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routers.some(route => route.name === props.routeId)).filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
-  if (chooseId === 1) features = features.filter(feature => feature.properties.routers.find(route => route.name === props.routeId).color !== 'red').sort((firstEl, secondEl) => { if (secondEl.properties.routers.find(route => route.name === props.routeId).id > firstEl.properties.routers.find(route => route.name === props.routeId).id) return -1; else return 0; });
-  else features = features.filter(feature => feature.properties.routers.find(route => route.name === props.routeId).color !== 'green').sort((firstEl, secondEl) => { if (secondEl.properties.routers.find(route => route.name === props.routeId).id > firstEl.properties.routers.find(route => route.name === props.routeId).id) return 0; else return -1; });
+  let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === props.routeId)).filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
+  if (chooseId === 1) features = features.filter(feature => feature.properties.routes.find(route => route.name === props.routeId).color !== 'red').sort((firstEl, secondEl) => { if (secondEl.properties.routes.find(route => route.name === props.routeId).id > firstEl.properties.routes.find(route => route.name === props.routeId).id) return -1; else return 0; });
+  else features = features.filter(feature => feature.properties.routes.find(route => route.name === props.routeId).color !== 'green').sort((firstEl, secondEl) => { if (secondEl.properties.routes.find(route => route.name === props.routeId).id > firstEl.properties.routes.find(route => route.name === props.routeId).id) return 0; else return -1; });
 
   const handleChoose = (e) => {
     setChooseId(parseInt(e.target.value));
@@ -49,7 +49,7 @@ export default function Infomation(props) {
               <div style={{ height: '25px' }}></div>
             </button>
             <div className='list-button-route' >
-              {feature.properties.routers.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
+              {feature.properties.routes.slice(0, 6).map(route => (<button key={JSON.stringify(route)} className='button-stations' onClick={handleClickChangeRoute} value={route.name} >{route.name}</button>))}
             </div>
           </div>
         ))}

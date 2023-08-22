@@ -137,11 +137,11 @@ function initLoadMarker(map) {
     }
     el.id = feature.geometry.coordinates;
 
-    let routes = feature.properties.routers;
+    let routes = feature.properties.routes;
     if (feature.geometry.type === 'Point In Province' || feature.geometry.type === 'Point Out Province') {
-      routes = feature.properties.routers.filter(route => route.start);
+      routes = feature.properties.routes.filter(route => route.start);
     } else {
-      routes = feature.properties.routers;
+      routes = feature.properties.routes;
     }
 
     let offset = '';
@@ -195,8 +195,8 @@ function change(number) {
 }
 
 function getRelativeRoutes(routeId, stationId, checkRelativeRoutes) {
-    if (checkRelativeRoutes === 1 && routeId) return [routeId];
-    else return stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routers.map(route => route.name);
+  if (checkRelativeRoutes === 1 && routeId) return [routeId];
+  else return stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routes.map(route => route.name);
 }
 
 function clearMarkerByClassName(className) {
@@ -255,14 +255,14 @@ function fly(map, geojson, relativeRoutes, scale) {
 
 function loadMarker(map, routeId, checkRelativeRoutes) {
   // add markers to map
-  const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routers.some(route => route.name === routeId));
+  const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === routeId));
   for (const feature of features) {
     // create a HTML element for each feature
     const el = document.createElement('div');
     if (checkRelativeRoutes === 2) {
       el.className = 'marker-all';
     } else {
-      const matchColor = feature.properties.routers.find(route => route.name === routeId).color;
+      const matchColor = feature.properties.routes.find(route => route.name === routeId).color;
       if (matchColor === 'green') {
         el.className = 'marker-green';
       } else if (matchColor === 'red') {
@@ -274,7 +274,7 @@ function loadMarker(map, routeId, checkRelativeRoutes) {
     el.id = feature.geometry.coordinates;
 
     // make a marker for each feature and add it to the map
-    createMarker(map, el, feature, feature.properties.routers, 25);
+    createMarker(map, el, feature, feature.properties.routes, 25);
   };
 }
 

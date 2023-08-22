@@ -29,6 +29,7 @@ export default function App() {
   const handleClickChangeRoute = (e) => {
     setRouteId(e);
     setDisplay('DetailRoute');
+    setCheckRelativeRoutes(1);
   }
 
   const handleClickChangeStation = (e) => {
