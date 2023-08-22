@@ -46,7 +46,7 @@ export default class Map extends React.Component {
       this.first = false;
     }
     //event click list bus stop in menu => map
-    clickButtonToHere(this.props.stationId);
+    clickButtonToHere(this.props.stationId, this.map, this.props.scale*1.2);
   }
 
   render() {
@@ -278,7 +278,7 @@ function loadMarker(map, routeId, checkRelativeRoutes) {
   };
 }
 
-function clickButtonToHere(stationId) {
+function clickButtonToHere(stationId, map, scale) {
   if (document.getElementById(stationId)) {
     //for all marker have opacity = 0.3
     const elements = document.getElementsByClassName('mapboxgl-marker');
@@ -294,5 +294,9 @@ function clickButtonToHere(stationId) {
     document.getElementById(stationId).style.width = '80px';
     document.getElementById(stationId).style.height = '80px';
     document.getElementById(stationId).style.opacity = '1';
+    map.flyTo({
+      center: stationId,
+      zoom: scale * mapInitZoom
+    });
   }
 }

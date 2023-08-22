@@ -35,6 +35,7 @@ export default function App() {
   const handleClickChangeStation = (e) => {
     setStationId(e);
     setDisplay('DetailStation');
+    setCheckRelativeRoutes(1);
   }
 
   const handleCheckRelativeRoutes = (e) => {
@@ -69,7 +70,7 @@ export default function App() {
             <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMenu} style={{ display: display === 'DetailStation' ? '' : 'none' }} >
-            <DetailStation routeId={routeId} stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
+            <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
           <div className={classMap}>
             <Map scale={height / height} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} />
@@ -90,7 +91,7 @@ export default function App() {
             <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
-            <DetailStation routeId={routeId} stationId={stationId} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
+            <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
           <div className='group' style={{ display: display === 'DetailRoute' || display === 'DetailStation' ? '' : 'none', height: '300px', color: 'black' }} >
             <Map scale={0.85} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} />
