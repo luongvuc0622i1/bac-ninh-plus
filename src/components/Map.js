@@ -31,10 +31,10 @@ export default class Map extends React.Component {
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
-      setDataSoureById(this.map, relativeRoutes, this.props.scale);
+      setDataSoureById(this.map, relativeRoutes, this.props.scale, this.props.checkGoBack);
       //setup new list marker by route
       relativeRoutes.forEach(e => {
-        loadMarker(this.map, e, this.props.checkRelativeRoutes);
+        loadMarker(this.map, e, this.props.checkRelativeRoutes, this.props.checkGoBack);
       });
     } else {
       //must load again funtion initLoadMarker because the last funtion in componentDidMount() not run in componentDidUpdate()
@@ -42,7 +42,7 @@ export default class Map extends React.Component {
       //init page load marker start-end bus stop, all bus stop, node marker
       initLoadMarker(this.map);
       //first time setDataSource in componentDidMount() so not run
-      if (!this.first) setDataSoureById(this.map, 'All', this.props.scale);
+      if (!this.first) setDataSoureById(this.map, 'All', this.props.scale, this.props.checkGoBack);
       this.first = false;
     }
     //event click list bus stop in menu => map
@@ -204,7 +204,7 @@ function clearMarkerByClassName(className) {
   while (elements.length > 0) elements[0].remove();
 }
 
-function setDataSoureById(map, relativeRoutes, scale) {
+function setDataSoureById(map, relativeRoutes, scale, checkGoBack) {
   routeIdList.forEach(e => {
     if (relativeRoutes === 'All') {
       setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All', scale);
@@ -213,8 +213,12 @@ function setDataSoureById(map, relativeRoutes, scale) {
       setDataSoure(map, 'Bus Route ' + e + ' Go', []);
       setDataSoure(map, 'Bus Route ' + e + ' Back', []);
       relativeRoutes.forEach(e => {
-        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
-        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
+        if (checkGoBack === 1) setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
+        else if (checkGoBack === 2) setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
+        else if (checkGoBack === 0) {
+          setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
+          setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
+        };
       });
     }
   });
@@ -253,9 +257,11 @@ function fly(map, geojson, relativeRoutes, scale) {
   });
 }
 
-function loadMarker(map, routeId, checkRelativeRoutes) {
+function loadMarker(map, routeId, checkRelativeRoutes, checkGoBack) {
   // add markers to map
-  const features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === routeId));
+  let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === routeId));
+  if (checkGoBack === 1) features = features.filter(feature => feature.properties.routes.find(route => route.name === routeId).color !== 'red');
+  else if (checkGoBack === 2) features = features.filter(feature => feature.properties.routes.find(route => route.name === routeId).color !== 'green');
   for (const feature of features) {
     // create a HTML element for each feature
     const el = document.createElement('div');

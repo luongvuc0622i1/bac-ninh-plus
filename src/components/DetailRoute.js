@@ -12,6 +12,8 @@ export default function DetailRoute(props) {
 
   const handleChoose = (e) => {
     setChooseId(parseInt(e.target.value));
+    props.parentCallbackCheckGoBack(0);
+    if (e.target.value === '2') props.parentCallbackCheckGoBack(1);
   }
 
   const handleBack = () => {
@@ -31,7 +33,7 @@ export default function DetailRoute(props) {
         <Information feature={feature} />
       </div>
       <div className='group' style={{ display: chooseId === 2 ? 'block' : 'none' }} >
-        <Station routeId={props.routeId} parentCallbackChangeRoute={props.parentCallbackChangeRoute} parentCallbackChangeStation={props.parentCallbackChangeStation} />
+        <Station checkGoBack={props.checkGoBack} parentCallbackCheckGoBack={props.parentCallbackCheckGoBack} routeId={props.routeId} parentCallbackChangeRoute={props.parentCallbackChangeRoute} parentCallbackChangeStation={props.parentCallbackChangeStation} />
       </div>
       <div className='group group-detail' style={{ display: chooseId === 3 ? 'block' : 'none' }} >
         <Timeline feature={feature} />

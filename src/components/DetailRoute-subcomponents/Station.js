@@ -2,19 +2,19 @@ import { useState } from 'react';
 import { stations } from '../suport/routerData';
 
 export default function Infomation(props) {
-  const [chooseId, setChooseId] = useState(1);
+  let chooseId = props.checkGoBack;
   const [textSearch, setTextSearch] = useState('');
   let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === props.routeId)).filter(feature => feature.properties.name.toLowerCase().includes(textSearch.toLowerCase()) || feature.properties.description.toLowerCase().includes(textSearch.toLowerCase()));
   if (chooseId === 1) features = features.filter(feature => feature.properties.routes.find(route => route.name === props.routeId).color !== 'red').sort((firstEl, secondEl) => { if (secondEl.properties.routes.find(route => route.name === props.routeId).id > firstEl.properties.routes.find(route => route.name === props.routeId).id) return -1; else return 0; });
   else features = features.filter(feature => feature.properties.routes.find(route => route.name === props.routeId).color !== 'green').sort((firstEl, secondEl) => { if (secondEl.properties.routes.find(route => route.name === props.routeId).id > firstEl.properties.routes.find(route => route.name === props.routeId).id) return 0; else return -1; });
 
   const handleChoose = (e) => {
-    setChooseId(parseInt(e.target.value));
+    props.parentCallbackCheckGoBack(parseInt(e.target.value));
   }
 
   const handleClickChangeRoute = (e) => {
     props.parentCallbackChangeRoute(e.target.value);
-    setChooseId(1);
+    props.parentCallbackCheckGoBack(1);
   }
 
   const handleStation = (e) => {

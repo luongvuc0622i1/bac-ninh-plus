@@ -13,6 +13,7 @@ export default function App() {
   const [routeId, setRouteId] = useState();
   const [stationId, setStationId] = useState();
   const [checkRelativeRoutes, setCheckRelativeRoutes] = useState(1);
+  const [checkGoBack, setCheckGoBack] = useState(0);
 
   let classMenu = 'menu menu-on-computer';
   let classMap = 'map map-on-computer';
@@ -46,6 +47,7 @@ export default function App() {
     setRouteId();
     if (stationId) setDisplay('DetailStation');
     else setDisplay('DefaultMenu');
+    setCheckGoBack(0);
   }
 
   const handleBackFromStation = () => {
@@ -67,13 +69,13 @@ export default function App() {
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMenu} style={{ display: display === 'DetailRoute' ? '' : 'none' }} >
-            <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <DetailRoute routeId={routeId} checkGoBack={checkGoBack} parentCallbackCheckGoBack={e => setCheckGoBack(e)} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div className={classMenu} style={{ display: display === 'DetailStation' ? '' : 'none' }} >
             <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
           <div className={classMap}>
-            <Map scale={height / height} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} />
+            <Map scale={height / height} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} checkGoBack={checkGoBack} />
             <div className='button-show-menu' style={{ display: showMap ? 'none' : '' }} onClick={() => handleShowMap(true)} >
               <i className='fa fa-chevron-left' />
             </div>
@@ -88,13 +90,13 @@ export default function App() {
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div style={{ display: display === 'DetailRoute' ? '' : 'none' }} >
-            <DetailRoute routeId={routeId} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
+            <DetailRoute routeId={routeId} checkGoBack={checkGoBack} parentCallbackCheckGoBack={e => setCheckGoBack(e)} parentCallbackBack={handleBackFromRoute} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
           <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
             <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
           <div className='group' style={{ display: display === 'DetailRoute' || display === 'DetailStation' ? '' : 'none', height: '300px', color: 'black' }} >
-            <Map scale={0.85} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} />
+            <Map scale={0.85} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} checkGoBack={checkGoBack} />
           </div>
         </div>
       )}
