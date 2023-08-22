@@ -21,24 +21,13 @@ export default class Map extends React.Component {
     });
     //init page load soure & layer (route line) all route
     initLoadLine(this.map);
-    //init page load marker start-end bus stop, all bus stop, node marker
-    initLoadMarker(this.map);
     //open menu navbar on left
     if (document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
   };
 
   componentDidUpdate() {
-    let relativeRoutes;
-    if (this.props.routeId) relativeRoutes = [this.props.routeId];
-    if (this.props.stationId) {
-      if (this.props.checkRelativeRoutes === 1) {
-        relativeRoutes = [this.props.routeId];
-      } else if (this.props.checkRelativeRoutes === 2) {
-        relativeRoutes = stations.features.find(feature => feature.geometry.coordinates === this.props.stationId).properties.routers.map(route => route.name);
-      }
-    }
-
     if (this.props.routeId || this.props.stationId) {
+      let relativeRoutes = getRelativeRoutes(this.props.routeId, this.props.stationId, this.props.checkRelativeRoutes);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
@@ -50,12 +39,11 @@ export default class Map extends React.Component {
     } else {
       //must load again funtion initLoadMarker because the last funtion in componentDidMount() not run in componentDidUpdate()
       clearMarkerByClassName('mapboxgl-marker');
-      //first time setDataSource in componentDidMount() so not run
-      if (!this.first) {
-        setDataSoureById(this.map, 'All', this.props.scale);
-      }
-      this.first = false;
+      //init page load marker start-end bus stop, all bus stop, node marker
       initLoadMarker(this.map);
+      //first time setDataSource in componentDidMount() so not run
+      if (!this.first) setDataSoureById(this.map, 'All', this.props.scale);
+      this.first = false;
     }
     //event click list bus stop in menu => map
     clickButtonToHere(this.props.stationId);
@@ -206,6 +194,11 @@ function change(number) {
   return hours + "°" + minutes + "'" + seconds + "''";
 }
 
+function getRelativeRoutes(routeId, stationId, checkRelativeRoutes) {
+    if (checkRelativeRoutes === 1 && routeId) return [routeId];
+    else return stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routers.map(route => route.name);
+}
+
 function clearMarkerByClassName(className) {
   const elements = document.getElementsByClassName(className); //clear all old markers
   while (elements.length > 0) elements[0].remove();
@@ -217,8 +210,8 @@ function setDataSoureById(map, relativeRoutes, scale) {
       setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All', scale);
       setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'All', scale);
     } else {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', [], null, scale);
-      setDataSoure(map, 'Bus Route ' + e + ' Back', [], null, scale);
+      setDataSoure(map, 'Bus Route ' + e + ' Go', []);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', []);
       relativeRoutes.forEach(e => {
         setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
         setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
@@ -269,7 +262,7 @@ function loadMarker(map, routeId, checkRelativeRoutes) {
     if (checkRelativeRoutes === 2) {
       el.className = 'marker-all';
     } else {
-      const matchColor = feature.properties.routers.filter(route => route.name === routeId)[0].color;
+      const matchColor = feature.properties.routers.find(route => route.name === routeId).color;
       if (matchColor === 'green') {
         el.className = 'marker-green';
       } else if (matchColor === 'red') {
