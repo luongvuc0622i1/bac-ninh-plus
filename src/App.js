@@ -19,8 +19,8 @@ export default function App() {
   let classMap = 'map map-on-computer';
 
   if (showMap) {
-    classMenu = 'menu menu-on-phone-when-show-map';
-    classMap = 'map map-on-phone-when-show-map';
+    classMenu = 'menu menu-on-computer-when-show-map';
+    classMap = 'map map-on-computer-when-show-map';
   }
 
   const handleShowMap = (e) => {
@@ -85,7 +85,7 @@ export default function App() {
           </div>
         </>
       ) : ( //for phone
-        <div className='menu menu-on-phone-when-normal'>
+        <div className='menu menu-on-phone'>
           <div style={{ display: display === 'DefaultMenu' ? '' : 'none' }}>
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>

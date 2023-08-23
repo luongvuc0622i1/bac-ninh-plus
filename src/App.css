@@ -27,11 +27,11 @@
   width: 380px;
 }
 
-.menu-on-phone-when-normal {
+.menu-on-phone {
   width: 100%;
 }
 
-.menu-on-phone-when-show-map {
+.menu-on-computer-when-show-map {
   display: none;
 }
 
@@ -211,11 +211,6 @@ i.fa-bus {
   width: calc(100vw - 380px);
 }
 
-.map-on-phone-when-normal {
-  width: 0px;
-  display: none;
-}
-
-.map-on-phone-when-show-map {
+.map-on-computer-when-show-map {
   width: 100%;
 }
