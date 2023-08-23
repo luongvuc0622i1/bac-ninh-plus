@@ -1,59 +1,72 @@
-import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { useEffect, useRef } from 'react';
 import { routes, stations } from './suport/routerData';
 import { routeIdList } from './suport/getListRouteId';
+const MAPBOX_ACCESS_TOKEN = 'pk.eyJ1Ijoic2FhZGlxbSIsImEiOiJjamJpMXcxa3AyMG9zMzNyNmdxNDlneGRvIn0.wjlI8r1S_-xxtq2d-W5qPA';
+const MAPBOX_STYLE = 'mapbox://styles/mapbox/streets-v11';
+const MAPBOX_CENTER = [106.0804849, 21.1169071];
+const MAPBOX_ZOOM = 10.5;
+let unFirst = false;
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2FhZGlxbSIsImEiOiJjamJpMXcxa3AyMG9zMzNyNmdxNDlneGRvIn0.wjlI8r1S_-xxtq2d-W5qPA';
-const mapInitCenter = [106.0804849, 21.1169071];
-const mapInitZoom = 10.5;
+export default function Map(props) {
+  const mapRef = useRef(null);
+  const map = useRef(null);
 
-export default class Map extends React.Component {
-  first = true;
+  //open menu navbar on left
+  useEffect(() => {
+    document.getElementById('clickOpenNavWhenInitPage').click();
+  }, []);
 
-  componentDidMount() {
-    this.map = new mapboxgl.Map({
-      container: this.mapContainer,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: mapInitCenter,
-      zoom: mapInitZoom * this.props.scale
+  useEffect(() => {
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+
+    // Initialize the map
+    map.current = new mapboxgl.Map({
+      container: mapRef.current,
+      style: MAPBOX_STYLE,
+      center: MAPBOX_CENTER,
+      zoom: MAPBOX_ZOOM,
     });
-    //init page load soure & layer (route line) all route
-    initLoadLine(this.map);
-    //open menu navbar on left
-    if (document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
-  };
 
-  componentDidUpdate() {
-    if (this.props.routeId || this.props.stationId) {
-      let relativeRoutes = getRelativeRoutes(this.props.routeId, this.props.stationId, this.props.checkRelativeRoutes);
+    //init page load soure & layer (route line) all route
+    initLoadLine(map.current);
+
+    // Clean up the map instance when the component unmounts
+    return () => map.current.remove();
+  }, [props.showMap]);
+
+  useEffect(() => {
+    if (props.display === 'DefaultMenu') { //data init and back to data init
+      if (unFirst) { //only when back to data init
+        setDataSoureById(map.current, 'All', props.scale);
+        //clear all old markers
+        clearMarkerByClassName('mapboxgl-marker');
+      }
+      //init page load marker start-end bus stop, all bus stop, node marker
+      initLoadMarker(map.current);
+    } else {
+      unFirst = true;
+
+
+      let relativeRoutes = getRelativeRoutes(props.routeId, props.stationId, props.checkRelativeRoutes);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
-      setDataSoureById(this.map, relativeRoutes, this.props.scale, this.props.checkGoBack);
+      setDataSoureById(map.current, relativeRoutes, props.scale, props.checkGoBack);
       //setup new list marker by route
       relativeRoutes.forEach(e => {
-        loadMarker(this.map, e, this.props.checkRelativeRoutes, this.props.checkGoBack);
+        loadMarker(map.current, e, props.checkRelativeRoutes, props.checkGoBack);
       });
-    } else {
-      //must load again funtion initLoadMarker because the last funtion in componentDidMount() not run in componentDidUpdate()
-      clearMarkerByClassName('mapboxgl-marker');
-      //init page load marker start-end bus stop, all bus stop, node marker
-      initLoadMarker(this.map);
-      //first time setDataSource in componentDidMount() so not run
-      if (!this.first) setDataSoureById(this.map, 'All', this.props.scale, this.props.checkGoBack);
-      this.first = false;
+      //event click list bus stop in menu => map
+      clickButtonToHere(props.stationId, map.current, props.scale*1.2);
     }
-    //event click list bus stop in menu => map
-    clickButtonToHere(this.props.stationId, this.map, this.props.scale*1.2);
-  }
+  }, [props.showMap, props.display, props.scale, props.routeId, props.stationId, props.checkRelativeRoutes, props.checkGoBack]);
 
-  render() {
-    return (
-      <div ref={el => this.mapContainer = el} style={{ width: 'inherit', height: 'inherit' }} />
-    );
-  }
+  return (
+    <div ref={mapRef} style={{ width: 'inherit', height: 'inherit' }} />
+  );
 }
 
 function initLoadLine(map) {
@@ -72,17 +85,17 @@ function addSourceLayer(map, idSoureLayer, coordinates, color) {
         data: geojson
       });
       map.addLayer({
-        "id": idSoureLayer,
-        "type": "line",
-        "source": idSoureLayer,
-        "paint": {
-          "line-color": color,
-          "line-width": 4,
-          "line-opacity": color === 'red' ? 0.5 : 1
+        'id': idSoureLayer,
+        'type': 'line',
+        'source': idSoureLayer,
+        'paint': {
+          'line-color': color,
+          'line-width': 4,
+          'line-opacity': color === 'red' ? 0.5 : 1
         },
-        "layout": {
-          "line-join": "round",
-          "line-cap": "round"
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
         },
       });
     } catch (error) { }
@@ -91,23 +104,81 @@ function addSourceLayer(map, idSoureLayer, coordinates, color) {
 
 function getGeojson(coordinates) {
   return {
-    "type": "FeatureCollection",
-    "features": [
+    'type': 'FeatureCollection',
+    'features': [
       {
-        "type": "Feature",
-        "geometry": {
-          "type": "MultiLineString",
-          "coordinates": coordinates
+        'type': 'Feature',
+        'geometry': {
+          'type': 'MultiLineString',
+          'coordinates': coordinates
         }
       }
     ],
-    "crs": {
-      "type": "name",
-      "properties": {
-        "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    'crs': {
+      'type': 'name',
+      'properties': {
+        'name': 'urn:ogc:def:crs:OGC:1.3:CRS84'
       }
     }
   };
+}
+
+function setDataSoureById(map, relativeRoutes, scale, checkGoBack) {
+  routeIdList.forEach(e => {
+    if (relativeRoutes === 'All') {
+      setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All', scale);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'All', scale);
+    } else {
+      setDataSoure(map, 'Bus Route ' + e + ' Go', []);
+      setDataSoure(map, 'Bus Route ' + e + ' Back', []);
+      relativeRoutes.forEach(e => {
+        if (checkGoBack === 1) setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
+        else if (checkGoBack === 2) setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
+        else if (checkGoBack === 0) {
+          setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
+          setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
+        };
+      });
+    }
+  });
+}
+
+function setDataSoure(map, idSoureLayer, coordinates, relativeRoutes, scale) {
+  let geojson = getGeojson(coordinates);
+  map.getSource(idSoureLayer).setData(geojson);
+  if (relativeRoutes === 'All') fly(map, null, relativeRoutes, scale);
+  else if (relativeRoutes) fly(map, geojson, relativeRoutes, scale);
+}
+
+function fly(map, geojson, relativeRoutes, scale) {
+  let center_coord = [];
+  if (geojson) {
+    let turf_center = center(geojson); //find center of bus route using Turf
+    center_coord = turf_center.geometry.coordinates;
+  } else center_coord = MAPBOX_CENTER;
+  map.flyTo({
+    center: center_coord,
+    zoom: scale * (relativeRoutes === 'BN01' ? 11 :
+      relativeRoutes === 'BN02' ? 11.5 :
+        relativeRoutes === 'BN03' ? 12.1 :
+          relativeRoutes === 'BN08' ? 11.2 :
+            relativeRoutes === 'BN27' ? 11.3 :
+              relativeRoutes === 'BN68' ? 11.5 :
+                relativeRoutes === 'BN86A' ? 10.8 :
+                  relativeRoutes === 'BN86B' ? 11.5 :
+                    relativeRoutes === '10A' ? 12 :
+                      relativeRoutes === '54' ? 11.2 :
+                        relativeRoutes === '203' ? 10.2 :
+                          relativeRoutes === '204' ? 11.4 :
+                            relativeRoutes === '210' ? 10.8 :
+                              relativeRoutes === '212' ? 10.8 :
+                                relativeRoutes === '217' ? 10.4 : MAPBOX_ZOOM)
+  });
+}
+
+function clearMarkerByClassName(className) {
+  const elements = document.getElementsByClassName(className); //clear all old markers
+  while (elements.length > 0) elements[0].remove();
 }
 
 function initLoadMarker(map) {
@@ -199,64 +270,6 @@ function getRelativeRoutes(routeId, stationId, checkRelativeRoutes) {
   else return stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routes.map(route => route.name);
 }
 
-function clearMarkerByClassName(className) {
-  const elements = document.getElementsByClassName(className); //clear all old markers
-  while (elements.length > 0) elements[0].remove();
-}
-
-function setDataSoureById(map, relativeRoutes, scale, checkGoBack) {
-  routeIdList.forEach(e => {
-    if (relativeRoutes === 'All') {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, 'All', scale);
-      setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'All', scale);
-    } else {
-      setDataSoure(map, 'Bus Route ' + e + ' Go', []);
-      setDataSoure(map, 'Bus Route ' + e + ' Back', []);
-      relativeRoutes.forEach(e => {
-        if (checkGoBack === 1) setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
-        else if (checkGoBack === 2) setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
-        else if (checkGoBack === 0) {
-          setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, e, scale);
-          setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, e, scale);
-        };
-      });
-    }
-  });
-}
-
-function setDataSoure(map, idSoureLayer, coordinates, relativeRoutes, scale) {
-  let geojson = getGeojson(coordinates);
-  map.getSource(idSoureLayer).setData(geojson);
-  if (relativeRoutes === 'All') fly(map, null, relativeRoutes, scale);
-  else if (relativeRoutes) fly(map, geojson, relativeRoutes, scale);
-}
-
-function fly(map, geojson, relativeRoutes, scale) {
-  let center_coord = [];
-  if (geojson) {
-    let turf_center = center(geojson); //find center of bus route using Turf
-    center_coord = turf_center.geometry.coordinates;
-  } else center_coord = mapInitCenter;
-  map.flyTo({
-    center: center_coord,
-    zoom: scale * (relativeRoutes === 'BN01' ? 11 :
-      relativeRoutes === 'BN02' ? 11.5 :
-        relativeRoutes === 'BN03' ? 12.1 :
-          relativeRoutes === 'BN08' ? 11.2 :
-            relativeRoutes === 'BN27' ? 11.3 :
-              relativeRoutes === 'BN68' ? 11.5 :
-                relativeRoutes === 'BN86A' ? 10.8 :
-                  relativeRoutes === 'BN86B' ? 11.5 :
-                    relativeRoutes === '10A' ? 12 :
-                      relativeRoutes === '54' ? 11.2 :
-                        relativeRoutes === '203' ? 10.2 :
-                          relativeRoutes === '204' ? 11.4 :
-                            relativeRoutes === '210' ? 10.8 :
-                              relativeRoutes === '212' ? 10.8 :
-                                relativeRoutes === '217' ? 10.4 : mapInitZoom)
-  });
-}
-
 function loadMarker(map, routeId, checkRelativeRoutes, checkGoBack) {
   // add markers to map
   let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === routeId));
@@ -302,7 +315,7 @@ function clickButtonToHere(stationId, map, scale) {
     document.getElementById(stationId).style.opacity = '1';
     map.flyTo({
       center: stationId,
-      zoom: scale * mapInitZoom
+      zoom: scale * MAPBOX_ZOOM
     });
   }
 }
