@@ -51,7 +51,6 @@ export default function Map(props) {
       unFirst = true;
 
 
-      map.current.panBy([1000, 0]);
       let relativeRoutes = getRelativeRoutes(props.routeId, props.stationId, props.checkRelativeRoutes);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
