@@ -28,7 +28,7 @@ export default function Map(props) {
     initLoadLine(map.current);
 
     //open menu navbar on left
-    document.getElementById('clickOpenNavWhenInitPage').click();
+    if(document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
 
     // Clean up the map instance when the component unmounts
     return () => map.current.remove();
@@ -51,6 +51,7 @@ export default function Map(props) {
       unFirst = true;
 
 
+      map.current.panBy([1000, 0]);
       let relativeRoutes = getRelativeRoutes(props.routeId, props.stationId, props.checkRelativeRoutes);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
@@ -61,9 +62,9 @@ export default function Map(props) {
         loadMarker(map.current, e, props.checkRelativeRoutes, props.checkGoBack);
       });
       //event click list bus stop in menu => map
-      clickButtonToHere(props.stationId, map.current, props.scale * 1.2);
+      clickButtonToHere(props.stationId, map.current, 1.2);
     }
-  }, [props.showMap, props.display, props.scale, props.routeId, props.stationId, props.checkRelativeRoutes, props.checkGoBack]);
+  }, [props.showMap, props.display, props.routeId, props.stationId, props.checkRelativeRoutes, props.checkGoBack]);
 
   return (
     <div ref={mapRef} style={{ width: 'inherit', height: 'inherit' }} />
