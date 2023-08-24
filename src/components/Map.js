@@ -165,8 +165,6 @@ function zoomBounds(map, coordinates, showMap) {
   map.fitBounds(bounds, {
     padding: { top: 50, bottom: 50, left: 50, right: showMap ? 50 : (50 + 380) } // Optional padding
   });
-
-  console.log(map.getZoom())
 }
 
 function clearMarkerByClassName(className) {
