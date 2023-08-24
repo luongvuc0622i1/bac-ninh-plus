@@ -1,5 +1,4 @@
 import mapboxgl from 'mapbox-gl';
-import { center } from 'turf';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useEffect, useRef } from 'react';
 import { routes, stations } from './suport/routerData';
@@ -37,18 +36,17 @@ export default function Map(props) {
 
   useEffect(() => {
     if (props.display === 'DefaultMenu') { //data init and back to data init
+      map.current.setCenter(MAPBOX_CENTER);
+      map.current.setZoom(MAPBOX_ZOOM);
+      if (!props.showMap) map.current.panBy([190, 0]);
+      
       if (unFirst) { //only when back to data init
-        setDataSoureById(map.current, routeIdList, props.showMap, props.scale, props.checkGoBack);
+        setDataSoureAll(map.current);
         //clear all old markers
         clearMarkerByClassName('mapboxgl-marker');
       }
       //load marker start-end bus stop, all bus stop, node marker
       initLoadMarker(map.current);
-
-      map.current.flyTo({
-        center: props.showMap ? MAPBOX_CENTER : [MAPBOX_CENTER[0] + 0.1195, MAPBOX_CENTER[1]],
-        zoom: MAPBOX_ZOOM,
-      });
     } else {
       unFirst = true;
 
@@ -57,7 +55,7 @@ export default function Map(props) {
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
       //setup new line by route
-      setDataSoureById(map.current, relativeRoutes, props.showMap, props.scale, props.checkGoBack);
+      setDataSoureById(map.current, relativeRoutes, props.showMap, props.checkGoBack);
       //setup new list marker by route
       relativeRoutes.forEach(e => {
         loadMarker(map.current, e, props.checkRelativeRoutes, props.checkGoBack);
@@ -126,48 +124,49 @@ function getGeojson(coordinates) {
   };
 }
 
-function setDataSoureById(map, relativeRoutes, showMap, scale, checkGoBack) {
+function setDataSoureAll(map) {
+  routeIdList.forEach(e => {
+    setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
+    setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
+  });
+}
+
+function setDataSoureById(map, relativeRoutes, showMap, checkGoBack) {
   routeIdList.forEach(e => {
     setDataSoure(map, 'Bus Route ' + e + ' Go', []);
     setDataSoure(map, 'Bus Route ' + e + ' Back', []);
     relativeRoutes.forEach(e => {
-      if (checkGoBack === 1) setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, showMap, e, scale);
-      else if (checkGoBack === 2) setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, showMap, e, scale);
-      else if (checkGoBack === 0) {
-        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, showMap, e, scale);
-        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, showMap, e, scale);
+      if (checkGoBack === 1) {
+        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
+        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.go[0], showMap);
+      } else if (checkGoBack === 2) {
+        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
+        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.back[0], showMap);
+      } else if (checkGoBack === 0) {
+        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
+        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
+        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.go[0], showMap);
       };
     });
   });
 }
 
-function setDataSoure(map, idSoureLayer, coordinates, showMap, routeId, scale) {
+function setDataSoure(map, idSoureLayer, coordinates) {
   let geojson = getGeojson(coordinates);
   map.getSource(idSoureLayer).setData(geojson);
-  if (routeId && scale) fly(map, geojson, showMap, routeId, scale);
 }
 
-function fly(map, geojson, showMap, routeId, scale) {
-  let turf_center = center(geojson); //find center of bus route using Turf
-  let center_coord = showMap ? turf_center.geometry.coordinates : [turf_center.geometry.coordinates[0] + 0.1195, turf_center.geometry.coordinates[1]];
-  map.flyTo({
-    center: center_coord,
-    zoom: scale * (routeId === 'BN01' ? 11 :
-      routeId === 'BN02' ? 11.5 : // ------------------------------------------------------------------  0.0465
-        routeId === 'BN03' ? 12.1 : // ----------------------------------------------------------------  0.0305
-          routeId === 'BN08' ? 11.2 :
-            routeId === 'BN27' ? 11.3 :
-              routeId === 'BN68' ? 11.5 :
-                routeId === 'BN86A' ? 10.8 :
-                  routeId === 'BN86B' ? 11.5 :
-                    routeId === '10A' ? 12 :
-                      routeId === '54' ? 11.2 :
-                        routeId === '203' ? 10.2 :
-                          routeId === '204' ? 11.4 :
-                            routeId === '210' ? 10.8 :
-                              routeId === '212' ? 10.8 :
-                                routeId === '217' ? 10.4 : MAPBOX_ZOOM)
+function zoomBounds(map, coordinates, showMap) {
+  // Calculate the bounding box of all the line coordinates
+  const bounds = new mapboxgl.LngLatBounds();
+  coordinates.forEach(coord => bounds.extend(coord));
+
+  // Set the map's zoom and center to fit the bounding box
+  map.fitBounds(bounds, {
+    padding: { top: 50, bottom: 50, left: 50, right: showMap ? 50 : (50 + 380) } // Optional padding
   });
+
+  console.log(map.getZoom())
 }
 
 function clearMarkerByClassName(className) {
