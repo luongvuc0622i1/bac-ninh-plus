@@ -85,7 +85,7 @@ export default function App() {
           </div>
         </>
       ) : ( //for phone
-        <div className='menu menu-on-phone'>
+        <div className='menu menu-on-phone' style={{ overflow: display === 'DefaultMenu' ? 'hidden' : '', height : display === 'DefaultMenu' ? (height - 55) : '' }}>
           <div style={{ display: display === 'DefaultMenu' ? '' : 'none' }}>
             <DefaultMenu parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackChangeStation={handleClickChangeStation} />
           </div>
@@ -95,7 +95,6 @@ export default function App() {
           <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
             <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
-          {/* <div className='group' style={{ display: display === 'DetailRoute' || display === 'DetailStation' ? '' : 'none', height: '300px', color: 'black' }} > */}
           <div className='group' style={{ height: '300px', color: 'black' }} >
             <Map showMap={showMap} display={display} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} checkGoBack={checkGoBack} />
           </div>
