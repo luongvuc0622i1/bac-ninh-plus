@@ -53,11 +53,7 @@ export default function Map(props) {
       clearDataSoure(map.current);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
-      if (props.display === 'DetailRoute') {
-        //setup new line by routeId
-        setDataSoureByRouteId(map.current, props.routeId, props.showMap, props.checkGoBack);
-        loadMarker(map.current, props.routeId, props.checkRelativeRoutes, props.checkGoBack);
-      } else if (props.display === 'DetailStation') {
+      if (props.display === 'DetailStation' && (!props.routeId || props.checkRelativeRoutes === 2)) {
         let relativeRoutes = stations.features.find(feature => feature.geometry.coordinates === props.stationId).properties.routes.map(route => ({ name: route.name, color: route.color }));
         //setup new line by relativeRoutes
         setDataSoureByRelativeRoutes(map.current, relativeRoutes);
@@ -65,6 +61,10 @@ export default function Map(props) {
         relativeRoutes.forEach(e => {
           loadMarker(map.current, e.name, props.checkRelativeRoutes, e.color === 'green' ? 1 : e.color === 'red' ? 2 : '');
         });
+      } else { //when props.display === 'DetailRoute'
+        //setup new line by routeId
+        setDataSoureByRouteId(map.current, props.routeId, props.showMap, props.checkGoBack);
+        loadMarker(map.current, props.routeId, props.checkRelativeRoutes, props.checkGoBack);
       }
       //event click list bus stop in menu => map
       clickButtonToHere(props.stationId, map.current, 1.2);
