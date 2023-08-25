@@ -6704,23 +6704,6 @@ export let stationsData = {
       "geometry": {
         "pointId": 14,
         "type": "Point Out Province",
-        "coordinates": [105.841484, 20.979797]
-      },
-      "properties": {
-        "name": "Giáp Bát",
-        "description": "Bến xe Giáp Bát",
-        "address": "897 Giải Phóng",
-        "district": "Hoàng Mai, Hà Nội",
-        "routes": [
-          { "id": 150, "name": "203", "start": true }
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "pointId": 15,
-        "type": "Point Out Province",
         "coordinates": [106.204874, 21.286627]
       },
       "properties": {
@@ -6730,6 +6713,503 @@ export let stationsData = {
         "district": "Thành phố Bắc Giang",
         "routes": [
           { "id": 1, "name": "203", "start": true }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.856207, 21.032033]
+      },
+      "properties": {
+        "name": "Viện Quy hoạch Thủy Lợi",
+        "description": "",
+        "address": "162 Trần Quang Khải",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 120, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.856426, 21.031970]
+      },
+      "properties": {
+        "name": "Cạnh phố Hàm Tử Quan",
+        "description": "",
+        "address": "Đối diện 162 Trần Quang Khải",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 121, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.859683, 21.025337]
+      },
+      "properties": {
+        "name": "Vườn hoa Bác Cổ",
+        "description": "",
+        "address": "162 Trần Quang Khải",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 122, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.858330, 21.028028]
+      },
+      "properties": {
+        "name": "Chương Dương Độ",
+        "description": "",
+        "address": "Đối diện 198 Trần Quang Khải",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 123, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.861114, 21.022255]
+      },
+      "properties": {
+        "name": "Điểm trung chuyển Trần Khánh Dư",
+        "description": "",
+        "address": "15C Trần Khánh Dư",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 124, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.861443, 21.022133]
+      },
+      "properties": {
+        "name": "ĐD Điểm trung chuyển Trần Khánh Dư",
+        "description": "",
+        "address": "Đối diện 15C Trần Khánh Dư",
+        "district": "Hoàn Kiếm, Hà Nội",
+        "routes": [
+          { "id": 125, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.862351, 21.017230]
+      },
+      "properties": {
+        "name": "Bệnh viện hữu nghị Việt Xô",
+        "description": "",
+        "address": "Đường Nguyễn Khoái",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 126, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.865270, 21.009377]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "18 Nguyễn Khoái",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 127, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.864426, 21.010602]
+      },
+      "properties": {
+        "name": "Đối diện Sun Plaza",
+        "description": "",
+        "address": "Đường Nguyễn Khoái",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 128, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.867950, 21.006615]
+      },
+      "properties": {
+        "name": "Dốc Minh Khai",
+        "description": "",
+        "address": "202-204 Nguyễn Khoái",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 129, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.868397, 21.006159]
+      },
+      "properties": {
+        "name": "Dốc Minh Khai",
+        "description": "",
+        "address": "287 Nguyễn Khoái",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 130, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.870512, 21.001091]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "539 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 131, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.870604, 21.000882]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "690 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 132, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.866674, 20.998049]
+      },
+      "properties": {
+        "name": "Đối diện cổng Times City",
+        "description": "",
+        "address": "423 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 133, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.867065, 20.997866]
+      },
+      "properties": {
+        "name": "Cổng Times City",
+        "description": "",
+        "address": "478 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 134, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863928, 20.997038]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "259 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 135, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863861, 20.996741]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "386-388 Minh Khai",
+        "district": "Hai Bà Trưng, Hà Nội",
+        "routes": [
+          { "id": 136, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.862739, 20.994044]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "89 Nguyễn Tam Trinh",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 137, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863430, 20.987591]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "Đối diện 303 Nguyễn Tam Trinh",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 138, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863289, 20.988816]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "251-253 Nguyễn Tam Trinh",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 139, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863798, 20.984223]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "Đối diện 411 Nguyễn Tam Trinh",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 140, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.863726, 20.984766]
+      },
+      "properties": {
+        "name": "Công ty da giầy Hà Nội",
+        "description": "",
+        "address": "441 Nguyễn Tam Trinh",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 141, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.861716, 20.983760]
+      },
+      "properties": {
+        "name": "ĐD Chợ Đầu mối phía Nam",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 142, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.862204, 20.983600]
+      },
+      "properties": {
+        "name": "Chợ Đầu mối phía Nam",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 143, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.853288, 20.983675]
+      },
+      "properties": {
+        "name": "Công viên hồ Đền Lừ",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 144, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.853368, 20.983533]
+      },
+      "properties": {
+        "name": "ĐD Công viên hồ Đền Lừ",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 145, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.848890, 20.983748]
+      },
+      "properties": {
+        "name": "Trường THCS Tân Mai",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 146, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.848930, 20.983611]
+      },
+      "properties": {
+        "name": "ĐD trường THCS Tân Mai",
+        "description": "",
+        "address": "Phố Tân Mai",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 147, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.844292, 20.983732]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "79 Kim Đồng",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 148, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.844340, 20.983608]
+      },
+      "properties": {
+        "name": "ĐD trường THCS Tân Mai",
+        "description": "",
+        "address": "36 Kim Đồng",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 149, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "pointId": 15,
+        "type": "Point Out Province",
+        "coordinates": [105.841484, 20.979797]
+      },
+      "properties": {
+        "name": "Giáp Bát",
+        "description": "Bến xe Giáp Bát",
+        "address": "897 Giải Phóng",
+        "district": "Hoàng Mai, Hà Nội",
+        "routes": [
+          { "id": 150, "name": "203", "start": true }
         ]
       }
     },
