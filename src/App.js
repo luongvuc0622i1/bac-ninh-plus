@@ -95,7 +95,7 @@ export default function App() {
           <div style={{ display: display === 'DetailStation' ? '' : 'none' }} >
             <DetailStation routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} parentCallbackBack={handleBackFromStation} parentCallbackChangeRoute={handleClickChangeRoute} parentCallbackCheckRelativeRoutes={handleCheckRelativeRoutes} />
           </div>
-          <div className='group' style={{ height: display === 'DetailRoute' || display === 'DetailStation' ? '300px' : '0px', color: 'black', padding : display === 'DetailRoute' || display === 'DetailStation' ? '' : '0px' }} >
+          <div className='group' style={display === 'DetailRoute' || display === 'DetailStation' ? { height: '300px', color: 'black' } : { height: '0px', color: 'black', padding : '0px', marginBottom : '0px' }} >  
             <Map showMap={showMap} display={display} routeId={routeId} stationId={stationId} checkRelativeRoutes={checkRelativeRoutes} checkGoBack={checkGoBack} />
           </div>
         </div>

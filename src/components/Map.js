@@ -28,7 +28,7 @@ export default function Map(props) {
     initLoadLine(map.current);
 
     //open menu navbar on left
-    if(document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
+    if (document.getElementById('clickOpenNavWhenInitPage')) document.getElementById('clickOpenNavWhenInitPage').click();
 
     // Clean up the map instance when the component unmounts
     return () => map.current.remove();
@@ -39,7 +39,7 @@ export default function Map(props) {
       map.current.setCenter(MAPBOX_CENTER);
       map.current.setZoom(MAPBOX_ZOOM);
       if (!props.showMap) map.current.panBy([190, 0]);
-      
+
       if (unFirst) { //only when back to data init
         setDataSoureAll(map.current);
         //clear all old markers
@@ -49,17 +49,23 @@ export default function Map(props) {
       initLoadMarker(map.current);
     } else {
       unFirst = true;
-
-
-      let relativeRoutes = getRelativeRoutes(props.routeId, props.stationId, props.checkRelativeRoutes);
+      //clear all old lines
+      clearDataSoure(map.current);
       //clear all old markers
       clearMarkerByClassName('mapboxgl-marker');
-      //setup new line by route
-      setDataSoureById(map.current, relativeRoutes, props.showMap, props.checkGoBack);
-      //setup new list marker by route
-      relativeRoutes.forEach(e => {
-        loadMarker(map.current, e, props.checkRelativeRoutes, props.checkGoBack);
-      });
+      if (props.display === 'DetailRoute') {
+        //setup new line by routeId
+        setDataSoureByRouteId(map.current, props.routeId, props.showMap, props.checkGoBack);
+        loadMarker(map.current, props.routeId, props.checkRelativeRoutes, props.checkGoBack);
+      } else if (props.display === 'DetailStation') {
+        let relativeRoutes = stations.features.find(feature => feature.geometry.coordinates === props.stationId).properties.routes.map(route => ({ name: route.name, color: route.color }));
+        //setup new line by relativeRoutes
+        setDataSoureByRelativeRoutes(map.current, relativeRoutes);
+        //setup new list marker by relativeRoutes
+        relativeRoutes.forEach(e => {
+          loadMarker(map.current, e.name, props.checkRelativeRoutes, e.color === 'green' ? 1 : e.color === 'red' ? 2 : '');
+        });
+      }
       //event click list bus stop in menu => map
       clickButtonToHere(props.stationId, map.current, 1.2);
     }
@@ -131,23 +137,42 @@ function setDataSoureAll(map) {
   });
 }
 
-function setDataSoureById(map, relativeRoutes, showMap, checkGoBack) {
+function clearDataSoure(map) {
   routeIdList.forEach(e => {
     setDataSoure(map, 'Bus Route ' + e + ' Go', []);
     setDataSoure(map, 'Bus Route ' + e + ' Back', []);
-    relativeRoutes.forEach(e => {
-      if (checkGoBack === 1) {
-        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
-        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.go[0], showMap);
-      } else if (checkGoBack === 2) {
-        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
-        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.back[0], showMap);
-      } else if (checkGoBack === 0) {
-        setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
-        setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
-        zoomBounds(map, routes.features.find(element => element.geometry.id === e).coordinates.go[0], showMap);
-      };
-    });
+  });
+}
+
+function clearMarkerByClassName(className) {
+  const elements = document.getElementsByClassName(className); //clear all old markers
+  while (elements.length > 0) elements[0].remove();
+}
+
+function setDataSoureByRouteId(map, routeId, showMap, checkGoBack) {
+  if (checkGoBack === 1) {
+    setDataSoure(map, 'Bus Route ' + routeId + ' Go', routes.features.find(element => element.geometry.id === routeId).coordinates.go);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go[0], showMap);
+  } else if (checkGoBack === 2) {
+    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.back);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.back[0], showMap);
+  } else if (checkGoBack === 0) {
+    setDataSoure(map, 'Bus Route ' + routeId + ' Go', routes.features.find(element => element.geometry.id === routeId).coordinates.go);
+    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.back);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go[0], showMap);
+  };
+}
+
+function setDataSoureByRelativeRoutes(map, relativeRoutes) {
+  relativeRoutes.forEach(e => {
+    if (e.color === 'green') {
+      setDataSoure(map, 'Bus Route ' + e.name + ' Go', routes.features.find(element => element.geometry.id === e.name).coordinates.go);
+    } else if (e.color === 'red') {
+      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.back);
+    } else if (!e.color) {
+      setDataSoure(map, 'Bus Route ' + e.name + ' Go', routes.features.find(element => element.geometry.id === e.name).coordinates.go);
+      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.back);
+    }
   });
 }
 
@@ -165,11 +190,6 @@ function zoomBounds(map, coordinates, showMap) {
   map.fitBounds(bounds, {
     padding: { top: 50, bottom: 50, left: 50, right: showMap ? 50 : (50 + 380) } // Optional padding
   });
-}
-
-function clearMarkerByClassName(className) {
-  const elements = document.getElementsByClassName(className); //clear all old markers
-  while (elements.length > 0) elements[0].remove();
 }
 
 function initLoadMarker(map) {
@@ -254,11 +274,6 @@ function change(number) {
   let minutes = (number % 1) * 60 - ((number % 1) * 60 % 1);
   let seconds = ((number % 1) * 60 % 1) * 60;
   return hours + "°" + minutes + "'" + seconds + "''";
-}
-
-function getRelativeRoutes(routeId, stationId, checkRelativeRoutes) {
-  if (checkRelativeRoutes === 1 && routeId) return [routeId];
-  else return stations.features.find(feature => feature.geometry.coordinates === stationId).properties.routes.map(route => route.name);
 }
 
 function loadMarker(map, routeId, checkRelativeRoutes, checkGoBack) {
