@@ -8469,6 +8469,57 @@ export let stationsData = {
     {
       "type": "Feature",
       "geometry": {
+        "type": "Point",
+        "coordinates": [105.980188, 21.199305]
+      },
+      "properties": {
+        "name": "Công ty SAMSUNG Electronic Vietnam",
+        "description": "",
+        "address": "Đường YP3-KCN Yên Phong",
+        "ward": "Long Châu",
+        "district": "Yên Phong",
+        "routes": [
+          { "id": 48, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.994396, 21.197131]
+      },
+      "properties": {
+        "name": "Ban quản lý KCN Yên Phong",
+        "description": "",
+        "address": "Đường YP2-KCN Yên Phong",
+        "ward": "Long Châu",
+        "district": "Yên Phong",
+        "routes": [
+          { "id": 49, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.005872, 21.189371]
+      },
+      "properties": {
+        "name": "Ngã ba Đông Yên",
+        "description": "",
+        "address": "Đường YP2-KCN Yên Phong",
+        "ward": "Đông Phong",
+        "district": "Yên Phong",
+        "routes": [
+          { "id": 50, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "pointId": 20,
         "type": "Point In Province",
         "coordinates": [106.156268, 21.152737]
