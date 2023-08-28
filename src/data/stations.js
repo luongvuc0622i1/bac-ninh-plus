@@ -8470,6 +8470,678 @@ export let stationsData = {
       "type": "Feature",
       "geometry": {
         "type": "Point",
+        "coordinates": [105.779237, 21.027574]
+      },
+      "properties": {
+        "name": "Đối diện Bến xe Mỹ Đình",
+        "description": "",
+        "address": "Đường Phạm Hùng",
+        "district": "Nam Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 6, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.778534, 21.023313]
+      },
+      "properties": {
+        "name": "Ngã tư Phạm Hùng - Đình Thôn",
+        "description": "",
+        "address": "Đường Phạm Hùng",
+        "district": "Nam Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 7, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780396, 21.034315]
+      },
+      "properties": {
+        "name": "ĐD Bệnh viện Đa Khoa YHCT",
+        "description": "",
+        "address": "Đường Phạm Hùng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 8, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779369, 21.030472]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "18 Phạm Hùng",
+        "district": "Nam Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 9, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780991, 21.038646]
+      },
+      "properties": {
+        "name": "Đại học Ngoại Ngữ - ĐHQGHN",
+        "description": "",
+        "address": "Đường Phạm Văn Đồng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 10, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780676, 21.040340]
+      },
+      "properties": {
+        "name": "Đối diện Đại học Ngoại Ngữ",
+        "description": "",
+        "address": "9 Phạm Văn Đồng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 11, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781321, 21.043656]
+      },
+      "properties": {
+        "name": "Tòa Nhà Bắc Hà",
+        "description": "",
+        "address": "30 Phạm Văn Đồng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 12, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780886, 21.043743]
+      },
+      "properties": {
+        "name": "Đối diện Tòa Nhà Bắc Hà",
+        "description": "",
+        "address": "126 Phạm Văn Đồng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 13, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781622, 21.048230]
+      },
+      "properties": {
+        "name": "Đối diện Bộ Công An",
+        "description": "",
+        "address": "655 Phạm Văn Đồng",
+        "district": "Cầu Giấy, Hà Nội",
+        "routes": [
+          { "id": 14, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781176, 21.047614]
+      },
+      "properties": {
+        "name": "Bộ Công An",
+        "description": "",
+        "address": "47 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 15, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781888, 21.051279]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "36A Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 16, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781393, 21.051569]
+      },
+      "properties": {
+        "name": "Vincom Bắc Từ Liêm",
+        "description": "",
+        "address": "234 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 17, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.782190, 21.054537]
+      },
+      "properties": {
+        "name": "UBND Phường Cổ Nhuế 1",
+        "description": "",
+        "address": "601 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 18, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781756, 21.054843]
+      },
+      "properties": {
+        "name": "Metro Thăng Long",
+        "description": "",
+        "address": "236 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 19, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.782962, 21.057730]
+      },
+      "properties": {
+        "name": "Ngã tư Cổ Nhuế",
+        "description": "",
+        "address": "527 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 20, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.782656, 21.058133]
+      },
+      "properties": {
+        "name": "Ngã tư Cổ Nhuế",
+        "description": "",
+        "address": "370 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 21, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.784090, 21.062198]
+      },
+      "properties": {
+        "name": "Công viên Hòa Bình - Đường Hoàng Minh Thảo",
+        "description": "",
+        "address": "Đường Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 22, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.783728, 21.062125]
+      },
+      "properties": {
+        "name": "ĐD Công viên Hòa Bình",
+        "description": "",
+        "address": "218 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 23, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.785548, 21.070196]
+      },
+      "properties": {
+        "name": "HC Phạm Văn Đồng",
+        "description": "",
+        "address": "399 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 24, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.785427, 21.071907]
+      },
+      "properties": {
+        "name": "",
+        "description": "",
+        "address": "454 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 25, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.785977, 21.075007]
+      },
+      "properties": {
+        "name": "Ngã Tư Tân Xuân",
+        "description": "",
+        "address": "113 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 26, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.786323, 21.076990]
+      },
+      "properties": {
+        "name": "Ngã Tư Tân Xuân",
+        "description": "",
+        "address": "96 Phạm Văn Đồng",
+        "district": "Bắc Từ Liêm, Hà Nội",
+        "routes": [
+          { "id": 27, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.784106, 21.117167]
+      },
+      "properties": {
+        "name": "KCN Bắc Thăng Long",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 28, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.783194, 21.119586]
+      },
+      "properties": {
+        "name": "KCN Bắc Thăng Long",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 29, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.781145, 21.126433]
+      },
+      "properties": {
+        "name": "Cầu vượt Kim Chung",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 30, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780753, 21.126502]
+      },
+      "properties": {
+        "name": "Cầu vượt Kim Chung",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 31, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779175, 21.131898]
+      },
+      "properties": {
+        "name": "ĐD UBND Xã Kim Chung",
+        "description": "Km2+230",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 32, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779156, 21.131611]
+      },
+      "properties": {
+        "name": "UBND Xã Kim Chung",
+        "description": "Km2+200",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 33, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.778623, 21.141810]
+      },
+      "properties": {
+        "name": "Cầu chui Thôn Nhuế",
+        "description": "Km11+200",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 34, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.778527, 21.141496]
+      },
+      "properties": {
+        "name": "ĐD đường vào Thôn Nhuế",
+        "description": "Km11+200",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 35, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779176, 21.153081]
+      },
+      "properties": {
+        "name": "Cầu Vân Trì",
+        "description": "Km4+560",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 36, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.778968, 21.151817]
+      },
+      "properties": {
+        "name": "Đầm Vân Trì",
+        "description": "Km4+400",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 37, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779406, 21.158161]
+      },
+      "properties": {
+        "name": "Cầu vượt Nam Hồng",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 38, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779257, 21.157934]
+      },
+      "properties": {
+        "name": "Cầu vượt Nam Hồng",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 39, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779674, 21.165310]
+      },
+      "properties": {
+        "name": "Thôn Đìa, Nam Hồng",
+        "description": "Km6+120",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 40, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779615, 21.166332]
+      },
+      "properties": {
+        "name": "Thôn Đoài, Nam Hồng",
+        "description": "Km5+950",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 41, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780497, 21.186430]
+      },
+      "properties": {
+        "name": "Melinh Plaza",
+        "description": "Km8+100",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Mê Linh, Hà Nội",
+        "routes": [
+          { "id": 42, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780326, 21.186179]
+      },
+      "properties": {
+        "name": "ĐD Melinh Plaza",
+        "description": "Km8+150",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Mê Linh, Hà Nội",
+        "routes": [
+          { "id": 43, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780721, 21.192496]
+      },
+      "properties": {
+        "name": "Tổ 7, Thị trấn Quang Minh",
+        "description": "Km8+850",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Mê Linh, Hà Nội",
+        "routes": [
+          { "id": 44, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.780559, 21.191143]
+      },
+      "properties": {
+        "name": "Chùa Đại Bi, Gia Trung",
+        "description": "Km8+700",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Mê Linh, Hà Nội",
+        "routes": [
+          { "id": 45, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779891, 21.204170]
+      },
+      "properties": {
+        "name": "Cầu vượt Bắc Thăng Long - QL.18",
+        "description": "",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 46, "name": "212", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.779855, 21.202479]
+      },
+      "properties": {
+        "name": "Trạm soát vé Bắc Thăng Long",
+        "description": "Km10+010",
+        "address": "Đường Võ Văn Kiệt",
+        "district": "Đông Anh, Hà Nội",
+        "routes": [
+          { "id": 47, "name": "212", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
         "coordinates": [105.980188, 21.199305]
       },
       "properties": {
