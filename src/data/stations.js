@@ -4868,7 +4868,7 @@ export let stationsData = {
         "district": "Thành phố Bắc Ninh",
         "routes": [
           { "id": 57, "name": "BN68", "color": "red" },
-          { "id": 41, "name": "203", "color": "green" }
+          { "id": 41, "name": "203" }
         ]
       }
     },
@@ -6713,6 +6713,314 @@ export let stationsData = {
         "district": "Thành phố Bắc Giang",
         "routes": [
           { "id": 1, "name": "203", "start": true }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.198085, 21.282477]
+      },
+      "properties": {
+        "name": "Ngã ba Hùng Vương",
+        "description": "",
+        "address": "Đường Xương Giang",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 2, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.195585, 21.280707]
+      },
+      "properties": {
+        "name": "Sân vận động tỉnh Bắc Giang",
+        "description": "",
+        "address": "Đường Xương Giang",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 3, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.193160, 21.279315]
+      },
+      "properties": {
+        "name": "Ga Bắc Giang",
+        "description": "",
+        "address": "Đường Xương Giang",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 4, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.193146, 21.279172]
+      },
+      "properties": {
+        "name": "Hiệu sách nhân dân tỉnh Bắc Giang",
+        "description": "",
+        "address": "Đường Xương Giang",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 5, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.190068, 21.277166]
+      },
+      "properties": {
+        "name": "Bách hóa Tổng hợp Xương Giang",
+        "description": "",
+        "address": "Đường Xương Giang",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 6, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.181763, 21.273385]
+      },
+      "properties": {
+        "name": "Cầu Mỹ Độ",
+        "description": "",
+        "address": "1 Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 7, "name": "203", "color": "green" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.182852, 21.273528]
+      },
+      "properties": {
+        "name": "Cầu Mỹ Độ",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 8, "name": "203", "color": "red" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.178905, 21.273616]
+      },
+      "properties": {
+        "name": "Cây xăng Phương Nam",
+        "description": "Trường THCS Mỹ Độ",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 9, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.173414, 21.274300]
+      },
+      "properties": {
+        "name": "Đường vào bênh viện Ung Bướu Bắc Giang",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 10, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.166507, 21.275136]
+      },
+      "properties": {
+        "name": "Cây xăng Tân Mỹ",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 11, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.164302, 21.275442]
+      },
+      "properties": {
+        "name": "Ngã tư Võ Nuyên Giáp",
+        "description": "Cầu vượt Quốc lộ 17",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 12, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.161687, 21.275180]
+      },
+      "properties": {
+        "name": "Cây xăng Ngọc Lâm",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 13, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.151128, 21.273923]
+      },
+      "properties": {
+        "name": "Chợ Mía",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 14, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.146805, 21.273422]
+      },
+      "properties": {
+        "name": "TTTM Thể Thao Lam Sơn",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 15, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.142245, 21.273748]
+      },
+      "properties": {
+        "name": "Trường trung cấp nghề 19-5",
+        "description": "",
+        "address": "Đường Thân Nhân Trung",
+        "district": "Thành phố Bắc Giang",
+        "routes": [
+          { "id": 16, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.136989, 21.273911]
+      },
+      "properties": {
+        "name": "Công ty TNHH Chính xác XIN YUE",
+        "description": "",
+        "address": "Đường tỉnh 295B",
+        "ward": "Hồng Thái",
+        "district": "Việt Yên, Bắc Giang",
+        "routes": [
+          { "id": 17, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.129421, 21.272380]
+      },
+      "properties": {
+        "name": "Đường vào thôn Như Thiết",
+        "description": "",
+        "address": "Đường tỉnh 295B",
+        "ward": "Hồng Thái",
+        "district": "Việt Yên, Bắc Giang",
+        "routes": [
+          { "id": 18, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.124574, 21.269852]
+      },
+      "properties": {
+        "name": "UBND xã Hồng Thái",
+        "description": "",
+        "address": "Đường tỉnh 295B",
+        "ward": "Hồng Thái",
+        "district": "Việt Yên, Bắc Giang",
+        "routes": [
+          { "id": 19, "name": "203" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.114171, 21.261083]
+      },
+      "properties": {
+        "name": "Khu công nghiệp Đình Trám",
+        "description": "",
+        "address": "Đường tỉnh 295B",
+        "ward": "Hồng Thái",
+        "district": "Việt Yên, Bắc Giang",
+        "routes": [
+          { "id": 20, "name": "203" }
         ]
       }
     },
