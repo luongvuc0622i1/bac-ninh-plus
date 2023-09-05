@@ -986,7 +986,7 @@ export let stationsData = {
       "properties": {
         "name": "Công ty may Đông Bình",
         "description": "",
-        "address": "Đường Nguyễn Văn Cừ",
+        "address": "162 Nguyễn Văn Cừ",
         "ward": "Thị trấn Gia Bình",
         "district": "Gia Bình",
         "routes": [
@@ -1020,7 +1020,7 @@ export let stationsData = {
       "properties": {
         "name": "Bến xe Gia Bình",
         "description": "",
-        "address": "Đường Nguyễn Văn Cừ",
+        "address": "156-158 Nguyễn Văn Cừ",
         "ward": "Thị trấn Gia Bình",
         "district": "Gia Bình",
         "routes": [
@@ -1592,7 +1592,8 @@ export let stationsData = {
         "routes": [
           { "id": 21, "name": "BN02" },
           { "id": 21, "name": "BN86A" },
-          { "id": 21, "name": "BN86B" }
+          { "id": 21, "name": "BN86B" },
+          { "id": 79, "name": "212" }
         ]
       }
     },
@@ -1610,7 +1611,8 @@ export let stationsData = {
         "routes": [
           { "id": 22, "name": "BN02" },
           { "id": 22, "name": "BN86A" },
-          { "id": 22, "name": "BN86B" }
+          { "id": 22, "name": "BN86B" },
+          { "id": 80, "name": "212" }
         ]
       }
     },
@@ -1628,7 +1630,8 @@ export let stationsData = {
         "routes": [
           { "id": 23, "name": "BN02", "color": "green" },
           { "id": 23, "name": "BN86A", "color": "green" },
-          { "id": 23, "name": "BN86B", "color": "green" }
+          { "id": 23, "name": "BN86B", "color": "green" },
+          { "id": 81, "name": "212", "color": "green" }
         ]
       }
     },
@@ -1646,7 +1649,8 @@ export let stationsData = {
         "routes": [
           { "id": 24, "name": "BN02", "color": "red" },
           { "id": 24, "name": "BN86A", "color": "red" },
-          { "id": 24, "name": "BN86B", "color": "red" }
+          { "id": 24, "name": "BN86B", "color": "red" },
+          { "id": 82, "name": "212", "color": "red" }
         ]
       }
     },
@@ -1665,7 +1669,8 @@ export let stationsData = {
         "routes": [
           { "id": 25, "name": "BN02" },
           { "id": 25, "name": "BN86A" },
-          { "id": 25, "name": "BN86B" }
+          { "id": 25, "name": "BN86B" },
+          { "id": 83, "name": "212" }
         ]
       }
     },
@@ -1684,7 +1689,8 @@ export let stationsData = {
         "routes": [
           { "id": 26, "name": "BN02" },
           { "id": 26, "name": "BN86A" },
-          { "id": 26, "name": "BN86B" }
+          { "id": 26, "name": "BN86B" },
+          { "id": 84, "name": "212" }
         ]
       }
     },
@@ -9500,17 +9506,120 @@ export let stationsData = {
     {
       "type": "Feature",
       "geometry": {
+        "type": "Point",
+        "coordinates": [106.210828, 21.144587]
+      },
+      "properties": {
+        "name": "Nhà văn hóa Khu phố Hiền Lương",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lương",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 85, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.216681, 21.149574]
+      },
+      "properties": {
+        "name": "Cây xăng Đồng Sài",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lãng",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 86, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.229867, 21.147365]
+      },
+      "properties": {
+        "name": "Chợ Đồng Sài",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lãng",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 87, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.237115, 21.152147]
+      },
+      "properties": {
+        "name": "Công ty Môi trường Phù Lãng",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lãng",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 88, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.245595, 21.152062]
+      },
+      "properties": {
+        "name": "Trạm Y tế Phù Lãng",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lãng",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 89, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.254329, 21.149678]
+      },
+      "properties": {
+        "name": "Chợ gốm Phù Lãng",
+        "description": "",
+        "address": "",
+        "ward": "Phù Lãng",
+        "district": "Thị xã Quế Võ",
+        "routes": [
+          { "id": 90, "name": "212" }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
         "pointId": 20,
         "type": "Point In Province",
-        "coordinates": [106.156268, 21.152737]
+        "coordinates": [106.255461, 21.148390]
       },
       "properties": {
         "name": "Quế Võ",
-        "description": "Bến xe Quế Võ",
-        "address": "Đường Trần Hưng Đạo",
+        "description": "UBND xã Phù Lãng",
+        "address": "",
+        "ward": "Phù Lãng",
         "district": "Thị xã Quế Võ",
         "routes": [
-          { "id": 79, "name": "212", "start": true }
+          { "id": 91, "name": "212", "start": true }
         ]
       }
     },
