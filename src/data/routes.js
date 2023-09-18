@@ -780,22 +780,41 @@ export let routesData = {
           { "name": "", "link": "" }
         ],
         "image": "img-212.jpg",
-        "description": "Bến xe Mỹ Đình - Phạm Hùng - Phạm Văn Đông - Cầu Thăng Long - Võ Văn Kiệt - QL.18 - Đường YP.3 - Đường YP.2 - Cầu Đông Yên - QL.18 - QL.1A - Cầu Bồ Sơn - Nguyễn Trãi (Bắc Ninh) - Lý Thái Tổ (Bắc Ninh) - Trần Hưng Đạo (Bắc Ninh) - Cầu Đại Phúc - QL.18 - Bến xe Quế Võ và ngược lại.",
+        "description": "Bến xe Mỹ Đình - Phạm Hùng - Phạm Văn Đông - Cầu Thăng Long - Võ Văn Kiệt - QL.18 - Đường YP.3 - Đường YP.2 - Cầu Đông Yên - QL.18 - QL.1A - Cầu Bồ Sơn - Nguyễn Trãi (Bắc Ninh) - Lý Thái Tổ (Bắc Ninh) - Trần Hưng Đạo (Bắc Ninh) - Cầu Đại Phúc - QL.18 - Bến xe Quế Võ - QL.18 - Ngã ba Đông Du - Đường vào Phù Lãng - UBND xã Phù Lãng và ngược lại.",
         "timeline": [
           ["Mỹ Đình", "Quế Võ"],
-          ["", ""]
+          ["5:15", "5:45"],
+          ["5:45", "6:15"],
+          ["6:25", "6:45"],
+          ["7:05", "7:15"],
+          ["7:35", "7:45"],
+          ["8:05", "8:15"],
+          ["8:35", "8:45"],
+          ["9:20", "9:20"],
+          ["9:50", "10:00"],
+          ["10:20", "10:40"],
+          ["10:50", "11:20"],
+          ["11:20", "12:20"],
+          ["11:55", "13:00"],
+          ["12:35", "13:35"],
+          ["13:15", "14:05"],
+          ["13:55", "14:35"],
+          ["14:35", "15:05"],
+          ["15:35", "15:35"],
+          ["15:55", "16:05"],
+          ["16:10", "16:35"],
+          ["16:25", "17:00"],
+          ["16:40", ""]
         ],
         "ticket": [
           {
             "type": "turn ticket",
             "grades": [
-              { "name": "Toàn Tuyến", "money": "40.000" },
+              { "name": "Toàn Tuyến", "money": "55.000" },
               { "name": "Mỹ Đình - Nội Bài", "money": "10.000" },
-              { "name": "Mỹ Đình - KCN Yên Phong", "money": "30.000" },
-              { "name": "Mỹ Đình - TP. Bắc Ninh", "money": "35.000" },
-              { "name": "Nội Bài - Quế Võ", "money": "35.000" },
-              { "name": "KCN Yên Phong - Quế Võ", "money": "30.000" },
-              { "name": "TP. Bắc Ninh - Quế Võ", "money": "10.000" }
+              { "name": "Mỹ Đình - KCN Yên Phong", "money": "45.000" },
+              { "name": "TP. Bắc Ninh - Bx. Quế Võ", "money": "10.000" },
+              { "name": "TP. Bắc Ninh - Phù Lãng", "money": "15.000" }
             ]
           },
           {
