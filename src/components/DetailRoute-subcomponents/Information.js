@@ -31,12 +31,12 @@ export default function Infomation(props) {
             <td style={{ width: 100 }}>Hoạt động:</td>
             <td>{feature.properties.establish}</td>
           </tr>
-          {feature.properties.decision.map(el => (
+          {/* {feature.properties.decision.map(el => (
             <tr key={el.name} style={{ display: feature.properties.decision[0].name ? '' : 'none' }} >
               <td rowSpan={feature.properties.decision.length} style={{ width: 100, display: el === feature.properties.decision[0] ? '' : 'none' }} >Văn bản:</td>
               <td><a href={el.link} target='_blank' rel='noopener noreferrer'>{el.name}</a></td>
             </tr>
-          ))}
+          ))} */}
           <tr style={{ display: feature.properties.operatedBy ? '' : 'none' }}>
             <td style={{ width: 100 }}>Đơn vị vận hành:</td>
             <td>{feature.properties.operatedBy}</td>
@@ -80,17 +80,17 @@ export default function Infomation(props) {
             <td style={{ width: 199, textAlign: 'center' }}>Chặng</td>
             <td style={{ width: 55, textAlign: 'center' }}>Giá vé</td>
           </tr>
-          {feature.properties.ticket[0].grades.map(el => (
+          {feature.properties.ticket.busTicket.map(el => (
             <tr key={el.name} >
-              <td rowSpan={feature.properties.ticket[0].grades.length} style={{ display: el === feature.properties.ticket[0].grades[0] ? '' : 'none' }} >Vé lượt:</td>
+              <td rowSpan={feature.properties.ticket.busTicket.length} style={{ display: el === feature.properties.ticket.busTicket[0] ? '' : 'none' }} >Vé lượt:</td>
               <td>{el.name}</td>
               <td style={{ textAlign: 'right' }}>{el.money}</td>
             </tr>
           ))}
           <tr style={{ height: '20px' }} />
-          {feature.properties.ticket[1].grades.map(el => (
+          {feature.properties.ticket.monthlyTicket.map(el => (
             <tr key={el.name} >
-              <td rowSpan={feature.properties.ticket[1].grades.length} style={{ display: el === feature.properties.ticket[1].grades[0] ? '' : 'none' }} >Vé tháng:</td>
+              <td rowSpan={feature.properties.ticket.monthlyTicket.length} style={{ display: el === feature.properties.ticket.monthlyTicket[0] ? '' : 'none' }} >Vé tháng:</td>
               <td>{el.name}</td>
               <td style={{ textAlign: 'right' }}>{el.money}</td>
             </tr>

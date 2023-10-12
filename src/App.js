@@ -1,10 +1,11 @@
 import './App.css';
 import { useWindowDimension } from './components/suport/useWindowDimension';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';
 import DetailRoute from './components/DetailRoute';
 import DetailStation from './components/DetailStation';
+// import DataFetcher from './DataFetcher';
 
 export default function App() {
   const [width, height] = useWindowDimension();
@@ -57,12 +58,19 @@ export default function App() {
     setCheckRelativeRoutes(1);
   }
 
+  // const onDataFetched = (data1, data2) => {
+  //   // Đặt dữ liệu vào Local Storage với một key cụ thể
+  //   localStorage.setItem('routes', JSON.stringify(data1));
+  //   localStorage.setItem('stations', JSON.stringify(data2));
+  // };
+
   return (
     <div className='container'>
       <div className='header'>
         <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
         <h1 className='title'>Bắc Ninh Bus</h1>
       </div>
+      {/* <DataFetcher onDataFetched={onDataFetched} /> */}
       {width > 500 ? ( //for website
         <>
           <div className={classMenu} style={{ display: display === 'DefaultMenu' ? '' : 'none' }} >
@@ -103,3 +111,32 @@ export default function App() {
     </div>
   );
 }
+
+// import React from 'react';
+// import DataFetcher from './DataFetcher';
+
+// function App() {
+
+//   const onDataFetched = (data1, data2) => {
+//     // Đặt dữ liệu vào Local Storage với một key cụ thể
+//     localStorage.setItem('routes', JSON.stringify(data1));
+//     localStorage.setItem('stations', JSON.stringify(data2));
+//   };
+
+//   console.log(JSON.parse(localStorage.getItem('routes')))
+//   console.log(JSON.parse(localStorage.getItem('stations')))
+
+//   return (
+//     <div>
+//       <h1>Ứng dụng React với DataFetcher</h1>
+//       <DataFetcher onDataFetched={onDataFetched} />
+//       {localStorage.getItem('routes') && (
+//         <div>
+//           <h2>Dữ liệu đã fetch:</h2>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default App;

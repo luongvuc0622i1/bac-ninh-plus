@@ -78,7 +78,7 @@ export default function Map(props) {
 
 function initLoadLine(map) {
   routeIdList.forEach(e => {
-    addSourceLayer(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back, 'red');
+    addSourceLayer(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.return, 'red');
     addSourceLayer(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go, '#3e8e41');
   });
 }
@@ -117,7 +117,7 @@ function getGeojson(coordinates) {
         'type': 'Feature',
         'geometry': {
           'type': 'MultiLineString',
-          'coordinates': coordinates
+          'coordinates': [coordinates]
         }
       }
     ],
@@ -133,7 +133,7 @@ function getGeojson(coordinates) {
 function setDataSoureAll(map) {
   routeIdList.forEach(e => {
     setDataSoure(map, 'Bus Route ' + e + ' Go', routes.features.find(element => element.geometry.id === e).coordinates.go);
-    setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.back);
+    setDataSoure(map, 'Bus Route ' + e + ' Back', routes.features.find(element => element.geometry.id === e).coordinates.return);
   });
 }
 
@@ -152,14 +152,14 @@ function clearMarkerByClassName(className) {
 function setDataSoureByRouteId(map, routeId, showMap, checkGoBack) {
   if (checkGoBack === 1) {
     setDataSoure(map, 'Bus Route ' + routeId + ' Go', routes.features.find(element => element.geometry.id === routeId).coordinates.go);
-    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go[0], showMap);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go, showMap);
   } else if (checkGoBack === 2) {
-    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.back);
-    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.back[0], showMap);
+    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.return);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.return, showMap);
   } else if (checkGoBack === 0) {
     setDataSoure(map, 'Bus Route ' + routeId + ' Go', routes.features.find(element => element.geometry.id === routeId).coordinates.go);
-    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.back);
-    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go[0], showMap);
+    setDataSoure(map, 'Bus Route ' + routeId + ' Back', routes.features.find(element => element.geometry.id === routeId).coordinates.return);
+    zoomBounds(map, routes.features.find(element => element.geometry.id === routeId).coordinates.go, showMap);
   };
 }
 
@@ -168,10 +168,10 @@ function setDataSoureByRelativeRoutes(map, relativeRoutes) {
     if (e.color === 'green') {
       setDataSoure(map, 'Bus Route ' + e.name + ' Go', routes.features.find(element => element.geometry.id === e.name).coordinates.go);
     } else if (e.color === 'red') {
-      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.back);
+      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.return);
     } else if (!e.color) {
       setDataSoure(map, 'Bus Route ' + e.name + ' Go', routes.features.find(element => element.geometry.id === e.name).coordinates.go);
-      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.back);
+      setDataSoure(map, 'Bus Route ' + e.name + ' Back', routes.features.find(element => element.geometry.id === e.name).coordinates.return);
     }
   });
 }
@@ -184,6 +184,7 @@ function setDataSoure(map, idSoureLayer, coordinates) {
 function zoomBounds(map, coordinates, showMap) {
   // Calculate the bounding box of all the line coordinates
   const bounds = new mapboxgl.LngLatBounds();
+  console.log(coordinates)
   coordinates.forEach(coord => bounds.extend(coord));
 
   // Set the map's zoom and center to fit the bounding box
@@ -196,23 +197,23 @@ function initLoadMarker(map) {
   for (const feature of stations.features) {
     // create a HTML element for each feature
     const el = document.createElement('div');
-    if (feature.geometry.lineId === '0108217') {
+    if (feature.geometry.pointId === '0108217') {
       el.className = 'marker-node marker-01-08-217';
-    } else if (feature.geometry.lineId === '0127') {
+    } else if (feature.geometry.pointId === '0127') {
       el.className = 'marker-node marker-01-27';
-    } else if (feature.geometry.lineId === '0286212') {
+    } else if (feature.geometry.pointId === '0286212') {
       el.className = 'marker-node marker-02-86-212';
-    } else if (feature.geometry.lineId === '0286') {
+    } else if (feature.geometry.pointId === '0286') {
       el.className = 'marker-node marker-02-86';
-    } else if (feature.geometry.lineId === '0886') {
+    } else if (feature.geometry.pointId === '0886') {
       el.className = 'marker-node marker-08-86';
-    } else if (feature.geometry.lineId === '27204') {
+    } else if (feature.geometry.pointId === '27204') {
       el.className = 'marker-node marker-27-204';
-    } else if (feature.geometry.lineId === '6854203') {
+    } else if (feature.geometry.pointId === '6854203') {
       el.className = 'marker-node marker-68-54-203';
-    } else if (feature.geometry.lineId === '1054210') {
+    } else if (feature.geometry.pointId === '1054210') {
       el.className = 'marker-node marker-10-54-210';
-    } else if (feature.geometry.type === 'Point') {
+    } else if (!feature.geometry.pointId) {
       el.className = 'marker-all';
     } else {
       el.className = 'marker-green';
@@ -220,14 +221,14 @@ function initLoadMarker(map) {
     el.id = feature.geometry.coordinates;
 
     let routes = feature.properties.routes;
-    if (feature.geometry.type === 'Point In Province' || feature.geometry.type === 'Point Out Province') {
+    if (!isNaN(feature.geometry.pointId)) {
       routes = feature.properties.routes.filter(route => route.start);
     } else {
       routes = feature.properties.routes;
     }
 
     let offset = '';
-    if (feature.geometry.type !== 'Point') offset = 25;
+    if (typeof feature.geometry.pointId !== 'string') offset = 25;
 
     // make a marker for each feature and add it to the map
     createMarker(map, el, feature, routes, offset);
@@ -247,7 +248,7 @@ function createMarker(map, el, feature, routes, offset) {
         + (feature.properties.ward ? ('<small>' + feature.properties.ward + ', </small>') : '')
         + (feature.properties.district ? ('<small>' + feature.properties.district + '.</small><br/>') : '')
         + renderRouteList(routes) + '<br/>'
-        + (feature.geometry.type === 'Line' ? '' : renderLink(feature.geometry.coordinates)) +
+        + (typeof feature.geometry.pointId !== 'string' ? '' : renderLink(feature.geometry.coordinates)) +
         '</div>'
       )
   ).addTo(map);
@@ -278,7 +279,7 @@ function change(number) {
 
 function loadMarker(map, routeId, checkRelativeRoutes, checkGoBack) {
   // add markers to map
-  let features = stations.features.filter(feature => feature.geometry.type !== 'Line').filter(feature => feature.properties.routes.some(route => route.name === routeId));
+  let features = stations.features.filter(feature => typeof feature.geometry.pointId !== 'string').filter(feature => feature.properties.routes.some(route => route.name === routeId));
   if (checkGoBack === 1) features = features.filter(feature => feature.properties.routes.find(route => route.name === routeId).color !== 'red');
   else if (checkGoBack === 2) features = features.filter(feature => feature.properties.routes.find(route => route.name === routeId).color !== 'green');
   for (const feature of features) {

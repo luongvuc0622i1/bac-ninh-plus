@@ -3,7 +3,7 @@ import { stations } from '../suport/routerData';
 
 export default function Stations(props) {
   const [textSearch, setTextSearch] = useState('');
-  let features = stations.features.filter(feature => feature.geometry.type !== 'Line');
+  let features = stations.features.filter(feature => typeof feature.geometry.pointId !== 'string');
   features = [
     ...features.filter(feature => feature.geometry.pointId).sort((a, b) => a.geometry.pointId - b.geometry.pointId),
     ...features.filter(feature => !feature.geometry.pointId).sort((a, b) => a.properties.district.localeCompare(b.properties.district))
