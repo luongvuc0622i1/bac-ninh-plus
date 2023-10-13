@@ -58,7 +58,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
+    // if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
       const url = 'https://script.google.com/macros/s/AKfycbx_t8rwPiQJUI_n9DyFvUVIlvKuAm2_2S_ztKOV1OBU9X8n9hhhmCAyCMUqIa420_7D/exec';
       // Sử dụng Promise.all để gọi cả hai API
       Promise.all([
@@ -70,7 +70,7 @@ export default function App() {
       }).catch((error) => {
         console.error('Lỗi khi gọi API:', error);
       });
-    }
+    // }
   }, []);
 
   const handleReload = () => {
