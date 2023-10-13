@@ -184,7 +184,6 @@ function setDataSoure(map, idSoureLayer, coordinates) {
 function zoomBounds(map, coordinates, showMap) {
   // Calculate the bounding box of all the line coordinates
   const bounds = new mapboxgl.LngLatBounds();
-  console.log(coordinates)
   coordinates.forEach(coord => bounds.extend(coord));
 
   // Set the map's zoom and center to fit the bounding box

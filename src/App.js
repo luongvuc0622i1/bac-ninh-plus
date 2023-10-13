@@ -1,11 +1,10 @@
 import './App.css';
 import { useWindowDimension } from './components/suport/useWindowDimension';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';
 import DetailRoute from './components/DetailRoute';
 import DetailStation from './components/DetailStation';
-// import DataFetcher from './DataFetcher';
 
 export default function App() {
   const [width, height] = useWindowDimension();
@@ -58,11 +57,35 @@ export default function App() {
     setCheckRelativeRoutes(1);
   }
 
-  // const onDataFetched = (data1, data2) => {
-  //   // Đặt dữ liệu vào Local Storage với một key cụ thể
-  //   localStorage.setItem('routes', JSON.stringify(data1));
-  //   localStorage.setItem('stations', JSON.stringify(data2));
-  // };
+  useEffect(() => {
+    if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
+      const url = 'https://script.google.com/macros/s/AKfycbx_t8rwPiQJUI_n9DyFvUVIlvKuAm2_2S_ztKOV1OBU9X8n9hhhmCAyCMUqIa420_7D/exec';
+      // Sử dụng Promise.all để gọi cả hai API
+      Promise.all([
+        fetch(url + '?action=getRoutes').then((response) => response.json()),
+        fetch(url + '?action=getStations').then((response) => response.json()),
+      ]).then(([result1, result2]) => {
+        localStorage.setItem('routes', JSON.stringify(result1));
+        localStorage.setItem('stations', JSON.stringify(result2));
+      }).catch((error) => {
+        console.error('Lỗi khi gọi API:', error);
+      });
+    }
+  }, []);
+
+  const handleReload = () => {
+    // Thực hiện hành động load lại trang
+    window.location.reload();
+  };
+
+  // Kiểm tra liệu đã có dữ liệu từ cả hai API hay chưa
+  if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
+    return (
+      <div>
+        <button onClick={handleReload}>Refresh Trang</button>
+      </div>
+    );
+  }
 
   return (
     <div className='container'>
@@ -70,7 +93,6 @@ export default function App() {
         <img src='https://raw.githubusercontent.com/luongvuc0622i1/project-data/master/images/logo2.png' alt='logo' className='logo' />
         <h1 className='title'>Bắc Ninh Bus</h1>
       </div>
-      {/* <DataFetcher onDataFetched={onDataFetched} /> */}
       {width > 500 ? ( //for website
         <>
           <div className={classMenu} style={{ display: display === 'DefaultMenu' ? '' : 'none' }} >
@@ -111,32 +133,3 @@ export default function App() {
     </div>
   );
 }
-
-// import React from 'react';
-// import DataFetcher from './DataFetcher';
-
-// function App() {
-
-//   const onDataFetched = (data1, data2) => {
-//     // Đặt dữ liệu vào Local Storage với một key cụ thể
-//     localStorage.setItem('routes', JSON.stringify(data1));
-//     localStorage.setItem('stations', JSON.stringify(data2));
-//   };
-
-//   console.log(JSON.parse(localStorage.getItem('routes')))
-//   console.log(JSON.parse(localStorage.getItem('stations')))
-
-//   return (
-//     <div>
-//       <h1>Ứng dụng React với DataFetcher</h1>
-//       <DataFetcher onDataFetched={onDataFetched} />
-//       {localStorage.getItem('routes') && (
-//         <div>
-//           <h2>Dữ liệu đã fetch:</h2>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default App;
