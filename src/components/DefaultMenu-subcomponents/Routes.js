@@ -24,7 +24,10 @@ export default function Routes(props) {
               <h3>{feature.geometry.id}</h3>
               <h4>{feature.geometry.name}</h4>
               <div style={{ float: 'left' }}>
-                <i className='fa fa-clock-o' />  {feature.properties.timeline[1][0]} - {feature.properties.timeline[feature.properties.timeline.length - 1][0]}
+                <i className='fa fa-clock-o' />  
+                {feature.properties.timeline.length > 0 && (
+                  <> {feature.properties.timeline[0][0]} - {feature.properties.timeline[feature.properties.timeline.length - 1][0]}</>
+                )}
               </div>
               <div style={{ float: 'right' }}>
                 {feature.properties.ticket.busTicket[0] ? feature.properties.ticket.busTicket[0].money : ''} <i className='fa fa-money' />
