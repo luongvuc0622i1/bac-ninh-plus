@@ -27,7 +27,7 @@ export default function Routes(props) {
                 <i className='fa fa-clock-o' />  {feature.properties.timeline[1][0]} - {feature.properties.timeline[feature.properties.timeline.length - 1][0]}
               </div>
               <div style={{ float: 'right' }}>
-                {feature.properties.ticket.busTicket[0].money} <i className='fa fa-money' />
+                {feature.properties.ticket.busTicket[0] ? feature.properties.ticket.busTicket[0].money : ''} <i className='fa fa-money' />
               </div>
             </div>
           </button>

@@ -1,6 +1,6 @@
 import './App.css';
 import { useWindowDimension } from './components/suport/useWindowDimension';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Map from './components/Map';
 import DefaultMenu from './components/DefaultMenu';
 import DetailRoute from './components/DetailRoute';
@@ -55,36 +55,6 @@ export default function App() {
     if (routeId) setDisplay('DetailRoute');
     else setDisplay('DefaultMenu');
     setCheckRelativeRoutes(1);
-  }
-
-  useEffect(() => {
-    // if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
-      const url = 'https://script.google.com/macros/s/AKfycbx_t8rwPiQJUI_n9DyFvUVIlvKuAm2_2S_ztKOV1OBU9X8n9hhhmCAyCMUqIa420_7D/exec';
-      // Sử dụng Promise.all để gọi cả hai API
-      Promise.all([
-        fetch(url + '?action=getRoutes').then((response) => response.json()),
-        fetch(url + '?action=getStations').then((response) => response.json()),
-      ]).then(([result1, result2]) => {
-        localStorage.setItem('routes', JSON.stringify(result1));
-        localStorage.setItem('stations', JSON.stringify(result2));
-      }).catch((error) => {
-        console.error('Lỗi khi gọi API:', error);
-      });
-    // }
-  }, []);
-
-  const handleReload = () => {
-    // Thực hiện hành động load lại trang
-    window.location.reload();
-  };
-
-  // Kiểm tra liệu đã có dữ liệu từ cả hai API hay chưa
-  if (localStorage.getItem('routes') === null || localStorage.getItem('routes') === null) {
-    return (
-      <div>
-        <button onClick={handleReload}>Refresh Trang</button>
-      </div>
-    );
   }
 
   return (
